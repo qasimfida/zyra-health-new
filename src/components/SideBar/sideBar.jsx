@@ -7,58 +7,59 @@ import {
   ChatBubbleOvalLeftEllipsisIcon,
   BuildingOfficeIcon,
   Cog8ToothIcon,
+  ArrowRightStartOnRectangleIcon
 } from "@heroicons/react/24/outline";
 
 const SideBar = () => {
   return (
-    <div className="bg-white w-60 rounded-2xl py-10 flex flex-col h-[80vh] justify-between sticky left-6 top-24 z-10">
-      <div className="flex flex-col w-full items-center">
-        <div className="flex items-center w-52 h-12 justify-start bg-[#7070FF] rounded-2xl text-white">
-          <button type="button" className="mr-4 ml-2">
-            <HomeIcon className="h-6 w-6" aria-hidden="true" />
+    <div className="hidden md:flex lg:flex bg-white max-w-60 rounded-2xl py-10  flex-col min-h-[80vh] justify-between sticky left-6 top-24 z-10">
+      <div className="flex flex-col items-center w-full">
+        <div className="flex items-center w-52 h-12 justify-start bg-[#7070FF] rounded-2xl text-white cursor-pointer">
+          <button type="button" className="ml-2 mr-4">
+            <HomeIcon className="w-6 h-6" aria-hidden="true" />
           </button>
-          <p lassName="m-1.5 text-slate-500 font-medium">Home</p>
+          <p lassname="m-1.5 text-slate-500 font-medium">Home</p>
         </div>
-        <div className="flex items-center w-52 h-12 justify-start rounded-2xl text-[#5E5E6F]">
-          <button type="button" className="mr-4 ml-2">
-            <UserCircleIcon className="h-6 w-6" aria-hidden="true" />
+        <div className="flex items-center w-52 h-12 justify-start rounded-2xl text-[#5E5E6F] cursor-pointer hover:text-white hover:bg-[#7070FF]">
+          <button type="button" className="ml-2 mr-4">
+            <UserCircleIcon className="w-6 h-6" aria-hidden="true" />
           </button>
-          <p lassName="m-1.5 text-slate-500 font-medium">Profile</p>
+          <p lassname="m-1.5 text-slate-500 font-medium">Profile</p>
         </div>
-        <div className="flex items-center w-52 h-12 justify-start rounded-2xl text-[#5E5E6F]">
-          <button type="button" className="mr-4 ml-2">
-            <DocumentTextIcon className="h-6 w-6" aria-hidden="true" />
+        <div className="flex items-center w-52 h-12 justify-start rounded-2xl text-[#5E5E6F] cursor-pointer hover:text-white hover:bg-[#7070FF]">
+          <button type="button" className="ml-2 mr-4">
+            <DocumentTextIcon className="w-6 h-6" aria-hidden="true" />
           </button>
-          <p lassName="m-1.5 text-slate-500 font-medium">My Work</p>
+          <p lassname="m-1.5 text-slate-500 font-medium">My Work</p>
         </div>
-        <div className="flex items-center w-52 h-12 justify-start rounded-2xl text-[#5E5E6F]">
-          <button type="button" className="mr-4 ml-2">
+        <div className="flex items-center w-52 h-12 justify-start rounded-2xl text-[#5E5E6F] cursor-pointer hover:text-white hover:bg-[#7070FF]">
+          <button type="button" className="ml-2 mr-4">
             <ChatBubbleOvalLeftEllipsisIcon
-              className="h-6 w-6"
+              className="w-6 h-6"
               aria-hidden="true"
             />
           </button>
-          <p lassName="m-1.5 text-slate-500 font-medium">Messages</p>
+          <p lassname="m-1.5 text-slate-500 font-medium">Messages</p>
         </div>
-        <div className="flex items-center w-52 h-12 justify-start rounded-2xl text-[#5E5E6F]">
-          <button type="button" className="mr-4 ml-2">
-            <BuildingOfficeIcon className="h-6 w-6" aria-hidden="true" />
+        <div className="flex items-center w-52 h-12 justify-start rounded-2xl text-[#5E5E6F] cursor-pointer hover:text-white hover:bg-[#7070FF]">
+          <button type="button" className="ml-2 mr-4">
+            <BuildingOfficeIcon className="w-6 h-6" aria-hidden="true" />
           </button>
-          <p lassName="m-1.5 text-slate-500 font-medium">Employers</p>
+          <p lassname="m-1.5 text-slate-500 font-medium">Employers</p>
         </div>
       </div>
-      <div className="flex flex-col w-full items-center">
-        <div className="flex items-center w-52 h-12 justify-start rounded-2xl text-[#5E5E6F]">
-          <button type="button" className="mr-4 ml-2">
-            <Cog8ToothIcon className="h-6 w-6" aria-hidden="true" />
+      <div className="flex flex-col items-center w-full">
+        <div className="flex items-center w-52 h-12 justify-start rounded-2xl text-[#5E5E6F] cursor-pointer hover:text-white hover:bg-[#7070FF]">
+          <button type="button" className="ml-2 mr-4">
+            <Cog8ToothIcon className="w-6 h-6" aria-hidden="true" />
           </button>
-          <p lassName="m-1.5 text-slate-500 font-medium">Messages</p>
+          <p lassname="m-1.5 text-slate-500 font-medium">Settings</p>
         </div>
-        <div className="flex items-center w-52 h-12 justify-start rounded-2xl text-[#5E5E6F]">
-          <button type="button" className="mr-4 ml-2">
-            <HomeIcon className="h-6 w-6" aria-hidden="true" />
+        <div className="flex items-center w-52 h-12 justify-start rounded-2xl text-[#5E5E6F] cursor-pointer hover:text-white hover:bg-[#7070FF]">
+          <button type="button" className="ml-2.5 mr-4">
+            <ArrowRightStartOnRectangleIcon className="w-6 h-6" aria-hidden="true" />
           </button>
-          <p lassName="m-1.5 text-slate-500 font-medium">Employers</p>
+          <p lassname="m-1.5 text-slate-500 font-medium">Log Out</p>
         </div>
       </div>
     </div>
