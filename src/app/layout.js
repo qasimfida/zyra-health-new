@@ -1,10 +1,10 @@
 "use client";
 
 import "./globals.css";
-import NavBar from "@/components/Navbar/NavBar.jsx";
-import SideBar from "@/components/SideBar/SideBar.jsx";
-import RightBar from "@/components/RightBar/RightBar.jsx";
-import Footer from "@/components/Footer/Footer.jsx";
+import NavBar from "@/components/Navbar/NavBar";
+import SideBar from "@/components/SideBar/SideBar";
+import RightBar from "@/components/RightBar/RightBar";
+import Footer from "@/components/Footer/Footer";
 
 export default function RootLayout({ children }) {
   return (
