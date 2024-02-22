@@ -1,13 +1,14 @@
 "use client";
 
+import { ImageIcon } from "@/svgs";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 const RightBar = () => {
   return (
     <div className="flex flex-col min-h-[90vh] w-[calc(100%-3rem)] md:w-[calc(100%-19.5rem)] ml-auto lg:ml-0 mr-6 lg:mr-0   lg:w-[18.8rem] relative  lg:sticky lg:top-[6rem] z-10 ">
       <div className="flex flex-col items-center w-full mb-6 text-center bg-white rounded-2xl">
-        <div className="flex justify-center py-2.5 flex-col w-full">
-          <img src={"/images/career.png"} alt="Career Image" layout="fill" />
+        <div className="flex items-center py-2.5 flex-col w-full">
+          <ImageIcon  aria-hidden="true" />
         </div>
         <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-0.5">
           Your career belongs to you

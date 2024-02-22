@@ -1,24 +1,22 @@
 "use client";
 
 import {
-    QuestionMarkCircleIcon,
-    ClockIcon,
-    UserCircleIcon,
-    ChartPieIcon,
     ArrowRightIcon,
 } from "@heroicons/react/24/outline";
 
+import { QuestionIcon, SheildIcon, CoverIcon, LockIcon } from "../../svgs/index";
+
 const Footer = () => {
   return (
-    <footer className="w-full px-12 overflow-hidden bg-white">
-      <div className="flex flex-row gap-8">
-        <div>
+    <footer className="w-full px-12 bg-white">
+      <div className="flex sm:flex-row flex-col gap-8 flex-wrap justify-center items-center">
+        <div className="w-[20rem]">
           <div className="flex justify-center pt-5">
             <button
               type="button"
               className=" text-[#7070FF] bg-white rounded-full"
             >
-              <QuestionMarkCircleIcon className="w-10 h-10" aria-hidden="true" />
+              <QuestionIcon className="w-10 h-10" aria-hidden="true" />
             </button>
           </div>
           <div className="flex flex-col items-center justify-center">
@@ -31,20 +29,20 @@ const Footer = () => {
             </p>
             <button
           type="button"
-          className="rounded-3xl flex h-10 px-9 items-center text-[16px] font-medium text-[#7070FF] mb-4 justify-center"
+          className="rounded-3xl flex h-10 px-9 items-center text-[16px] font-medium text-[#7070FF] mb-4 justify-center leading-6"
         >
           Show More
           <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
         </button>
           </div>
         </div>
-        <div>
+        <div className="w-[20rem]">
           <div className="flex justify-center pt-5">
             <button
               type="button"
               className=" text-[#7070FF] bg-white rounded-full"
             >
-              <ClockIcon className="w-10 h-10" aria-hidden="true" />
+              <SheildIcon className="w-10 h-10" aria-hidden="true" />
             </button>
           </div>
           <div className="flex flex-col items-center justify-center">
@@ -57,24 +55,24 @@ const Footer = () => {
             </p>
             <button
           type="button"
-          className="rounded-3xl flex h-10 px-9 items-center text-[16px] font-medium text-[#7070FF] mb-4 justify-center"
+          className="rounded-3xl flex h-10 px-9 items-center text-[16px] font-medium text-[#7070FF] mb-4 justify-center leading-6"
         >
           Show More
           <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
         </button>
           </div>
         </div>
-        <div>
+        <div className="w-[20rem]">
           <div className="flex justify-center pt-5">
             <button
               type="button"
               className=" text-[#7070FF] bg-white rounded-full"
             >
-              <UserCircleIcon className="w-10 h-10" aria-hidden="true" />
+              <CoverIcon className="w-10 h-10" aria-hidden="true" />
             </button>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-2">
+            <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-2 text-center">
             Rules of Engagement
             </h4>
 
@@ -83,20 +81,20 @@ const Footer = () => {
             </p>
             <button
           type="button"
-          className="rounded-3xl flex h-10 px-9 items-center text-[16px] font-medium text-[#7070FF] mb-4 justify-center"
+          className="rounded-3xl flex h-10 px-9 items-center text-[16px] font-medium text-[#7070FF] mb-4 justify-center leading-6"
         >
           Show More
           <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
         </button>
           </div>
         </div>
-        <div>
+        <div className="w-[20rem]">
           <div className="flex justify-center pt-5">
             <button
               type="button"
               className=" text-[#7070FF] bg-white rounded-full"
             >
-              <ChartPieIcon className="w-10 h-10" aria-hidden="true" />
+              <LockIcon className="w-10 h-10" aria-hidden="true" />
             </button>
           </div>
           <div className="flex flex-col items-center justify-center">
@@ -109,7 +107,7 @@ const Footer = () => {
             </p>
             <button
           type="button"
-          className="rounded-3xl flex h-10 px-9 items-center text-[16px] font-medium text-[#7070FF] mb-4 justify-center"
+          className="rounded-3xl flex h-10 px-9 items-center text-[16px] font-medium text-[#7070FF] mb-4 justify-center leading-6"
         >
           Show More
           <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
@@ -120,7 +118,7 @@ const Footer = () => {
 
       <div className="flex justify-between items-center w-full h-[67px] border-t">
         <div>
-          <h4 className="text-[14px] font-normal text-[#7070FF]">
+          <h4 className="text-[14px] font-normal text-[#7070FF] leading-[21px]">
           2023 © ZyraHealth
           </h4>
         </div>

@@ -4,113 +4,108 @@ import {
   DocumentMagnifyingGlassIcon,
   DocumentMinusIcon,
   AcademicCapIcon,
-  PencilIcon,
-  PlusIcon,
 } from "@heroicons/react/24/outline";
 
-import { IconBreifcase, AwardIcon, SettingsIcon, DocumentsIcon } from "@/svgs";
+import { IconBreifcase, AwardIcon, SettingsIcon, DocumentsIcon, EditIcon, AddIcon } from "@/svgs";
 
 export default function Home() {
   return (
     <div className="w-[calc(100%-3rem)] md:w-[calc(100%-19.5rem)] lg:w-[calc(100%-40rem)] flex flex-col justify-between sm:auto relative">
       <div className="bg-white rounded-2xl">
-        <div className="hidden">
+      <div className="sm:hidden">
           <label htmlFor="tabs" className="sr-only">
             Select your country
           </label>
           <select
             id="tabs"
-            className=" border border-gray-300 text-gray-900 text-sm block w-full p-2.5"
+            className=" border border-gray-300 text-gray-900 text-sm block w-full p-2.5 rounded-xl"
           >
             <option>Overview</option>
-            <option>Dashboard</option>
-            <option>setting</option>
-            <option>Invoioce</option>
+            <option>Credentials</option>
+            <option>Education</option>
+            <option>Experience</option>
+            <option>Documents</option>
+            <option>Skills</option>
+            <option>Preferences</option>
           </select>
         </div>
         <div>
-        <ul className="text-sm font-medium text-center text-gray-500 sm:flex min-h-[67px] overflow-hidden">
-          <li className="flex items-center w-full focus-within:z-10">
-            <a
-              href="#"
-              className="flex items-center justify-center  w-full min-h-[46px] border-r  text-[#7070FF] rounded-s-2xl"
-            >
-              <DocumentMagnifyingGlassIcon
-                className="w-5 h-5 mr-1"
-                aria-hidden="true"
-              />
-              Overview
-            </a>
-          </li>
-          <li className="flex items-center w-full focus-within:z-10">
-            <a
-              href="#"
-              className="flex items-center justify-center  w-full h-[46px] border-r hover:text-gray-700"
-            >
-              <DocumentMinusIcon className="w-5 h-5 mr-1" aria-hidden="true" />
-              Credentials
-            </a>
-          </li>
-          <li className="flex items-center w-full focus-within:z-10">
-            <a
-              href="#"
-              className="flex items-center justify-center  w-full h-[46px] border-r hover:text-gray-700"
-            >
-              <AcademicCapIcon className="w-5 h-5 mr-1" aria-hidden="true" />
-              Education
-            </a>
-          </li>
-          <li className="flex items-center w-full focus-within:z-10">
-            <a
-              href="#"
-              className="flex items-center justify-center  w-full h-[46px] border-r hover:text-gray-700"
-            >
-              <button type="button" className="mr-1">
-                <IconBreifcase className="w-6 h-6" aria-hidden="true" />
-              </button>
-              <p lassname="m-1.5 text-slate-500 font-medium">Experience</p>
-            </a>
-          </li>
-          <li className="flex items-center w-full focus-within:z-10">
-            <a
-              href="#"
-              className="flex items-center justify-center  w-full h-[46px] border-r hover:text-gray-700"
-            >
-              {/* <DocumentTextIcon className="w-6 h-6 mr-1" aria-hidden="true" />
-            Documents */}
-
-              <button type="button" className="mr-1">
-                <DocumentsIcon className="w-6 h-6" aria-hidden="true" />
-              </button>
-              <p lassname="m-1.5 text-slate-500 font-medium">Documents</p>
-            </a>
-          </li>
-          <li className="flex items-center w-full focus-within:z-10">
-            <a
-              href="#"
-              className="flex items-center justify-center  w-full h-[46px] border-r hover:text-gray-700"
-            >
-              {/* <AcademicCapIcon className="w-6 h-6 mr-1" aria-hidden="true" />
-            Skills */}
-              <button type="button" className="mr-1">
-                <AwardIcon className="w-6 h-6" aria-hidden="true" />
-              </button>
-              <p lassname="m-1.5 text-slate-500 font-medium">Skills</p>
-            </a>
-          </li>
-          <li className="flex items-center w-full focus-within:z-10">
-            <a
-              href="#"
-              className="flex items-center justify-center  w-full h-[46px] hover:text-gray-700 rounded-e-2xl"
-            >
-              {/* <IconBreifcase className="fill-current" aria-hidden="true" />Preferences */}
-              <button type="button" className="mr-1">
-                <SettingsIcon className="w-6 h-6" aria-hidden="true" />
-              </button>
-              <p lassname="m-1.5 text-slate-500 font-medium">Preferences</p>
-            </a>
-          </li>
-        </ul>
+          <ul className="text-sm font-medium text-center text-gray-500 sm:flex min-h-[67px] overflow-hidden hidden">
+            <li className="flex items-center w-full focus-within:z-10">
+              <a
+                href="#"
+                className="flex items-center justify-center  w-full min-h-[46px] border-r  text-[#7070FF] rounded-s-2xl"
+              >
+                <DocumentMagnifyingGlassIcon
+                  className="w-5 h-5 mr-1"
+                  aria-hidden="true"
+                />
+                Overview
+              </a>
+            </li>
+            <li className="flex items-center w-full focus-within:z-10">
+              <a
+                href="#"
+                className="flex items-center justify-center  w-full h-[46px] border-r hover:text-gray-700"
+              >
+                <DocumentMinusIcon className="w-5 h-5 mr-1" aria-hidden="true" />
+                Credentials
+              </a>
+            </li>
+            <li className="flex items-center w-full focus-within:z-10">
+              <a
+                href="#"
+                className="flex items-center justify-center  w-full h-[46px] border-r hover:text-gray-700"
+              >
+                <AcademicCapIcon className="w-5 h-5 mr-1" aria-hidden="true" />
+                Education
+              </a>
+            </li>
+            <li className="flex items-center w-full focus-within:z-10">
+              <a
+                href="#"
+                className="flex items-center justify-center  w-full h-[46px] border-r hover:text-gray-700"
+              >
+                <button type="button" className="mr-1">
+                  <IconBreifcase className="w-6 h-6" aria-hidden="true" />
+                </button>
+                <p lassname="m-1.5 text-slate-500 font-medium">Experience</p>
+              </a>
+            </li>
+            <li className="flex items-center w-full focus-within:z-10">
+              <a
+                href="#"
+                className="flex items-center justify-center  w-full h-[46px] border-r hover:text-gray-700"
+              >
+                <button type="button" className="mr-1">
+                  <DocumentsIcon className="w-6 h-6" aria-hidden="true" />
+                </button>
+                <p lassname="m-1.5 text-slate-500 font-medium">Documents</p>
+              </a>
+            </li>
+            <li className="flex items-center w-full focus-within:z-10">
+              <a
+                href="#"
+                className="flex items-center justify-center  w-full h-[46px] border-r hover:text-gray-700"
+              >
+                <button type="button" className="mr-1">
+                  <AwardIcon className="w-6 h-6" aria-hidden="true" />
+                </button>
+                <p lassname="m-1.5 text-slate-500 font-medium">Skills</p>
+              </a>
+            </li>
+            <li className="flex items-center w-full focus-within:z-10">
+              <a
+                href="#"
+                className="flex items-center justify-center  w-full h-[46px] hover:text-gray-700 rounded-e-2xl"
+              >
+                <button type="button" className="mr-1">
+                  <SettingsIcon className="w-6 h-6" aria-hidden="true" />
+                </button>
+                <p lassname="m-1.5 text-slate-500 font-medium">Preferences</p>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -121,12 +116,12 @@ export default function Home() {
               Personal Information
             </h4>
           </div>
-          <div>
+          <div className="flex items-center">
             <button
               type="button"
-              className="p-2 text-white bg-[#7070FF] rounded-full hover:text-black hover:border-gray-700"
+              className="text-white"
             >
-              <PencilIcon className="w-5 h-5" aria-hidden="true" />
+              <EditIcon className="w-5 h-5" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -162,12 +157,12 @@ export default function Home() {
               Contact Information
             </h4>
           </div>
-          <div>
+          <div className="flex items-center">
             <button
               type="button"
-              className="p-2 text-white bg-[#7070FF] rounded-full hover:text-black hover:border-gray-700"
+              className="text-white"
             >
-              <PencilIcon className="w-5 h-5" aria-hidden="true" />
+              <EditIcon className="w-5 h-5" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -192,20 +187,14 @@ export default function Home() {
             </h4>
           </div>
           <div>
-            {/* <button
-              type="button"
-              className="p-2 text-white bg-[#7070FF] rounded-full hover:text-black hover:border-gray-700"
-            >
-              <PencilIcon className="w-5 h-5" aria-hidden="true" />
-            </button> */}
           </div>
         </div>
         <div className="flex justify-center pt-5">
           <button
             type="button"
-            className="p-2 text-white bg-[#7070FF] rounded-full hover:text-black hover:border-gray-700"
+            className="text-white"
           >
-            <PlusIcon className="w-5 h-5" aria-hidden="true" />
+            <AddIcon className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
         <div className="flex flex-col items-center justify-center">
@@ -228,20 +217,14 @@ export default function Home() {
             </h4>
           </div>
           <div>
-            {/* <button
-              type="button"
-              className="p-2 text-white bg-[#7070FF] rounded-full hover:text-black hover:border-gray-700"
-            >
-              <PencilIcon className="w-5 h-5" aria-hidden="true" />
-            </button> */}
           </div>
         </div>
         <div className="flex justify-center pt-5">
           <button
             type="button"
-            className="p-2 text-white bg-[#7070FF] rounded-full hover:text-black hover:border-gray-700"
+            className="text-white"
           >
-            <PlusIcon className="w-5 h-5" aria-hidden="true" />
+            <AddIcon className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
         <div className="flex flex-col items-center justify-center">
@@ -263,20 +246,14 @@ export default function Home() {
             </h4>
           </div>
           <div>
-            {/* <button
-              type="button"
-              className="p-2 text-white bg-[#7070FF] rounded-full hover:text-black hover:border-gray-700"
-            >
-              <PencilIcon className="w-5 h-5" aria-hidden="true" />
-            </button> */}
           </div>
         </div>
         <div className="flex justify-center pt-5">
           <button
             type="button"
-            className="p-2 text-white bg-[#7070FF] rounded-full hover:text-black hover:border-gray-700"
+            className="text-white"
           >
-            <PlusIcon className="w-5 h-5" aria-hidden="true" />
+            <AddIcon className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
         <div className="flex flex-col items-center justify-center">
@@ -299,32 +276,26 @@ export default function Home() {
             </h4>
           </div>
           <div>
-            {/* <button
-              type="button"
-              className="p-2 text-white bg-[#7070FF] rounded-full hover:text-black hover:border-gray-700"
-            >
-              <PencilIcon className="w-5 h-5" aria-hidden="true" />
-            </button> */}
           </div>
         </div>
         <div className="flex justify-center pt-5">
           <button
             type="button"
-            className="p-2 text-white bg-[#7070FF] rounded-full hover:text-black hover:border-gray-700"
+            className="text-white"
           >
-            <PlusIcon className="w-5 h-5" aria-hidden="true" />
+            <AddIcon className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
         <div className="flex flex-col items-center justify-center">
           <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-4">
-          Drop a Line
+            Drop a Line
 
           </h4>
 
           <p className="text-[16px] text-[#5E5E6F] font-medium mb-8">
-          Questions or feedback? We are all ears and ready to help!
+            Questions or feedback? We are all ears and ready to help!
           </p>
-          
+
         </div>
       </div>
     </div>
