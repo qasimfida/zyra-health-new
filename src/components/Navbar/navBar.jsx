@@ -4,10 +4,13 @@ import { Bars3Icon, BellIcon, XMarkIcon, ChatBubbleLeftIcon, ChatBubbleLeftRight
 import Image from "next/image";
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Home', href: '#', current: true },
+  { name: 'Profile', href: '#', current: false },
+  { name: 'My Work', href: '#', current: false },
+  { name: 'Messages', href: '#', current: false },
+  { name: 'Employers', href: '#', current: false },
+  { name: 'Settings', href: '#', current: false },
+  { name: 'Log Out', href: '#', current: false },
 ];
 
 const NavBar = () => {
@@ -16,7 +19,7 @@ const NavBar = () => {
       {({ open }) => (
         <>
           <div className="px-2 mx-auto sm:px-6 lg:px-8">
-            <div className="relative flex items-center justify-between h-20">
+            <div className="relative flex items-center justify-between h-[4.6rem]">
               <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-[#7070FF] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   {open ? <XMarkIcon className="block w-6 h-6" aria-hidden="true" /> : <Bars3Icon className="block w-6 h-6" aria-hidden="true" />}

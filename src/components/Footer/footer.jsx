@@ -6,14 +6,11 @@ import {
     UserCircleIcon,
     ChartPieIcon,
     ArrowRightIcon,
-  PlusIcon,
 } from "@heroicons/react/24/outline";
-
-import { IconBreifcase, AwardIcon, SettingsIcon, DocumentsIcon } from "@/svgs";
 
 const Footer = () => {
   return (
-    <div className="w-full px-12 bg-white">
+    <footer className="w-full px-12 overflow-hidden bg-white">
       <div className="flex flex-row gap-8">
         <div>
           <div className="flex justify-center pt-5">
@@ -133,7 +130,7 @@ const Footer = () => {
           </h4>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

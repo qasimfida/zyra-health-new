@@ -12,7 +12,7 @@ import {
 
 const SideBar = () => {
   return (
-    <div className="hidden md:flex lg:flex bg-white max-w-60 rounded-2xl py-10  flex-col min-h-[80vh] justify-between sticky left-6 top-24 z-10">
+    <div className="hidden md:flex lg:flex bg-white  sticky top-[6rem] w-60 rounded-2xl py-10  flex-col min-h-[calc(100vh-20.5rem)] h-auto justify-between z-10">
       <div className="flex flex-col items-center w-full">
         <div className="flex items-center w-52 h-12 justify-start bg-[#7070FF] rounded-2xl text-white cursor-pointer">
           <button type="button" className="ml-2 mr-4">
@@ -64,6 +64,6 @@ const SideBar = () => {
       </div>
     </div>
   );
-};
+};  
 
 export default SideBar;

@@ -16,11 +16,12 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <main className=" min-h-[220vh]">
-          <NavBar />
+      <NavBar />
+
+        <main className="relative flex h-auto min-h-[calc(100vh-8rem)]  pt-[6rem] gap-6 justify-center mb-6 items-start flex-wrap">
           <SideBar />
-          <RightBar />
           {children}
+          <RightBar />
         </main>
         <Footer />
       </body>

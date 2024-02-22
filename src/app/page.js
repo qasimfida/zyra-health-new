@@ -12,9 +12,9 @@ import { IconBreifcase, AwardIcon, SettingsIcon, DocumentsIcon } from "@/svgs";
 
 export default function Home() {
   return (
-    <div className="w-fit md:w-[calc(100vw-300px)] lg:w-[calc(100vw-656px)] flex flex-col justify-between sm:auto md:absolute lg:absolute left-72 top-24">
+    <div className="w-[calc(100%-3rem)] md:w-[calc(100%-19.5rem)] lg:w-[calc(100%-40rem)] flex flex-col justify-between sm:auto relative">
       <div className="bg-white rounded-2xl">
-        <div className="sm:hidden">
+        <div className="hidden">
           <label htmlFor="tabs" className="sr-only">
             Select your country
           </label>
@@ -29,7 +29,7 @@ export default function Home() {
           </select>
         </div>
         <div>
-        <ul className="hidden text-sm font-medium text-center text-gray-500 sm:flex min-h-[67px]">
+        <ul className="text-sm font-medium text-center text-gray-500 sm:flex min-h-[67px] overflow-hidden">
           <li className="flex items-center w-full focus-within:z-10">
             <a
               href="#"
