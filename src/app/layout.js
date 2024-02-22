@@ -1,10 +1,10 @@
 "use client";
 
 import "./globals.css";
-import NavBar from "@/components/Navbar/NavBar";
-import SideBar from "@/components/SideBar/SideBar";
-import RightBar from "@/components/RightBar/RightBar";
-import Footer from "@/components/Footer/Footer";
+import NavBar from "@/components/Navbar/NavBar.jsx";
+import SideBar from "@/components/SideBar/SideBar.jsx";
+import RightBar from "@/components/RightBar/RightBar.jsx";
+import Footer from "@/components/Footer/Footer.jsx";
 
 export default function RootLayout({ children }) {
   return (
@@ -17,7 +17,6 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <NavBar />
-
         <main className="relative flex h-auto min-h-[calc(100vh-8rem)]  pt-[6rem] gap-6 justify-center mb-6 items-start flex-wrap">
           <SideBar />
           {children}
