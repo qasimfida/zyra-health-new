@@ -20,7 +20,7 @@ const SideBar = () => {
           <button type="button" className="ml-2 mr-4">
             <ProfileIcon className="w-5 h-5"  aria-hidden="true" />
           </button>
-          <p lassname="m-1.5 text-slate-500 font-medium">Home</p>
+          <p lassname="m-1.5 text-slate-500 font-medium">Profile</p>
         </div>
         <div className="flex items-center w-52 h-12 justify-start rounded-2xl text-[#5E5E6F] cursor-pointer hover:text-white hover:bg-[#7070FF]">
           <button type="button" className="ml-2 mr-4">
