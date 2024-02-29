@@ -34,7 +34,7 @@ const NavBar = () => {
                 <button type="button" className="mr-2 text-gray-400 bg-white">
                   <InfoIcon className="w-4 h-4" aria-hidden="true" />
                 </button>
-                <button type="button" className=" mr-2 text-gray-400 bg-white">
+                <button type="button" className="mr-2 text-gray-400 bg-white ">
                   <ChatLeftIcon className="w-4 h-4" aria-hidden="true" />
                 </button>
                 <button type="button" className="text-gray-400 bg-white">
