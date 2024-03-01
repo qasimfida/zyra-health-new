@@ -31,16 +31,16 @@ const NavBar = () => {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button type="button" className="mr-2 text-gray-400 bg-white">
+                <button type="button" className="mr-4 text-gray-400 bg-white">
                   <InfoIcon className="w-4 h-4" aria-hidden="true" />
                 </button>
-                <button type="button" className="mr-2 text-gray-400 bg-white ">
+                <button type="button" className="mr-4 text-gray-400 bg-white ">
                   <ChatLeftIcon className="w-4 h-4" aria-hidden="true" />
                 </button>
-                <button type="button" className="text-gray-400 bg-white">
+                <button type="button" className="mr-4 text-gray-400 bg-white">
                   <BellIcon className="w-4 h-4" aria-hidden="true" />
                 </button>
-                <Menu as="div" className="relative ml-3">
+                <Menu as="div" className="relative">
                   <Menu.Button className="flex items-center text-sm bg-white rounded-full focus:outline-none">
                     <img className="w-12 h-12 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
                     <p className="mx-2 text-slate-500">James Bond</p>
