@@ -18,6 +18,7 @@ import {
   TimeTagIcon,
   WarningTagIcon,
 } from "@/svgs";
+import AddCardComponent from "../AddCardComponent/AddCardComponent";
 
 const Credentials = () => {
   return (
@@ -121,31 +122,13 @@ const Credentials = () => {
       </div>
 
       {/* Licenses Empty Data Start */}
-      <div className="px-5 pb-2 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-            Add Licenses
-            </h4>
-          </div>
-        </div>
-        <div className="flex justify-center pt-5">
-          <button
-            type="button"
-            className="text-white"
-          >
-            <AddIcon className="w-5 h-5" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-4">
-          Add Licenses
-          </h4>
-          <p className="text-[16px] text-[#5E5E6F] font-medium mb-8">
-          Adding your current licenses is critical to ensure eligibility for matching job offers
-          </p>
-        </div>
-      </div>
+      <AddCardComponent
+        title={"Licenses"}
+        subTitle={"Add Licenses"}
+        description={
+          "Adding your current licenses is critical to ensure eligibility for matching job offers"
+        }
+      />
       {/* Licenses Empty Data End */}
 
       {/* Licences Component start */}
@@ -332,39 +315,21 @@ const Credentials = () => {
       {/* Licences Component End */}
 
       {/* Basic Certifications Empty Data Start */}
-      <div className="px-5 pb-2 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-            Basic Certifications
-            </h4>
-          </div>
-        </div>
-        <div className="flex justify-center pt-5">
-          <button
-            type="button"
-            className="text-white"
-          >
-            <AddIcon className="w-5 h-5" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-4">
-          Basic Certifications
-          </h4>
-          <p className="text-[16px] text-[#5E5E6F] font-medium mb-8">
-          List basic certifications you have earned to demonstrate proficiency and attract employers
-          </p>
-        </div>
-      </div>
+      <AddCardComponent
+        title={"Basic Certifications"}
+        subTitle={"Add Basic Certifications"}
+        description={
+          "List basic certifications you have earned to demonstrate proficiency and attract employers"
+        }
+      />
       {/* Basic Certifications Empty Data End */}
-      
+
       {/* Basic Certifications Component start */}
       <div className="px-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between items-center w-full min-h-[67px] border-b">
           <div>
             <h4 className="text-[19px] font-semibold text-[#7070FF]">
-            Basic Certifications
+              Basic Certifications
             </h4>
           </div>
           <div className="flex items-center">
@@ -378,7 +343,7 @@ const Credentials = () => {
           <div className="flex justify-between items-center w-full min-h-[40px]">
             <div>
               <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-              Advanced Cardiovascular Life Support (ACLS)
+                Advanced Cardiovascular Life Support (ACLS)
               </h4>
             </div>
             <div className="flex items-center mr-[12px]">
@@ -389,7 +354,8 @@ const Credentials = () => {
           </div>
           <div className="mb-4">
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Expiry Date: </span>September 2025
+              <span className="text-[#5E5E6F]">Expiry Date: </span>September
+              2025
             </p>
             <div className="flex flex-wrap w-full gap-1.5">
               <button
@@ -418,7 +384,7 @@ const Credentials = () => {
           <div className="flex justify-between items-center w-full min-h-[40px]">
             <div>
               <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-              Advanced Cardiovascular Life Support (ACLS)
+                Advanced Cardiovascular Life Support (ACLS)
               </h4>
             </div>
             <div className="flex items-center mr-[12px]">
@@ -429,7 +395,8 @@ const Credentials = () => {
           </div>
           <div className="mb-4">
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Expiry Date: </span>September 2025
+              <span className="text-[#5E5E6F]">Expiry Date: </span>September
+              2025
             </p>
             <div className="flex flex-wrap w-full gap-1.5">
               <button
@@ -457,39 +424,21 @@ const Credentials = () => {
       {/* Basic Certifications Component End */}
 
       {/* Speciality Certifications Empty Data Start */}
-      <div className="px-5 pb-2 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-            Speciality Certifications
-            </h4>
-          </div>
-        </div>
-        <div className="flex justify-center pt-5">  
-          <button
-            type="button"
-            className="text-white"
-          >
-            <AddIcon className="w-5 h-5" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-4">
-          Add Speciality Certifications
-          </h4>
-          <p className="text-[16px] text-[#5E5E6F] font-medium mb-8">
-          Adding specialty certifications is important to validate your expertise and professional readiness
-          </p>
-        </div>
-      </div>
-      {/* Basic Certifications Empty Data End */}
+      <AddCardComponent
+        title={"Speciality Certifications"}
+        subTitle={"Add Speciality Certifications"}
+        description={
+          "Adding specialty certifications is important to validate your expertise and professional readiness"
+        }
+      />
+      {/* Speciality Empty Data End */}
 
       {/* Speciality Certifications Component start */}
       <div className="px-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between items-center w-full min-h-[67px] border-b">
           <div>
             <h4 className="text-[19px] font-semibold text-[#7070FF]">
-            Specialty Certifications
+              Specialty Certifications
             </h4>
           </div>
           <div className="flex items-center">
@@ -503,7 +452,7 @@ const Credentials = () => {
           <div className="flex justify-between items-center w-full min-h-[40px]">
             <div>
               <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-              Cardiac Medicine Certification
+                Cardiac Medicine Certification
               </h4>
             </div>
             <div className="flex items-center mr-[12px]">
@@ -514,7 +463,8 @@ const Credentials = () => {
           </div>
           <div className="mb-4">
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Issuing Institution: </span>American Association of Critical Care Nurses (AACN)
+              <span className="text-[#5E5E6F]">Issuing Institution: </span>
+              American Association of Critical Care Nurses (AACN)
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
               <span className="text-[#5E5E6F]">Expiry Date: </span>April 2027
@@ -537,7 +487,7 @@ const Credentials = () => {
           <div className="flex justify-between items-center w-full min-h-[40px]">
             <div>
               <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-              Trauma Certified Registered Nurse (TCRN)
+                Trauma Certified Registered Nurse (TCRN)
               </h4>
             </div>
             <div className="flex items-center mr-[12px]">
@@ -548,7 +498,8 @@ const Credentials = () => {
           </div>
           <div className="mb-4">
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Issuing Institution: </span>American Board of Neuroscience Nursing (ABNN)
+              <span className="text-[#5E5E6F]">Issuing Institution: </span>
+              American Board of Neuroscience Nursing (ABNN)
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
               <span className="text-[#5E5E6F]">Expiry Date: </span>May 2025
@@ -570,47 +521,13 @@ const Credentials = () => {
       {/* Speciality Certifications Component End */}
 
       {/* Other Certifications Component start */}
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-            Other Certifications
-            </h4>
-        </div>
-
-        <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full min-h-[40px]">
-            <div>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-              Test Certification
-              </h4>
-            </div>
-            <div className="flex items-center mr-[12px]">
-              <button type="button" className="text-white">
-                <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-              </button>
-            </div>
-          </div>
-          <div className="mb-4">
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Issuing Institution: </span>Test Institution of Massachusetts
-            </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Expiry Date: </span>September 2025
-            </p>
-            <div className="flex flex-wrap w-full gap-1.5">
-              <button
-                type="button"
-                className="rounded-3xl border border-[#299DCF] flex items-center text-[14px] font-medium text-[#299DCF] h-[30px] py-[5px] px-[10px]"
-              >
-                <span className="mr-2">
-                  <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
-                </span>
-                Name of Document
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <AddCardComponent
+        title={"Other Certifications"}
+        subTitle={"Add Other Certifications"}
+        description={
+          "Include other certifications you have earned to boost your professional standing"
+        }
+      />
       {/* other Certifications Component End */}
 
       {/* Other Certifications Component start */}
@@ -618,7 +535,7 @@ const Credentials = () => {
         <div className="flex justify-between items-center w-full min-h-[67px] border-b">
           <div>
             <h4 className="text-[19px] font-semibold text-[#7070FF]">
-            Other Certifications
+              Other Certifications
             </h4>
           </div>
           <div className="flex items-center">
@@ -632,7 +549,7 @@ const Credentials = () => {
           <div className="flex justify-between items-center w-full min-h-[40px]">
             <div>
               <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-              Test Certification
+                Test Certification
               </h4>
             </div>
             <div className="flex items-center mr-[12px]">
@@ -643,10 +560,12 @@ const Credentials = () => {
           </div>
           <div className="mb-4">
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Issuing Institution: </span>Test Institution of Massachusetts
+              <span className="text-[#5E5E6F]">Issuing Institution: </span>Test
+              Institution of Massachusetts
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Expiry Date: </span>September 2025
+              <span className="text-[#5E5E6F]">Expiry Date: </span>September
+              2025
             </p>
             <div className="flex flex-wrap w-full gap-1.5">
               <button
@@ -663,7 +582,6 @@ const Credentials = () => {
         </div>
       </div>
       {/* other Certifications Component End */}
-
     </div>
   );
 };

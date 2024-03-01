@@ -20,6 +20,7 @@ import {
   PhoneIcon,
   AddPlusIcon,
 } from "@/svgs";
+import AddCardComponent from "../AddCardComponent/AddCardComponent";
 
 const Experience = () => {
   return (
@@ -179,29 +180,13 @@ const Experience = () => {
       {/* Experience Summary Component End */}
 
       {/* Add Work Experience Empty Data Start */}
-      <div className="px-5 pb-2 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Add Work Experience
-            </h4>
-          </div>
-        </div>
-        <div className="flex justify-center pt-5">
-          <button type="button" className="text-white">
-            <AddIcon className="w-5 h-5" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-4">
-            Add Add Work Experience
-          </h4>
-          <p className="text-[16px] text-[#5E5E6F] font-medium mb-8">
-            Find the right job by adding past and current work experience on
-            your profile
-          </p>
-        </div>
-      </div>
+      <AddCardComponent
+        title={"Work Experience"}
+        subTitle={"Add Work Experience"}
+        description={
+          "Find the right job by adding past and current work experience on your profile"
+        }
+      />
       {/* Add Work Experience Empty Data End */}
 
       {/* Work Experience Component start */}
@@ -660,28 +645,13 @@ const Experience = () => {
       {/* Work Experience Component End */}
 
       {/* Add Add Professional Activities Empty Data Start */}
-      <div className="px-5 pb-2 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Add Add Professional Activities
-            </h4>
-          </div>
-        </div>
-        <div className="flex justify-center pt-5">
-          <button type="button" className="text-white">
-            <AddIcon className="w-5 h-5" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-4">
-            Add Professional Activities
-          </h4>
-          <p className="text-[16px] text-[#5E5E6F] font-medium mb-8">
-            Attract employers by adding professional activities on your profile
-          </p>
-        </div>
-      </div>
+      <AddCardComponent
+        title={"Professional Activities"}
+        subTitle={"Add Professional Activities"}
+        description={
+          "Attract employers by adding professional activities on your profile"
+        }
+      />
       {/* Add Work Experience Empty Data End */}
 
       {/* Professional Activities Component start */}
@@ -1014,28 +984,13 @@ const Experience = () => {
       {/* Professional Activities Component End */}
 
       {/* Add References Empty Data Start */}
-      <div className="px-5 pb-2 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Add References
-            </h4>
-          </div>
-        </div>
-        <div className="flex justify-center pt-5">
-          <button type="button" className="text-white">
-            <AddIcon className="w-5 h-5" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-4">
-            Add Professional Activities
-          </h4>
-          <p className="text-[16px] text-[#5E5E6F] font-medium mb-8">
-            Boost your credibility with employers by adding references to your profile.
-          </p>
-        </div>
-      </div>
+      <AddCardComponent
+        title={"References"}
+        subTitle={"Add References"}
+        description={
+          "Boost your credibility with employers by adding references to your profile."
+        }
+      />
       {/* Add References Empty Data End */}
 
       {/* Add References Component start */}
@@ -1071,7 +1026,8 @@ const Experience = () => {
               <span className="text-[#5E5E6F]">Reference Type: </span>Manager
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">For: </span>Clinical Nurse Specialist (CNS) – Oncology
+              <span className="text-[#5E5E6F]">For: </span>Clinical Nurse
+              Specialist (CNS) – Oncology
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
               <span className="text-[#5E5E6F]">Reference Title: </span>
@@ -1081,12 +1037,16 @@ const Experience = () => {
               <span className="text-[#5E5E6F]">Years Known: </span>3 years
             </p>
             <p className="text-[16px] text-[#7070FF] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Reference Work Email Address: </span>Kimberly.green@cityhealth.com
+              <span className="text-[#5E5E6F]">
+                Reference Work Email Address:{" "}
+              </span>
+              Kimberly.green@cityhealth.com
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Reference Phone Number: </span>617-777-9090
+              <span className="text-[#5E5E6F]">Reference Phone Number: </span>
+              617-777-9090
             </p>
-            
+
             <div className="flex flex-wrap w-full gap-1.5">
               <button
                 type="button"
@@ -1095,7 +1055,7 @@ const Experience = () => {
                 <span className="mr-2">
                   <PhoneIcon className="w-5 h-5" aria-hidden="true" />
                 </span>
-                Consent to Reach Out  
+                Consent to Reach Out
               </button>
             </div>
           </div>
@@ -1119,7 +1079,8 @@ const Experience = () => {
               <span className="text-[#5E5E6F]">Reference Type: </span>Manager
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">For: </span>Clinical Nurse Specialist (CNS) – Oncology
+              <span className="text-[#5E5E6F]">For: </span>Clinical Nurse
+              Specialist (CNS) – Oncology
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
               <span className="text-[#5E5E6F]">Reference Title: </span>
@@ -1129,12 +1090,16 @@ const Experience = () => {
               <span className="text-[#5E5E6F]">Years Known: </span>3 years
             </p>
             <p className="text-[16px] text-[#7070FF] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Reference Work Email Address: </span>Kimberly.green@cityhealth.com
+              <span className="text-[#5E5E6F]">
+                Reference Work Email Address:{" "}
+              </span>
+              Kimberly.green@cityhealth.com
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Reference Phone Number: </span>617-777-9090
+              <span className="text-[#5E5E6F]">Reference Phone Number: </span>
+              617-777-9090
             </p>
-            
+
             <div className="flex flex-wrap w-full gap-1.5">
               <button
                 type="button"
@@ -1143,38 +1108,22 @@ const Experience = () => {
                 <span className="mr-2">
                   <PhoneDisconnectIcon className="w-5 h-5" aria-hidden="true" />
                 </span>
-                Consent to Reach Out  
+                Consent to Reach Out
               </button>
             </div>
           </div>
         </div>
-
       </div>
       {/* Add References Component End */}
 
       {/* Add Tech Proficiency Empty Data Start */}
-      <div className="px-5 pb-2 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Add Tech Proficiency
-            </h4>
-          </div>
-        </div>
-        <div className="flex justify-center pt-5">
-          <button type="button" className="text-white">
-            <AddIcon className="w-5 h-5" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-4">
-            Add Professional Activities
-          </h4>
-          <p className="text-[16px] text-[#5E5E6F] font-medium mb-8">
-          Enhance your profile by listing tools and apps you have used in past roles.
-          </p>
-        </div>
-      </div>
+      <AddCardComponent
+        title={"Tech Proficiency"}
+        subTitle={"Add Tech Proficiency"}
+        description={
+          "Enhance your profile by listing tools and apps you have used in past roles."
+        }
+      />
       {/* Add Tech Proficiency Empty Data End */}
 
       {/* Add Tech Proficiency Component start */}
@@ -1182,7 +1131,7 @@ const Experience = () => {
         <div className="flex justify-between items-center w-full min-h-[67px] border-b">
           <div>
             <h4 className="text-[19px] font-semibold text-[#7070FF]">
-            Tech Proficiency
+              Tech Proficiency
             </h4>
           </div>
           <div className="flex items-center">
@@ -1196,7 +1145,7 @@ const Experience = () => {
           <div className="flex justify-between items-center w-full min-h-[40px]">
             <div>
               <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-              Electronic Health Records
+                Electronic Health Records
               </h4>
             </div>
             <div className="flex items-center mr-[12px]">
@@ -1207,16 +1156,18 @@ const Experience = () => {
           </div>
           <div className="mb-4">
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Application Name:  </span>Allscripts
+              <span className="text-[#5E5E6F]">Application Name: </span>
+              Allscripts
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Proficiency Level: </span>Intermediate
+              <span className="text-[#5E5E6F]">Proficiency Level: </span>
+              Intermediate
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Years of Experience: </span>
-              5 years
+              <span className="text-[#5E5E6F]">Years of Experience: </span>5
+              years
             </p>
-            
+
             <div className="flex flex-wrap w-full gap-1.5">
               <button
                 type="button"
@@ -1234,7 +1185,7 @@ const Experience = () => {
                 <span className="mr-2">
                   <PhoneIcon className="w-5 h-5" aria-hidden="true" />
                 </span>
-                Consent to Reach Out  
+                Consent to Reach Out
               </button>
             </div>
           </div>
@@ -1258,7 +1209,8 @@ const Experience = () => {
               <span className="text-[#5E5E6F]">Reference Type: </span>Manager
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">For: </span>Clinical Nurse Specialist (CNS) – Oncology
+              <span className="text-[#5E5E6F]">For: </span>Clinical Nurse
+              Specialist (CNS) – Oncology
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
               <span className="text-[#5E5E6F]">Reference Title: </span>
@@ -1268,14 +1220,18 @@ const Experience = () => {
               <span className="text-[#5E5E6F]">Years Known: </span>3 years
             </p>
             <p className="text-[16px] text-[#7070FF] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Reference Work Email Address: </span>Kimberly.green@cityhealth.com
+              <span className="text-[#5E5E6F]">
+                Reference Work Email Address:{" "}
+              </span>
+              Kimberly.green@cityhealth.com
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Reference Phone Number: </span>617-777-9090
+              <span className="text-[#5E5E6F]">Reference Phone Number: </span>
+              617-777-9090
             </p>
-            
+
             <div className="flex flex-wrap w-full gap-1.5">
-            <button
+              <button
                 type="button"
                 className="rounded-3xl border border-[#299DCF] flex items-center text-[14px] font-medium text-[#299DCF] h-[30px] py-[5px] px-[10px]"
               >
@@ -1291,15 +1247,13 @@ const Experience = () => {
                 <span className="mr-2">
                   <PhoneDisconnectIcon className="w-5 h-5" aria-hidden="true" />
                 </span>
-                Consent to Reach Out  
+                Consent to Reach Out
               </button>
             </div>
           </div>
         </div>
-
       </div>
       {/* Add Tech Proficiency Component End */}
-
     </div>
   );
 };

@@ -4,6 +4,7 @@ import Overview from "@/components/Overview/Overview";
 import Credentials from "@/components/Credentials/Credentials";
 import Education from "@/components/Education/Education";
 import Experience from "@/components/Experience/Experience";
+import Documents from "@/components/Documents/Documents";
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
     {/* <Overview /> */}
     {/* <Credentials /> */}
     {/* <Education /> */}
-    <Experience />
+    {/* <Experience /> */}
+    <Documents />
     </>
   );
 }

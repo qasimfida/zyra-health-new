@@ -18,6 +18,7 @@ import {
   CertifiedIcon,
   AddPlusIcon,
 } from "@/svgs";
+import AddCardComponent from "../AddCardComponent/AddCardComponent";
 
 const Education = () => {
   return (
@@ -121,28 +122,13 @@ const Education = () => {
       </div>
 
       {/* Education Empty Data Start */}
-      <div className="px-5 pb-2 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Education
-            </h4>
-          </div>
-        </div>
-        <div className="flex justify-center pt-5">
-          <button type="button" className="text-white">
-            <AddIcon className="w-5 h-5" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-4">
-            Add Education
-          </h4>
-          <p className="text-[16px] text-[#5E5E6F] font-medium mb-8">
-            Unlock job opportunities by adding education details to your profile
-          </p>
-        </div>
-      </div>
+      <AddCardComponent
+        title={"Education"}
+        subTitle={"Add Education"}
+        description={
+          "Unlock job opportunities by adding education details to your profile"
+        }
+      />
       {/* Education Empty Data End */}
 
       {/* Education Component start */}
@@ -214,28 +200,13 @@ const Education = () => {
       {/* Education Component End */}
 
       {/* Continuing Education Empty Data Start */}
-      <div className="px-5 pb-2 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Continuing Education
-            </h4>
-          </div>
-        </div>
-        <div className="flex justify-center pt-5">
-          <button type="button" className="text-white">
-            <AddIcon className="w-5 h-5" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-4">
-            Add Continuing Education
-          </h4>
-          <p className="text-[16px] text-[#5E5E6F] font-medium mb-8">
-            Add continuing education credits earned to enhance your profile
-          </p>
-        </div>
-      </div>
+      <AddCardComponent
+        title={"Continuing Education"}
+        subTitle={"Add Continuing Education"}
+        description={
+          "Add continuing education credits earned to enhance your profile"
+        }
+      />
       {/* Continuing Education Empty Data End */}
 
       {/* Continuing Education Component start */}
@@ -493,28 +464,13 @@ const Education = () => {
       {/* Continuing Education Component End */}
 
       {/* Training Certifications Empty Data Start */}
-      <div className="px-5 pb-2 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Training
-            </h4>
-          </div>
-        </div>
-        <div className="flex justify-center pt-5">
-          <button type="button" className="text-white">
-            <AddIcon className="w-5 h-5" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-4">
-            Add Training
-          </h4>
-          <p className="text-[16px] text-[#5E5E6F] font-medium mb-8">
-            Add trainings attended to demonstrate your professional development
-          </p>
-        </div>
-      </div>
+      <AddCardComponent
+        title={"Training"}
+        subTitle={"Add Training"}
+        description={
+          "Add trainings attended to demonstrate your professional development"
+        }
+      />
       {/* Training Certifications Empty Data End */}
 
       {/* Training Certifications Component start */}
