@@ -419,20 +419,25 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="px-5 py-6 mt-6 bg-white rounded-2xl flex justify-center text-center flex-col items-center">
-          <BoxIcon className="w-5 h-5" aria-hidden="true" />
+      <div className="px-5 py-6 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-center text-center flex-col items-center">
+        <BoxIcon className="w-5 h-5" aria-hidden="true" />
           <h4 className="text-[17px] font-semibold text-[#5E5E6F]">
               Add a Checklist
             </h4>
             <p className="font-normal text-[16px] leading-6 text-[#5E5E6F]">Upload External Checklist</p>
+        </div>
+          
       </div>
 
-      <div className="px-5 py-6 mt-6 bg-white rounded-2xl flex justify-center text-center flex-col items-center">
-          <DocumentFrameIcon className="w-5 h-5" aria-hidden="true" />
+      <div className="px-5 py-6 mt-6 bg-white rounded-2xl">
+            <div className="flex justify-center text-center flex-col items-center">
+        <DocumentFrameIcon className="w-5 h-5" aria-hidden="true" />
           <h4 className="text-[17px] font-semibold text-[#5E5E6F]">
               Add a Checklist
             </h4>
             <p className="font-normal text-[16px] leading-6 text-[#5E5E6F]">Upload External Checklist</p>
+        </div>
       </div>
 
     </div>
