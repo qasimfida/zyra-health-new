@@ -557,9 +557,10 @@ const Documents = () => {
         <div className="flex mt-6">
           <button
             type="button"
-            className="flex text-[16px] font-medium text-[#5E5E6F] mb-4"
+            className="flex text-[16px] font-medium text-[#5E5E6F] mb-4 items-center"
           >
-            <CheckboxIcon className="w-5 h-5 mr-2" aria-hidden="true" />
+            {/* <CheckboxIcon className="w-5 h-5 mr-2" aria-hidden="true" /> */}
+            <input id="inline-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded" />
             <span className="ml-2">
               I do not have an active liability insurance
             </span>
@@ -1108,9 +1109,10 @@ const Documents = () => {
           <div>
             <button
               type="button"
-              className="flex text-[16px] font-medium text-[#5E5E6F] mb-4"
+              className="flex text-[16px] font-medium text-[#5E5E6F] mb-4 items-center"
             >
-              <CheckboxIcon className="w-5 h-5 mr-2" aria-hidden="true" />
+              {/* <CheckboxIcon className="w-5 h-5 mr-2" aria-hidden="true" /> */}
+              <input id="inline-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded" />
               <span className="ml-2">
                 I have read and understand the Participation Agreement and agree
                 to all terms

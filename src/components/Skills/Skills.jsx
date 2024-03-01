@@ -23,8 +23,11 @@ import {
   PhoneIcon,
   DeleteIcon,
   BoxIcon,
-  DocumentFrameIcon
+  DocumentFrameIcon,
+  AddPlusIcon
 } from "@/svgs";
+import ProgressBar from "../CustomProgressbar/CustomProgressbar";
+import CustomCheckbox from "../CustomCheckbox/CustomCheckbox";
 import AddCardComponent from "../AddCardComponent/AddCardComponent";
 
 const Skills = () => {
@@ -192,7 +195,7 @@ const Skills = () => {
         <div className="flex justify-between items-center w-full h-[67px] border-b">
           <div>
             <h4 className="text-[19px] font-semibold text-[#7070FF]">
-            Completed Chekcklists
+              Completed Chekcklists
             </h4>
           </div>
           <div></div>
@@ -421,24 +424,1315 @@ const Skills = () => {
 
       <div className="px-5 py-6 mt-6 bg-white rounded-2xl">
         <div className="flex justify-center text-center flex-col items-center">
-        <BoxIcon className="w-5 h-5" aria-hidden="true" />
+          <BoxIcon className="w-5 h-5" aria-hidden="true" />
           <h4 className="text-[17px] font-semibold text-[#5E5E6F]">
-              Add a Checklist
-            </h4>
-            <p className="font-normal text-[16px] leading-6 text-[#5E5E6F]">Upload External Checklist</p>
+            Add a Checklist
+          </h4>
+          <p className="font-normal text-[16px] leading-6 text-[#5E5E6F]">
+            Upload External Checklist
+          </p>
         </div>
-          
       </div>
 
       <div className="px-5 py-6 mt-6 bg-white rounded-2xl">
-            <div className="flex justify-center text-center flex-col items-center">
-        <DocumentFrameIcon className="w-5 h-5" aria-hidden="true" />
+        <div className="flex justify-center text-center flex-col items-center">
+          <DocumentFrameIcon className="w-5 h-5" aria-hidden="true" />
           <h4 className="text-[17px] font-semibold text-[#5E5E6F]">
-              Add a Checklist
-            </h4>
-            <p className="font-normal text-[16px] leading-6 text-[#5E5E6F]">Upload External Checklist</p>
+            Add a Checklist
+          </h4>
+          <p className="font-normal text-[16px] leading-6 text-[#5E5E6F]">
+            Upload External Checklist
+          </p>
         </div>
       </div>
+
+      <div className="px-5 py-6 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+          <div className="flex items-center">
+            <button type="button" className="mr-4 text-white">
+              <BackIcon className="w-5 h-5" aria-hidden="true" />
+            </button>
+            <h4 className="text-[19px] font-semibold text-[#7070FF]">
+              Please fill out your Administrative RN Skills
+            </h4>
+          </div>
+        </div>
+        <div className="flex justify-between mt-6">
+          <div>
+            <button type="button" className="flex mb-4 items-center">
+              <div className="w-6 h-6 bg-[#FF5858] rounded-full"></div>
+              <span className="ml-2 text-[16px] font-medium text-[#5E5E6F]">
+                No theory or experience
+              </span>
+            </button>
+            <button type="button" className="flex mb-4">
+              <div className="w-6 h-6 bg-[#FE9B26] rounded-full"></div>
+              <span className="ml-2 text-[16px] font-medium text-[#5E5E6F]">
+                Limited experience. Need training
+              </span>
+            </button>
+          </div>
+          <div>
+            <button
+              type="button"
+              className="flex text-[16px] font-medium text-[#5E5E6F] mb-4"
+            >
+              <div className="w-6 h-6 bg-[#FFC75A] rounded-full"></div>
+              <span className="ml-2">
+                Experienced. Able to perform under supervision
+              </span>
+            </button>
+            <button
+              type="button"
+              className="flex text-[16px] font-medium text-[#5E5E6F] mb-4"
+            >
+              <div className="w-6 h-6 bg-[#00DF59] rounded-full"></div>
+              <span className="ml-2">
+                Proficient. Able to perform independently
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="pt-5 border flex flex-col justify-start px-[16px] py-[14px] rounded-3xl mt-6 bg-[#CDE1E1] h-[100px]">
+        <ProgressBar filled={30} />
+      </div>
+
+      <div className="px-5 py-6 mt-6 bg-white rounded-2xl">
+          <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+            <div className="flex items-center">
+              <h4 className="text-[19px] font-semibold text-[#7070FF]">
+              Administrative Duties
+              </h4>
+            </div>
+          </div>
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Data Entry
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" checkedDefault={true} />
+                    <CustomCheckbox variant="yellow" checkedDefault={true} />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Medical Records - Entry
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" checkedDefault={true} />
+                    <CustomCheckbox variant="green" checkedDefault={true} />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Medical Records - Maintenance
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" checkedDefault={true} />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Electronic Medical Records - Entry  
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" checkedDefault={true} />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Electronic Medical Records - Maintenance
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Electronic Medical Records - Maintenance
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Gathers data and runs reports
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Patient Files - Set up, report, and record
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Completion and filing/distribution of reports
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Schedules appointments/tests
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Takes, distributes, and prioritizes messages
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Assists physicians with procedures
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Assists nursing staff
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Prepares patients for appointments and exams
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Gathers patient history and VS
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Gives injections as directed
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Performs phlebotomy skills
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Collects lab. Specimens
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Administer EKGs
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Completes specimen testing, i.e. glucose, strep, mono, flu
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+
+
+      </div>
+
+      <div className="px-5 py-6 mt-6 bg-white rounded-2xl">
+          <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+            <div className="flex items-center">
+              <h4 className="text-[19px] font-semibold text-[#7070FF]">
+              Computer Skills
+              </h4>
+            </div>
+          </div>
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Medic, Medic Soft
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" checkedDefault={true} />
+                    <CustomCheckbox variant="yellow" checkedDefault={true} />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Centricity
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" checkedDefault={true} />
+                    <CustomCheckbox variant="green" checkedDefault={true} />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Medical Manager
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" checkedDefault={true} />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  HIS
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" checkedDefault={true} />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Word, Word Perfect
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Soft
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Windows
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  IDX
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Meditech
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+
+      </div>
+
+      <div className="px-5 py-6 mt-6 bg-white rounded-2xl">
+          <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+            <div className="flex items-center">
+              <h4 className="text-[19px] font-semibold text-[#7070FF]">
+              Age-Specific Competencies
+              </h4>
+            </div>
+          </div>
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Newborn (birth to 30 days)
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" checkedDefault={true} />
+                    <CustomCheckbox variant="yellow" checkedDefault={true} />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Infant (31 days to 1 year)
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" checkedDefault={true} />
+                    <CustomCheckbox variant="green" checkedDefault={true} />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Toddler (ages 2-3 years)
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" checkedDefault={true} />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Preschooler (ages 4-5 years)
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" checkedDefault={true} />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Childhood (ages 6-12 years)
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Adolescents (ages 13-21 years)
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Young Adults (ages 22-39 years)
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Adults (ages 40-64 years)
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Older Adults (ages 65 -79 years)
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+          <div className="mt-6 border-b h-[54px] flex justify-between">
+                <div>
+                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+                  Elderly (ages 80+ years)
+                  </h4>
+                </div>
+                <div className="flex gap-2">
+                    <CustomCheckbox variant="red" />
+                    <CustomCheckbox variant="orange" />
+                    <CustomCheckbox variant="yellow" />
+                    <CustomCheckbox variant="green" />
+                </div>
+          </div>
+
+
+      </div>
+
+      {/* Search Preferences Component start */}
+      <div className="px-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+          <div>
+            <h4 className="text-[19px] font-semibold text-[#7070FF]">
+            Search Preferences
+            </h4>
+          </div>
+          <div className="flex items-center">
+            <button type="button" className="text-white">
+              <EditIcon className="w-5 h-5" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+
+        <div className="pt-5 border-b">
+          <div className="mb-4">
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Job Type Preference:
+              </span>
+              Full-time
+            </p>
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Job Search Status:
+              </span>
+              Actively looking for new opportunities
+            </p>
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">Start Date Availability: </span>
+              Immediately
+            </p>
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Work Style Preference:
+              </span>
+              Remote
+            </p>
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Willingness to Travel/Relocate: 
+              </span>
+              Yes, I am willing to travel on
+            </p>
+            <div className="flex flex-wrap w-full gap-1.5 mb-2">
+              <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
+                <span className="text-[#5E5E6F]">Skills Acquired: </span>
+              </p>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Patient Assessment
+              </button>
+              <button
+                type="button"
+                className="flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Care Planning
+              </button>
+              <button
+                type="button"
+                className="flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Patient Education
+              </button>
+              <button
+                type="button"
+                className="flex items-center text-[16px] font-medium text-[#7070FF] py-[5px] px-[7px]"
+              >
+                <span>
+                  <AddPlusIcon className="w-5 h-5" aria-hidden="true" />
+                </span>
+                View More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Experience Summary Component End */}
+
+      {/* Workplace Preferences Component start */}
+      <div className="px-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+          <div>
+            <h4 className="text-[19px] font-semibold text-[#7070FF]">
+            Workplace Preferences
+            </h4>
+          </div>
+          <div className="flex items-center">
+            <button type="button" className="text-white">
+              <EditIcon className="w-5 h-5" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+
+        <div className="pt-5 border-b">
+          <div className="mb-4">
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Job Opportunity Priorities:
+              </span>
+              Company Culture
+            </p>
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Preferred Organization Type:
+              </span>
+              Hospital chain
+            </p>
+
+            <div className="flex flex-wrap w-full gap-1.5 mb-2">
+              <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
+                <span className="text-[#5E5E6F]">Skills Acquired: </span>
+              </p>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Adult Day Care Center
+              </button>
+              <button
+                type="button"
+                className="flex items-center text-[16px] font-medium text-[#7070FF] py-[5px] px-[7px]"
+              >
+                <span>
+                  <AddPlusIcon className="w-5 h-5" aria-hidden="true" />
+                </span>
+                View More
+              </button>
+            </div>
+
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Desired Salary Range:
+              </span>
+              $45,000-$60,000/Year
+            </p>
+
+            <div className="flex flex-wrap w-full gap-1.5 mb-2">
+              <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
+                <span className="text-[#5E5E6F]">Skills Acquired: </span>
+              </p>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Rotating Shifts
+              </button>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Weekend Shifts
+              </button>
+              <button
+                type="button"
+                className="flex items-center text-[16px] font-medium text-[#7070FF] py-[5px] px-[7px]"
+              >
+                <span>
+                  <AddPlusIcon className="w-5 h-5" aria-hidden="true" />
+                </span>
+                View More
+              </button>
+            </div>
+
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Management Style:
+              </span>
+              Autonomous
+            </p>
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Team Environment:
+              </span>
+              Dynamic
+            </p>
+
+            
+          </div>
+        </div>
+      </div>
+      {/* Experience Summary Component End */}
+
+      <AddCardComponent
+        title={"Add Employment Preferences"}
+        subTitle={"Add Employment Preferences"}
+        description={
+          "Customize your job search by setting your employment preferences"}
+      />
+
+       {/* Search Preferences Component start */}
+       <div className="px-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+          <div>
+            <h4 className="text-[19px] font-semibold text-[#7070FF]">
+            Search Preferences
+            </h4>
+          </div>
+          <div className="flex items-center">
+            <button type="button" className="text-white">
+              <EditIcon className="w-5 h-5" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+
+        <div className="pt-5 border-b">
+          <div className="mb-4">
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Job Type Preference:
+              </span>
+              Full-time
+            </p>
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Job Search Status:
+              </span>
+              Actively looking for new opportunities
+            </p>
+
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Start Date Availability:
+              </span>
+              Immediately
+            </p>
+
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Work Style Preference:
+              </span>
+              Remote
+            </p>
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Willingness to Travel/Relocate: 
+              </span>
+              Yes, I am willing to travel on
+            </p>
+
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Preferred Work Location: 
+              </span>
+              Atlanta, GA
+            </p>
+
+            
+          </div>
+        </div>
+      </div>
+      {/* Experience Summary Component End */}
+
+       {/* Workplace Preferences Component start */}
+       <div className="px-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+          <div>
+            <h4 className="text-[19px] font-semibold text-[#7070FF]">
+            Workplace Preferences
+            </h4>
+          </div>
+          <div className="flex items-center">
+            <button type="button" className="text-white">
+              <EditIcon className="w-5 h-5" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+
+        <div className="pt-5 border-b">
+          <div className="mb-4">
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Job Opportunity Priorities:
+              </span>
+              Company Culture
+            </p>
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Preferred Organization Type:
+              </span>
+              Hospital chain
+            </p>
+
+            <div className="flex flex-wrap w-full gap-1.5 mb-2">
+              <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
+                <span className="text-[#5E5E6F]">Skills Acquired: </span>
+              </p>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Adult Day Care Center
+              </button>
+              <button
+                type="button"
+                className="flex items-center text-[16px] font-medium text-[#7070FF] py-[5px] px-[7px]"
+              >
+                <span>
+                  <AddPlusIcon className="w-5 h-5" aria-hidden="true" />
+                </span>
+                View More
+              </button>
+            </div>
+
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Desired Salary Range:
+              </span>
+              $45,000-$60,000/Year
+            </p>
+
+            <div className="flex flex-wrap w-full gap-1.5 mb-2">
+              <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
+                <span className="text-[#5E5E6F]">Skills Acquired: </span>
+              </p>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Rotating Shifts
+              </button>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Weekend Shifts
+              </button>
+              <button
+                type="button"
+                className="flex items-center text-[16px] font-medium text-[#7070FF] py-[5px] px-[7px]"
+              >
+                <span>
+                  <AddPlusIcon className="w-5 h-5" aria-hidden="true" />
+                </span>
+                View More
+              </button>
+            </div>
+
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Management Style:
+              </span>
+              Autonomous
+            </p>
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Team Environment:
+              </span>
+              Dynamic
+            </p>
+
+            
+          </div>
+        </div>
+      </div>
+      {/* Experience Summary Component End */}
+
+      {/* Employment Preferences Component start */}
+      <div className="px-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+          <div>
+            <h4 className="text-[19px] font-semibold text-[#7070FF]">
+            Employment Preferences
+            </h4>
+          </div>
+          <div className="flex items-center">
+            <button type="button" className="text-white">
+              <EditIcon className="w-5 h-5" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+
+        <div className="pt-5 border-b">
+
+        <div className="flex justify-between items-center w-full min-h-[40px]">
+            <div>
+              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
+              Full-time
+              </h4>
+            </div>
+            <div className="flex items-center mr-[12px]">
+              <button type="button" className="text-white">
+                <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
+              </button>
+            </div>
+          </div>
+
+
+          <div className="mb-4 border-b">
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Start Date Availability:
+              </span>
+              March 2024
+            </p>
+
+            <div className="flex flex-wrap w-full gap-1.5 mb-2">
+              <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
+                <span className="text-[#5E5E6F]">Preferred Work Location: </span>
+              </p>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Charlotte, NC
+              </button>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Charleston, SC
+              </button>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Winston-Salem, NC
+              </button>
+              <button
+                type="button"
+                className="flex items-center text-[16px] font-medium text-[#7070FF] py-[5px] px-[7px]"
+              >
+                <span>
+                  <AddPlusIcon className="w-5 h-5" aria-hidden="true" />
+                </span>
+                View More
+              </button>
+            </div>
+
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Desired Pay: 
+              </span>
+              $30/Hour
+            </p>
+
+            <div className="flex flex-wrap w-full gap-1.5 mb-2">
+              <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
+                <span className="text-[#5E5E6F]">Shift Preferences: </span>
+              </p>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Day Shifts
+              </button>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Weekend Shifts
+              </button>
+              <button
+                type="button"
+                className="flex items-center text-[16px] font-medium text-[#7070FF] py-[5px] px-[7px]"
+              >
+                <span>
+                  <AddPlusIcon className="w-5 h-5" aria-hidden="true" />
+                </span>
+                View More
+              </button>
+            </div>
+
+            
+          </div>
+
+          <div className="mb-4 border-b">
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Start Date Availability:
+              </span>
+              March 2024
+            </p>
+
+            <div className="flex flex-wrap w-full gap-1.5 mb-2">
+              <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
+                <span className="text-[#5E5E6F]">Preferred Work Location: </span>
+              </p>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Charlotte, NC
+              </button>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Charleston, SC
+              </button>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Winston-Salem, NC
+              </button>
+              <button
+                type="button"
+                className="flex items-center text-[16px] font-medium text-[#7070FF] py-[5px] px-[7px]"
+              >
+                <span>
+                  <AddPlusIcon className="w-5 h-5" aria-hidden="true" />
+                </span>
+                View More
+              </button>
+            </div>
+
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Desired Pay: 
+              </span>
+              $30/Hour
+            </p>
+
+            <div className="flex flex-wrap w-full gap-1.5 mb-2">
+              <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
+                <span className="text-[#5E5E6F]">Shift Preferences: </span>
+              </p>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Day Shifts
+              </button>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Weekend Shifts
+              </button>
+              <button
+                type="button"
+                className="flex items-center text-[16px] font-medium text-[#7070FF] py-[5px] px-[7px]"
+              >
+                <span>
+                  <AddPlusIcon className="w-5 h-5" aria-hidden="true" />
+                </span>
+                View More
+              </button>
+            </div>
+
+            
+          </div>
+
+          <div className="mb-4 border-b">
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Start Date Availability:
+              </span>
+              March 2024
+            </p>
+
+            <div className="flex flex-wrap w-full gap-1.5 mb-2">
+              <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
+                <span className="text-[#5E5E6F]">Preferred Work Location: </span>
+              </p>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Charlotte, NC
+              </button>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Charleston, SC
+              </button>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Winston-Salem, NC
+              </button>
+              <button
+                type="button"
+                className="flex items-center text-[16px] font-medium text-[#7070FF] py-[5px] px-[7px]"
+              >
+                <span>
+                  <AddPlusIcon className="w-5 h-5" aria-hidden="true" />
+                </span>
+                View More
+              </button>
+            </div>
+
+            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+              <span className="text-[#5E5E6F]">
+              Desired Pay: 
+              </span>
+              $30/Hour
+            </p>
+
+            <div className="flex flex-wrap w-full gap-1.5 mb-2">
+              <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
+                <span className="text-[#5E5E6F]">Shift Preferences: </span>
+              </p>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Day Shifts
+              </button>
+              <button
+                type="button"
+                className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
+              >
+                
+                Weekend Shifts
+              </button>
+              <button
+                type="button"
+                className="flex items-center text-[16px] font-medium text-[#7070FF] py-[5px] px-[7px]"
+              >
+                <span>
+                  <AddPlusIcon className="w-5 h-5" aria-hidden="true" />
+                </span>
+                View More
+              </button>
+            </div>
+
+            
+          </div>
+
+
+
+
+        </div>
+      </div>
+      {/* Experience Summary Component End */}
 
     </div>
   );
