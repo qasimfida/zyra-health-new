@@ -17,7 +17,7 @@ import {
   DocumentTagIcon,
   TimeTagIcon,
   WarningTagIcon,
-} from "@/svgs";
+} from "@/svgs/icons";
 import AddCardComponent from "../AddCardComponent/AddCardComponent";
 
 const Credentials = () => {

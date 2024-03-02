@@ -10,12 +10,12 @@ import Skills from "@/components/Skills/Skills";
 export default function Home() {
   return (
     <>
-    {/* <Overview /> */}
+    <Overview />
     {/* <Credentials /> */}
     {/* <Education /> */}
     {/* <Experience /> */}
     {/* <Documents /> */}
-    <Skills />
+    {/* <Skills /> */}
     </>
   );
 }

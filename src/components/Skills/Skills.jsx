@@ -25,7 +25,7 @@ import {
   BoxIcon,
   DocumentFrameIcon,
   AddPlusIcon
-} from "@/svgs";
+} from "@/svgs/icons";
 import ProgressBar from "../CustomProgressbar/CustomProgressbar";
 import CustomCheckbox from "../CustomCheckbox/CustomCheckbox";
 import AddCardComponent from "../AddCardComponent/AddCardComponent";

@@ -11,16 +11,28 @@ import {
   AwardIcon,
   SettingsIcon,
   DocumentsIcon,
-  EditIcon,
   AddIcon,
   GlobeIcon,
   EditIconTransparent,
   TwitterIcon,
   LinkedInIcon,
-} from "@/svgs";
+} from "@/svgs/icons";
 import AddCardComponent from "../AddCardComponent/AddCardComponent";
+import Card from "../Card/Card";
+import { Icon } from "@/svgs";
 
 const Overview = () => {
+  const profileData = [
+    { name: "Discipline Type", value: "Nursing" },
+    { name: "Clinician Type", value: "Registered Nurse (RN)" },
+    { name: "Bio", value: "Committed and versatile healthcare professional with extensive experience across a variety of healthcare settings. Known for providing top-notch care and support, excelling in fast-paced environments, and adept at addressing diverse patient needs with empathy and proficiency. With a strong foundation in patient care principles, equipped to deliver exceptional service whether in direct patient care, administrative roles, or team collaboration. Driven by a passion for improving patient outcomes and enhancing the quality of healthcare delivery"}
+  ];
+
+  const contactInformationData = [
+    { name: "Phone Number", value: "617-777-7788" },
+    { name: "Email", value: "williamnash@gmail.com" },
+  ];
+
   return (
     <div className="w-[calc(100%-3rem)] md:w-[calc(100%-19.5rem)] lg:w-[calc(100%-40rem)] flex flex-col justify-between sm:auto relative">
       <div className="bg-white rounded-2xl">
@@ -79,7 +91,12 @@ const Overview = () => {
                 className="flex items-center justify-center  w-full h-[46px] border-r hover:text-gray-700"
               >
                 <button type="button" className="mr-1">
-                  <IconBreifcase className="w-6 h-6" aria-hidden="true" />
+                  {/* <IconBreifcase className="w-6 h-6" aria-hidden="true" /> */}
+                  <Icon
+                    name="breifcase"
+                    className="w-5 h-5"
+                    aria-hidden="true"
+                  />
                 </button>
                 <p lassname="m-1.5 text-slate-500 font-medium">Experience</p>
               </a>
@@ -121,71 +138,19 @@ const Overview = () => {
         </div>
       </div>
 
-      <div className="px-5 mt-6 bg-white min-h-80 rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Personal Information
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <EditIcon className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
-        </div>
-        <div className="pt-5">
-          <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-            Registered Nurse (RN)
-          </h4>
-          <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-            <span className="text-[#5E5E6F]">Discipline Type: </span>Nursing
-          </p>
-          <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-            <span className="text-[#5E5E6F]">Discipline Type: </span>Registered
-            Nurse (RN)
-          </p>
-          <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-            <span className="text-[#5E5E6F]">Bio: </span>Committed and versatile
-            healthcare professional with extensive experience across a variety
-            of healthcare settings. Known for providing top-notch care and
-            support, excelling in fast-paced environments, and adept at
-            addressing diverse patient needs with empathy and proficiency. With
-            a strong foundation in patient care principles, equipped to deliver
-            exceptional service whether in direct patient care, administrative
-            roles, or team collaboration. Driven by a passion for improving
-            patient outcomes and enhancing the quality of healthcare delivery
-          </p>
-        </div>
-      </div>
+      <Card
+        title="Personal Information"
+        heading="William Brute Nash"
+        options={profileData}
+        icon={<Icon name="edit" className="h-8 w-8" aria-hidden="true"  />}
+      />
 
-      <div className="px-5 pb-2 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Contact Information
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <EditIcon className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
-        </div>
-        <div className="pt-5">
-          <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-            Currently located in Charlotte, NC
-          </h4>
-          <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-            <span className="text-[#5E5E6F]">Phone Number: </span>617-777-7788
-          </p>
-          <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-            <span className="text-[#5E5E6F]">Email: </span>williamnash@gmail.com
-          </p>
-        </div>
-      </div>
+      <Card
+        title="Contact Information"
+        heading="Currently located in Charlotte, NC"
+        options={contactInformationData}
+      />
 
-      {/* Language Component Empty Start */}
       <AddCardComponent
         title={"Languages"}
         subTitle={"Add Languages"}
@@ -193,7 +158,6 @@ const Overview = () => {
           "Attract more employers by adding the languages you speak on your profile"
         }
       />
-      {/* Language Component Empty End */}
 
       {/* Language Component With Data Start */}
       <div className="px-5 mt-6 bg-white min-h-80 rounded-2xl">
@@ -205,7 +169,7 @@ const Overview = () => {
           </div>
           <div className="flex items-end">
             <button type="button" className="text-white">
-              <EditIcon className="w-5 h-5" aria-hidden="true" />
+              <Icon name="edit" className="w-5 h-5" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -309,7 +273,8 @@ const Overview = () => {
           </div>
           <div className="flex items-end">
             <button type="button" className="text-white">
-              <EditIcon className="w-5 h-5" aria-hidden="true" />
+              {/* <EditIcon className="w-5 h-5" aria-hidden="true" /> */}
+              <Icon name="edit" className="w-5 h-5" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -358,7 +323,8 @@ const Overview = () => {
           </div>
           <div className="flex items-end">
             <button type="button" className="text-white">
-              <EditIcon className="w-5 h-5" aria-hidden="true" />
+              {/* <EditIcon className="w-5 h-5" aria-hidden="true" /> */}
+              <Icon name="edit" className="w-5 h-5" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -416,7 +382,8 @@ const Overview = () => {
           </div>
           <div className="flex items-end">
             <button type="button" className="text-white">
-              <EditIcon className="w-5 h-5" aria-hidden="true" />
+              {/* <EditIcon className="w-5 h-5" aria-hidden="true" /> */}
+              <Icon name="edit" className="w-5 h-5" aria-hidden="true" />
             </button>
           </div>
         </div>

@@ -20,7 +20,7 @@ import {
   PhoneIcon,
   AddPlusIcon,
   CheckboxIcon,
-} from "@/svgs";
+} from "@/svgs/icons";
 import AddCardComponent from "../AddCardComponent/AddCardComponent";
 
 const Documents = () => {

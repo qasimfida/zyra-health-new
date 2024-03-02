@@ -4,7 +4,7 @@ import {
     ArrowRightIcon,
 } from "@heroicons/react/24/outline";
 
-import { QuestionIcon, SheildIcon, CoverIcon, LockIcon } from "../../svgs/index";
+import { QuestionIcon, SheildIcon, CoverIcon, LockIcon } from "../../svgs/icons";
 
 const Footer = () => {
   return (

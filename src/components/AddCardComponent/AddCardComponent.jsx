@@ -1,5 +1,5 @@
 import React from 'react'
-import { AddIcon } from "@/svgs";
+import { AddIcon } from "@/svgs/icons";
 
 const AddCardComponent = ({ title="Add Title", subTitle="Add Subtitle", description="Please Add Description!"}) => {
   return (

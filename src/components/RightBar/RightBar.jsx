@@ -1,6 +1,6 @@
 "use client";
 
-import { ImageIcon } from "@/svgs";
+import { ImageIcon } from "@/svgs/icons";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 const RightBar = () => {

@@ -1,6 +1,6 @@
 "use client";
 
-import { DocumentIcon, HomeIcon, ProfileIcon, MessagesIcon, BuildingIcon, LogoutIcon } from "@/svgs";
+import { DocumentIcon, HomeIcon, ProfileIcon, MessagesIcon, BuildingIcon, LogoutIcon } from "@/svgs/icons";
 
 import {
   Cog8ToothIcon,

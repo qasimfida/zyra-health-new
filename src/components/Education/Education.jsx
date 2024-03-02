@@ -17,7 +17,7 @@ import {
   DocumentTagIcon,
   CertifiedIcon,
   AddPlusIcon,
-} from "@/svgs";
+} from "@/svgs/icons";
 import AddCardComponent from "../AddCardComponent/AddCardComponent";
 
 const Education = () => {
