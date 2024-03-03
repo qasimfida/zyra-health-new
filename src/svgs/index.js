@@ -1,9 +1,15 @@
-import { Breifcase, Edit } from "./icons";
+import { Breifcase, DocumentMagnify, DocumentsMinus, Edit, Education, Documents, Award, Settings } from "./icons";
 
 export const Icon = ({ name, filled, className }) => {
   const icons = {
+    award: <Award />,
     edit: <Edit />,
     breifcase: <Breifcase />,
+    education: <Education />,
+    documentsMinus: <DocumentsMinus />,
+    documentMagnify: <DocumentMagnify />,
+    documents: <Documents />,
+    settings: <Settings />,
   };
 
   if (filled) {
@@ -19,7 +25,7 @@ export const Icon = ({ name, filled, className }) => {
   return (
     <button
       type="button"
-      className={`flex items-center justify-center h-10 w-10 border-2 rounded-full ${className}`}
+      className={`flex items-center justify-center h-10 w-10  rounded-full ${className}`}
     >
       {icons[name]}
     </button>

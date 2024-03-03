@@ -18,8 +18,8 @@ const NavBar = () => {
     <Disclosure as="nav" className="fixed z-20 w-full bg-white md:fixed">
       {({ open }) => (
         <>
-          <div className="px-2 mx-auto sm:px-6 lg:px-8">
-            <div className="relative flex items-center justify-between h-[4.6rem]">
+          <div className="px-8 py-5 mx-auto  sm:px-6 lg:px-8">
+            <div className="relative flex items-center justify-between ">
               <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-[#7070FF] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   {open ? <XMarkIcon className="block w-6 h-6" aria-hidden="true" /> : <Bars3Icon className="block w-6 h-6" aria-hidden="true" />}

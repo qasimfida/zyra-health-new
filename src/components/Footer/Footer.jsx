@@ -1,130 +1,130 @@
 "use client";
 
 import {
-    ArrowRightIcon,
+  ArrowRightIcon,
 } from "@heroicons/react/24/outline";
 
 import { QuestionIcon, SheildIcon, CoverIcon, LockIcon } from "../../svgs/icons";
 
 const Footer = () => {
   return (
-    <footer className="w-full px-12 bg-white">
-      <div className="flex sm:flex-row flex-col gap-8 flex-wrap justify-center items-center">
-        <div className="w-[20rem]">
-          <div className="flex justify-center pt-5">
+    <footer className="w-full bg-white">
+      <div className="flex md:flex-row flex-col gap-8 justify-center items-center px-24 py-6">
+        <div className="flex flex-col gap-4">
+          <div className="flex justify-center">
             <button
               type="button"
-              className=" text-[#7070FF] bg-white rounded-full"
+              className=" text-primary bg-white rounded-full"
             >
               <QuestionIcon className="w-10 h-10" aria-hidden="true" />
             </button>
           </div>
-          <div className="flex flex-col items-center justify-center">
-            <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-2">
-            Drop a Line
+          <div className="flex flex-col items-center justify-center gap-1">
+            <h4 className="text-4xl text-body">
+              Drop a Line
             </h4>
 
-            <p className="text-[14px] text-[#5E5E6F] font-normal text-center">
-            Questions or feedback? We are all ears and ready to help!
+            <p className="text-sm text-body font-normal text-center">
+              Questions or feedback? We are all ears and ready to help!
             </p>
             <button
-          type="button"
-          className="rounded-3xl flex h-10 px-9 items-center text-[16px] font-medium text-[#7070FF] mb-4 justify-center leading-6"
-        >
-          Show More
-          <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
-        </button>
+              type="button"
+              className="rounded-3xl flex  items-center text-base font-medium text-primary justify-center leading-6"
+            >
+              Show More
+              <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
+            </button>
           </div>
         </div>
-        <div className="w-[20rem]">
-          <div className="flex justify-center pt-5">
+        <div className="flex flex-col gap-4">
+          <div className="flex justify-center">
             <button
               type="button"
-              className=" text-[#7070FF] bg-white rounded-full"
+              className=" text-primary bg-white rounded-full"
             >
               <SheildIcon className="w-10 h-10" aria-hidden="true" />
             </button>
           </div>
-          <div className="flex flex-col items-center justify-center">
-            <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-2">
-            Support Hub
+          <div className="flex flex-col items-center justify-center  gap-1">
+            <h4 className="text-4xl text-body">
+              Support Hub
             </h4>
 
-            <p className="text-[14px] text-[#5E5E6F] font-normal text-center">
-            Navigate your way through solutions, common queries, and FAQs.
+            <p className="text-sm text-body font-normal text-center">
+              Navigate your way through solutions, common queries, and FAQs.
             </p>
             <button
-          type="button"
-          className="rounded-3xl flex h-10 px-9 items-center text-[16px] font-medium text-[#7070FF] mb-4 justify-center leading-6"
-        >
-          Show More
-          <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
-        </button>
+              type="button"
+              className="rounded-3xl flex items-center text-base font-medium text-primary justify-center leading-6"
+            >
+              Show More
+              <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
+            </button>
           </div>
         </div>
-        <div className="w-[20rem]">
-          <div className="flex justify-center pt-5">
+        <div className="flex flex-col gap-4">
+          <div className="flex justify-center">
             <button
               type="button"
-              className=" text-[#7070FF] bg-white rounded-full"
+              className=" text-primary bg-white rounded-full"
             >
               <CoverIcon className="w-10 h-10" aria-hidden="true" />
             </button>
           </div>
-          <div className="flex flex-col items-center justify-center">
-            <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-2 text-center">
-            Rules of Engagement
+          <div className="flex flex-col items-center justify-center  gap-1">
+            <h4 className="text-4xl text-body text-center">
+              Rules of Engagement
             </h4>
 
-            <p className="text-[14px] text-[#5E5E6F] font-normal text-center">
-            Quick insights into our terms. Understand your rights and ours in a snap.
+            <p className="text-sm text-body font-normal text-center">
+              Quick insights into our terms. Understand your rights and ours in a snap.
             </p>
             <button
-          type="button"
-          className="rounded-3xl flex h-10 px-9 items-center text-[16px] font-medium text-[#7070FF] mb-4 justify-center leading-6"
-        >
-          Show More
-          <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
-        </button>
+              type="button"
+              className="rounded-3xl flex items-center text-base font-medium text-primary justify-center leading-6"
+            >
+              Show More
+              <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
+            </button>
           </div>
         </div>
-        <div className="w-[20rem]">
-          <div className="flex justify-center pt-5">
+        <div className="flex flex-col gap-4">
+          <div className="flex justify-center">
             <button
               type="button"
-              className=" text-[#7070FF] bg-white rounded-full"
+              className=" text-primary bg-white rounded-full"
             >
               <LockIcon className="w-10 h-10" aria-hidden="true" />
             </button>
           </div>
-          <div className="flex flex-col items-center justify-center">
-            <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-2">
-            Privacy First
+          <div className="flex flex-col items-center justify-center gap-1">
+            <h4 className="text-4xl text-body">
+              Privacy First
             </h4>
 
-            <p className="text-[14px] text-[#5E5E6F] font-normal text-center">
-            Dive into how we respect and protect your data. Your privacy matters!
+            <p className="text-sm text-body font-normal text-center">
+              Dive into how we respect and protect your data. Your privacy matters!
             </p>
             <button
-          type="button"
-          className="rounded-3xl flex h-10 px-9 items-center text-[16px] font-medium text-[#7070FF] mb-4 justify-center leading-6"
-        >
-          Show More
-          <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
-        </button>
+              type="button"
+              className="rounded-3xl flex items-center text-base font-medium text-primary justify-center leading-6"
+            >
+              Show More
+              <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
+            </button>
           </div>
         </div>
       </div>
 
-      <div className="flex justify-between items-center w-full h-[67px] border-t">
+      <div className="flex justify-between items-center w-full px-24 py-6 border-t ">
         <div>
-          <h4 className="text-[14px] font-normal text-[#7070FF] leading-[21px]">
-          2023 © ZyraHealth
+          <h4 className="text-sm font-normal text-primary">
+            2023 © ZyraHealth
           </h4>
         </div>
         <div>
-          <h4 className="text-[14px] font-normal text-[#7070FF] underline">
-          Made with love in Boston
+          <h4 className="text-sm font-normal text-primary underline">
+            Made with love in Boston
           </h4>
         </div>
       </div>
