@@ -20,7 +20,7 @@ const RightBar = () => {
         </p>
         <button
           type="button"
-          className="rounded-3xl border-2 mt-2 px-8 py-1.5 border-primaryLight flex items-center text-4xl text-primary hover:text-white hover:bg-primary hover:border-primary"
+          className="rounded-3xl border-2 mt-2 px-6 py-2 border-primaryLight flex items-center text-4xl text-primary hover:text-white hover:bg-primary hover:border-primary"
         >
           Find your fit
           <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
@@ -50,19 +50,19 @@ const RightBar = () => {
           <div className="flex flex-wrap w-full gap-2">
             <button
               type="button"
-              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary px-1.5 py-1"
+              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary py-1"
             >
               Full Time
             </button>
             <button
               type="button"
-              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary px-1.5 py-1"
+              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary py-1"
             >
               40 Hours / Week
             </button>
             <button
               type="button"
-              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary px-1.5 py-1"
+              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary py-1"
             >
               $75,000-$120,000
             </button>
@@ -89,19 +89,19 @@ const RightBar = () => {
           <div className="flex flex-wrap w-full gap-2">
             <button
               type="button"
-              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary px-1.5 py-1"
+              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary py-1"
             >
               Full Time
             </button>
             <button
               type="button"
-              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary px-1.5 py-1"
+              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary py-1"
             >
               40 Hours / Week
             </button>
             <button
               type="button"
-              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary px-1.5 py-1"
+              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary py-1"
             >
               $75,000-$120,000
             </button>
@@ -128,19 +128,19 @@ const RightBar = () => {
           <div className="flex flex-wrap w-full gap-2">
             <button
               type="button"
-              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary px-1.5 py-1"
+              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary py-1"
             >
               Full Time
             </button>
             <button
               type="button"
-              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary px-1.5 py-1"
+              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary py-1"
             >
               40 Hours / Week
             </button>
             <button
               type="button"
-              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary px-1.5 py-1"
+              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary py-1"
             >
               $75,000-$120,000
             </button>
@@ -167,19 +167,19 @@ const RightBar = () => {
           <div className="flex flex-wrap w-full gap-2">
             <button
               type="button"
-              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary px-1.5 py-1"
+              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary py-1"
             >
               Full Time
             </button>
             <button
               type="button"
-              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary px-1.5 py-1"
+              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary py-1"
             >
               40 Hours / Week
             </button>
             <button
               type="button"
-              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary px-1.5 py-1"
+              className="rounded-3xl font-normal bg-light flex items-center text-xs text-primary py-1"
             >
               $75,000-$120,000
             </button>
@@ -190,7 +190,7 @@ const RightBar = () => {
 
       <button
         type="button"
-        className="rounded-3xl border-2 border-primaryLight flex items-center text-base px- font-semibold text-primary justify-center hover:text-white hover:bg-primary hover:border-none"
+        className="rounded-3xl border-2 border-primaryLight flex items-center text-base py-2 w-full font-semibold text-primary justify-center hover:text-white hover:bg-primary hover:border-primary"
       >
         Show More
         <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
