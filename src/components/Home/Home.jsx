@@ -1,15 +1,6 @@
 "use client";
 
-import {
-    GlobeIcon,
-    EditIconTransparent,
-    TwitterIcon,
-    LinkedInIcon,
-} from "@/svgs/icons";
-import AddCardComponent from "../AddCardComponent/AddCardComponent";
-import Card from "../Card/Card";
-import { Icon } from "@/svgs";
-import { DocumentMagnify, DocumentsMinus, Breifcase, Award, Settings } from "@/svgs/icons";
+import { DocumentMagnify } from "@/svgs/icons";
 import { useState } from "react";
 import Overview from "../Overview/Overview";
 import Credentials from "../Credentials/Credentials";
@@ -70,7 +61,6 @@ const Home = () => {
             </div>
         );
     };
-
 
     return (
         <div className="w-[calc(100%-3rem)] md:w-[calc(100%-19.5rem)] lg:w-[calc(100%-40rem)] flex flex-col justify-between sm:auto relative">

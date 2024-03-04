@@ -1,39 +1,26 @@
 "use client";
 
 import {
-  DocumentMagnifyingGlassIcon,
-  DocumentMinusIcon,
-  AcademicCapIcon,
-} from "@heroicons/react/24/outline";
-
-import {
-  IconBreifcase,
-  AwardIcon,
-  SettingsIcon,
-  DocumentsIcon,
-  EditIcon,
-  AddIcon,
   EditIconTransparent,
   DocumentTagIcon,
   CertifiedIcon,
   AddPlusIcon,
 } from "@/svgs/icons";
-import AddCardComponent from "../AddCardComponent/AddCardComponent";
 import { Icon } from "@/svgs";
+import Card from "../Card/Card";
 
 const Education = () => {
   return (
     <div>
-
-      {/* Education Empty Data Start */}
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Education"}
         subTitle={"Add Education"}
         description={
           "Unlock job opportunities by adding education details to your profile"
         }
+
       />
-      {/* Education Empty Data End */}
 
       {/* Education Component start */}
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -103,15 +90,15 @@ const Education = () => {
       </div>
       {/* Education Component End */}
 
-      {/* Continuing Education Empty Data Start */}
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Continuing Education"}
         subTitle={"Add Continuing Education"}
         description={
           "Add continuing education credits earned to enhance your profile"
         }
+
       />
-      {/* Continuing Education Empty Data End */}
 
       {/* Continuing Education Component start */}
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -367,15 +354,15 @@ const Education = () => {
       </div>
       {/* Continuing Education Component End */}
 
-      {/* Training Certifications Empty Data Start */}
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Training"}
         subTitle={"Add Training"}
         description={
           "Add trainings attended to demonstrate your professional development"
         }
+
       />
-      {/* Training Certifications Empty Data End */}
 
       {/* Training Certifications Component start */}
       <div className="px-5 mt-6 bg-white rounded-2xl">

@@ -1,18 +1,6 @@
 "use client";
 
 import {
-  DocumentMagnifyingGlassIcon,
-  DocumentMinusIcon,
-  AcademicCapIcon,
-} from "@heroicons/react/24/outline";
-
-import {
-  IconBreifcase,
-  AwardIcon,
-  SettingsIcon,
-  DocumentsIcon,
-  EditIcon,
-  AddIcon,
   EditIconTransparent,
   AddIconSmall,
   PhoneDisconnectIcon,
@@ -20,8 +8,8 @@ import {
   PhoneIcon,
   AddPlusIcon,
 } from "@/svgs/icons";
-import AddCardComponent from "../AddCardComponent/AddCardComponent";
 import { Icon } from "@/svgs";
+import Card from "../Card/Card";
 
 const Experience = () => {
   return (
@@ -83,15 +71,15 @@ const Experience = () => {
       </div>
       {/* Experience Summary Component End */}
 
-      {/* Add Work Experience Empty Data Start */}
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Work Experience"}
         subTitle={"Add Work Experience"}
         description={
           "Find the right job by adding past and current work experience on your profile"
         }
+
       />
-      {/* Add Work Experience Empty Data End */}
 
       {/* Work Experience Component start */}
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -548,15 +536,15 @@ const Experience = () => {
       </div>
       {/* Work Experience Component End */}
 
-      {/* Add Add Professional Activities Empty Data Start */}
-      <AddCardComponent
+       <Card
+        isEmpty={true}
         title={"Professional Activities"}
         subTitle={"Add Professional Activities"}
         description={
           "Attract employers by adding professional activities on your profile"
         }
+
       />
-      {/* Add Work Experience Empty Data End */}
 
       {/* Professional Activities Component start */}
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -887,15 +875,15 @@ const Experience = () => {
       </div>
       {/* Professional Activities Component End */}
 
-      {/* Add References Empty Data Start */}
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"References"}
         subTitle={"Add References"}
         description={
           "Boost your credibility with employers by adding references to your profile."
         }
+
       />
-      {/* Add References Empty Data End */}
 
       {/* Add References Component start */}
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -1020,15 +1008,15 @@ const Experience = () => {
       </div>
       {/* Add References Component End */}
 
-      {/* Add Tech Proficiency Empty Data Start */}
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Tech Proficiency"}
         subTitle={"Add Tech Proficiency"}
         description={
           "Enhance your profile by listing tools and apps you have used in past roles."
         }
+
       />
-      {/* Add Tech Proficiency Empty Data End */}
 
       {/* Add Tech Proficiency Component start */}
       <div className="px-5 mt-6 bg-white rounded-2xl">

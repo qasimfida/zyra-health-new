@@ -4,8 +4,8 @@ import {
   EditIconTransparent,
   AddPlusIcon
 } from "@/svgs/icons";
-import AddCardComponent from "../AddCardComponent/AddCardComponent";
 import { Icon } from "@/svgs";
+import Card from "../Card/Card";
 
 const Preferences = () => {
   return (
@@ -203,11 +203,13 @@ const Preferences = () => {
       </div>
       {/* Experience Summary Component End */}
 
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Add Employment Preferences"}
         subTitle={"Add Employment Preferences"}
         description={
           "Customize your job search by setting your employment preferences"}
+
       />
 
        {/* Search Preferences Component start */}

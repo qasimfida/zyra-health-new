@@ -1,39 +1,26 @@
 "use client";
 
 import {
-  DocumentMagnifyingGlassIcon,
-  DocumentMinusIcon,
-  AcademicCapIcon,
-} from "@heroicons/react/24/outline";
-
-import {
-  IconBreifcase,
-  AwardIcon,
-  SettingsIcon,
-  DocumentsIcon,
-  EditIcon,
   BackIcon,
   EditIconTransparent,
   AddIconSmall,
   DownloadIcon,
   DocumentTagIcon,
-  PhoneIcon,
-  AddPlusIcon,
-  CheckboxIcon,
 } from "@/svgs/icons";
-import AddCardComponent from "../AddCardComponent/AddCardComponent";
 import { Icon } from "@/svgs";
+import Card from "../Card/Card";
 
 const Documents = () => {
   return (
     <div>
-
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Resume"}
         subTitle={"Upload Resume Now"}
         description={
           "Upload your most up to date resume to help us find you the next best opportunity."
         }
+
       />
 
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -74,12 +61,14 @@ const Documents = () => {
         </div>
       </div>
 
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Identification"}
         subTitle={"Upload  ID to Verify  Identity"}
         description={
           "Get verified to get started. We respect your privacy and never sell or share your information with others."
         }
+
       />
 
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -133,12 +122,14 @@ const Documents = () => {
         </div>
       </div>
 
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Health Screening"}
         subTitle={"Complete Health Screening"}
         description={
           "We require health screening submissions to ensure safely performance of duties."
         }
+
       />
 
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -258,12 +249,14 @@ const Documents = () => {
         </div>
       </div>
 
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Immunization"}
         subTitle={"Submit  Immunization Records"}
         description={
           "We require immunization records from applicants as part of the application process."
         }
+
       />
 
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -383,12 +376,14 @@ const Documents = () => {
         </div>
       </div>
 
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Liability Insurance"}
         subTitle={"Upload  Liability Insurance"}
         description={
           "Clinicians engaged in contract work must upload liability insurance for continued protection."
         }
+
       />
 
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -563,12 +558,14 @@ const Documents = () => {
         </div>
       </div>
 
-      <AddCardComponent
+       <Card
+        isEmpty={true}
         title={"Participation Agreement"}
         subTitle={"Sign the Participation Agreement"}
         description={
           "Review and sign the participation agreement to confirm your understanding and acceptance of the terms."
         }
+
       />
 
       {/* Participation Agreement */}
@@ -1044,12 +1041,14 @@ const Documents = () => {
         </div>
       </div>
 
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Background Check Consent Form"}
         subTitle={"Background Check Consent Form  "}
         description={
           "We require your approval for the background check to maintain safety and compliance standards."
         }
+
       />
 
       {/* Participation Agreement */}

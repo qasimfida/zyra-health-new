@@ -1,35 +1,17 @@
 "use client";
 
 import {
-  DocumentMagnifyingGlassIcon,
-  DocumentMinusIcon,
-  AcademicCapIcon,
-} from "@heroicons/react/24/outline";
-
-import {
-  IconBreifcase,
-  AwardIcon,
-  SettingsIcon,
-  DocumentsIcon,
-  EditIcon,
   BackIcon,
   EditIconTransparent,
-  AddIconSmall,
-  DownloadIcon,
   DocumentTagIcon,
   UploadIcon,
   DropdownIcon,
-  CheckboxIcon,
-  PhoneIcon,
   DeleteIcon,
   BoxIcon,
   DocumentFrameIcon,
-  AddPlusIcon
 } from "@/svgs/icons";
 import ProgressBar from "../CustomProgressbar/CustomProgressbar";
 import CustomCheckbox from "../CustomCheckbox/CustomCheckbox";
-import AddCardComponent from "../AddCardComponent/AddCardComponent";
-import { Icon } from "@/svgs";
 
 const Skills = () => {
   return (

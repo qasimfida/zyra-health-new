@@ -6,22 +6,21 @@ import {
   TimeTagIcon,
   WarningTagIcon,
 } from "@/svgs/icons";
-import AddCardComponent from "../AddCardComponent/AddCardComponent";
 import { Icon } from "@/svgs";
+import Card from "../Card/Card";
 
 const Credentials = () => {
   return (
     <div>
-
-      {/* Licenses Empty Data Start */}
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Licenses"}
         subTitle={"Add Licenses"}
         description={
           "Adding your current licenses is critical to ensure eligibility for matching job offers"
         }
+
       />
-      {/* Licenses Empty Data End */}
 
       {/* Licences Component start */}
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -206,15 +205,15 @@ const Credentials = () => {
       </div>
       {/* Licences Component End */}
 
-      {/* Basic Certifications Empty Data Start */}
-      <AddCardComponent
+       <Card
+        isEmpty={true}
         title={"Basic Certifications"}
         subTitle={"Add Basic Certifications"}
         description={
           "List basic certifications you have earned to demonstrate proficiency and attract employers"
         }
+
       />
-      {/* Basic Certifications Empty Data End */}
 
       {/* Basic Certifications Component start */}
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -315,15 +314,15 @@ const Credentials = () => {
       </div>
       {/* Basic Certifications Component End */}
 
-      {/* Speciality Certifications Empty Data Start */}
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Speciality Certifications"}
         subTitle={"Add Speciality Certifications"}
         description={
           "Adding specialty certifications is important to validate your expertise and professional readiness"
         }
+
       />
-      {/* Speciality Empty Data End */}
 
       {/* Speciality Certifications Component start */}
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -412,15 +411,15 @@ const Credentials = () => {
       </div>
       {/* Speciality Certifications Component End */}
 
-      {/* Other Certifications Component start */}
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Other Certifications"}
         subTitle={"Add Other Certifications"}
         description={
           "Include other certifications you have earned to boost your professional standing"
         }
+
       />
-      {/* other Certifications Component End */}
 
       {/* Other Certifications Component start */}
       <div className="px-5 mt-6 bg-white rounded-2xl">

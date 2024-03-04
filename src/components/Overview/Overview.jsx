@@ -6,10 +6,8 @@ import {
   TwitterIcon,
   LinkedInIcon,
 } from "@/svgs/icons";
-import AddCardComponent from "../AddCardComponent/AddCardComponent";
 import Card from "../Card/Card";
 import { Icon } from "@/svgs";
-import { DocumentMagnify, DocumentsMinus, Education, Breifcase, Documents, Award, Settings } from "@/svgs/icons";
 
 const Overview = () => {
   const profileData = [
@@ -38,13 +36,15 @@ const Overview = () => {
         heading="Currently located in Charlotte, NC"
         options={contactInformationData}
       />
-
-      <AddCardComponent
+      
+      <Card
+        isEmpty={true}
         title={"Languages"}
         subTitle={"Add Languages"}
         description={
           "Attract more employers by adding the languages you speak on your profile"
         }
+
       />
 
       <div className="p-5 mt-6 bg-white  rounded-2xl">
@@ -137,12 +137,14 @@ const Overview = () => {
         </div>
       </div>
 
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Emergency Contacts"}
         subTitle={"Add Emergency Contacts"}
         description={
           "Add an emergency contact to increase profile completeness"
         }
+
       />
 
       <div className="p-5 mt-6 bg-white  rounded-2xl">
@@ -182,12 +184,14 @@ const Overview = () => {
         </div>
       </div>
 
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Social Profile"}
         subTitle={"Add Social Profile"}
         description={
           "Add your social media or other online accounts to enhance your profile"
         }
+
       />
 
       <div className="p-5 mt-6 bg-white  rounded-2xl">
@@ -236,12 +240,14 @@ const Overview = () => {
         </div>
       </div>
 
-      <AddCardComponent
+      <Card
+        isEmpty={true}
         title={"Identity Information"}
         subTitle={"Add Identity Information"}
         description={
           "Questions or feedback? We are all ears and ready to help!"
         }
+
       />
 
       <div className="p-5 mt-6 bg-white  rounded-2xl">
