@@ -9,7 +9,28 @@ import {
 import { Icon } from "@/svgs";
 import Card from "../Card/Card";
 
+const educationData = [
+  {
+    country: "Bachelor of Science in Nursing (BSN)",
+    data: [
+      { name: "Institution Name", value: "Washington University in St. Louis" },
+      { name: "Field of Study", value: "Compact License" },
+      { name: "Start Date", value: "October 2024" },
+      { name: "End/Expected", value: "October 2024" },
+      { name: "GPA", value: "October 2024" },
+      { name: "Honors and Awards", value: "October 2024" },
+    ],
+    tags: [
+      {
+        name: "Name of Document",
+        type: "document"
+      },
+    ]
+  },
+];
+
 const Education = () => {
+  
   return (
     <div>
       <Card
@@ -22,11 +43,10 @@ const Education = () => {
 
       />
 
-      {/* Education Component start */}
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full border-b pb-3">
           <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
+            <h4 className="text-5xl text-primary">
               Education
             </h4>
           </div>
@@ -37,59 +57,54 @@ const Education = () => {
           </div>
         </div>
 
-        <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full min-h-[40px]">
-            <div>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-                Bachelor of Science in Nursing (BSN)
-              </h4>
+        {educationData.map((licence) => {
+          return (
+            <div className="pt-5 border-b">
+              <div className="flex justify-between items-center w-full h-10">
+                <div>
+                  <h4 className="text-4xl text-body mb-2">
+                    {licence.country}
+                  </h4>
+                </div>
+                <div className="flex items-center">
+                  <button type="button" className="text-white">
+                    <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
+                  </button>
+                </div>
+              </div>
+              <div className="mb-4">
+                <h4 className="text-4xl text-body mb-2">
+                  {licence.heading}
+                </h4>
+                {licence.data.map(({ name, value }) => {
+                  return (
+                    <p className="text-base text-secondary font-medium mb-2">
+                      <span className="text-body">{name}: </span>{value}
+                    </p>
+                  )
+                })}
+                <div className="flex flex-wrap w-full gap-1.5">
+                  {licence.tags.map(({ name, type }) => {
+                    const tagClass = type === "document" ? "border-documentBorder text-documentBorder" : type === "verified" ? "border-verified text-verified" : "border-unverifiedBorder text-unverifiedBorder";
+                    return (
+                      <button
+                        type="button"
+                        className={`rounded-3xl border  flex items-center text-sm font-medium  py-1 px-2 ${tagClass}`}
+                      >
+                        <span className="mr-2">
+                          {type === "document" ? <DocumentTagIcon className="w-5 h-5" aria-hidden="true" /> : type === "unverified" ? <WarningTagIcon className="w-5 h-5" aria-hidden="true" /> : type === "verified" ? <VerifiedIcon className="w-5 h-5" aria-hidden="true" /> : <TimeTagIcon className="w-5 h-5" aria-hidden="true" />}
+                        </span>
+                        {name}
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
             </div>
-            <div className="flex items-center mr-[12px]">
-              <button type="button" className="text-white">
-                <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-              </button>
-            </div>
-          </div>
-          <div className="mb-4">
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Institution Name: </span>North
-              Carolina Board of Nursing
-            </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Field of Study: </span>Compact
-              License
-            </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Start Date: </span>
-              XYZ23091234
-            </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">End/Expected Date: </span>October
-              2024
-            </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">GPA: </span>October 2024
-            </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Honors and Awards: </span>October
-              2024
-            </p>
-            <div className="flex flex-wrap w-full gap-1.5">
-              <button
-                type="button"
-                className="rounded-3xl border border-[#299DCF] flex items-center text-[14px] font-medium text-[#299DCF] h-[30px] py-[5px] px-[10px]"
-              >
-                <span className="mr-2">
-                  <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
-                </span>
-                Name of Document
-              </button>
-            </div>
-          </div>
-        </div>
+          )
+        })}
       </div>
-      {/* Education Component End */}
-
+{/* TODO Continuing */}
       <Card
         isEmpty={true}
         title={"Continuing Education"}
@@ -101,10 +116,10 @@ const Education = () => {
       />
 
       {/* Continuing Education Component start */}
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full border-b pb-3">
           <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
+            <h4 className="text-5xl text-primary">
               Continuing Education
             </h4>
           </div>
@@ -116,49 +131,46 @@ const Education = () => {
         </div>
 
         <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full min-h-[40px]">
+          <div className="flex justify-between items-center w-full h-10">
             <div>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
+              <h4 className="text-4xl text-body mb-2">
                 Advanced Pediatric Care Techniques:
               </h4>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-                Enhancing Skills and Knowledge for Modern Nursing
-              </h4>
             </div>
-            <div className="flex items-center mr-[12px]">
+            <div className="flex items-center">
               <button type="button" className="text-white">
                 <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
               </button>
             </div>
           </div>
           <div className="mb-4">
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Institution Name: </span>
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">Institution Name: </span>
               Riverside Health Sciences Institute - Center for Nursing
               Excellence
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Course Type: </span>Seminar
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">Course Type: </span>Seminar
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Field of Study: </span>Geriatric
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">Field of Study: </span>Geriatric
               Nursing
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Start Date: </span>
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">Start Date: </span>
               September 2020
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">End/Expected Date: </span>October
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">End/Expected Date: </span>October
               2024
             </p>
             <div className="flex flex-wrap w-full gap-1.5 mb-2">
-              <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
-                <span className="text-[#5E5E6F]">Skills Acquired: </span>
+              <p className="flex items-center text-base text-secondary font-medium mr-2">
+                <span className="text-body">Skills Acquired: </span>
               </p>
               <button
                 type="button"
-                className="rounded-3xl bg-[#E8E6FF] flex items-center text-[14px] font-medium text-[#7F7F7F] h-[30px] py-[5px] px-[7px]"
+                className="rounded-3xl bg-genericTag flex items-center text-sm font-medium text-secondary py-1 px-2"
               >
                 <span className="mr-2">
                   <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
@@ -167,7 +179,7 @@ const Education = () => {
               </button>
               <button
                 type="button"
-                className="rounded-3xl bg-[#E8E6FF] flex items-center text-[14px] font-medium text-[#7F7F7F] h-[30px] py-[5px] px-[7px]"
+                className="rounded-3xl bg-genericTag flex items-center text-sm font-medium text-secondary py-1 px-2"
               >
                 <span className="mr-2">
                   <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
@@ -176,7 +188,7 @@ const Education = () => {
               </button>
               <button
                 type="button"
-                className="rounded-3xl flex items-center text-[16px] font-medium text-[#7070FF] h-[30px] py-[5px] px-[7px]"
+                className="rounded-3xl flex items-center text-base font-medium text-primary py-1 px-2"
               >
                 <span>
                   <AddPlusIcon className="w-5 h-5" aria-hidden="true" />
@@ -185,55 +197,52 @@ const Education = () => {
               </button>
             </div>
 
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">CEUs Earned: </span>10 CEUs
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">CEUs Earned: </span>10 CEUs
             </p>
           </div>
         </div>
         <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full min-h-[40px]">
+          <div className="flex justify-between items-center w-full h-10">
             <div>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
+              <h4 className="text-4xl text-body mb-2">
                 Advanced Pediatric Care Techniques:
               </h4>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-                Enhancing Skills and Knowledge for Modern Nursing
-              </h4>
             </div>
-            <div className="flex items-center mr-[12px]">
+            <div className="flex items-center">
               <button type="button" className="text-white">
                 <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
               </button>
             </div>
           </div>
           <div className="mb-4">
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Institution Name: </span>
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">Institution Name: </span>
               Riverside Health Sciences Institute - Center for Nursing
               Excellence
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Course Type: </span>Seminar
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">Course Type: </span>Seminar
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Field of Study: </span>Geriatric
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">Field of Study: </span>Geriatric
               Nursing
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Start Date: </span>
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">Start Date: </span>
               September 2020
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">End/Expected Date: </span>October
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">End/Expected Date: </span>October
               2024
             </p>
             <div className="flex flex-wrap w-full gap-1.5 mb-2">
-              <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
-                <span className="text-[#5E5E6F]">Skills Acquired: </span>
+              <p className="flex items-center text-base text-secondary font-medium mr-2">
+                <span className="text-body">Skills Acquired: </span>
               </p>
               <button
                 type="button"
-                className="rounded-3xl bg-[#E8E6FF] flex items-center text-[14px] font-medium text-[#7F7F7F] h-[30px] py-[5px] px-[7px]"
+                className="rounded-3xl bg-genericTag flex items-center text-sm font-medium text-secondary py-1 px-2"
               >
                 <span className="mr-2">
                   <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
@@ -242,7 +251,7 @@ const Education = () => {
               </button>
               <button
                 type="button"
-                className="rounded-3xl bg-[#E8E6FF] flex items-center text-[14px] font-medium text-[#7F7F7F] h-[30px] py-[5px] px-[7px]"
+                className="rounded-3xl bg-genericTag flex items-center text-sm font-medium text-secondary py-1 px-2"
               >
                 <span className="mr-2">
                   <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
@@ -251,7 +260,7 @@ const Education = () => {
               </button>
               <button
                 type="button"
-                className="rounded-3xl flex items-center text-[16px] font-medium text-[#7070FF] h-[30px] py-[5px] px-[7px]"
+                className="rounded-3xl flex items-center text-base font-medium text-primary py-1 px-2"
               >
                 <span>
                   <AddPlusIcon className="w-5 h-5" aria-hidden="true" />
@@ -260,55 +269,52 @@ const Education = () => {
               </button>
             </div>
 
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">CEUs Earned: </span>10 CEUs
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">CEUs Earned: </span>10 CEUs
             </p>
           </div>
         </div>
         <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full min-h-[40px]">
+          <div className="flex justify-between items-center w-full h-10">
             <div>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
+              <h4 className="text-4xl text-body mb-2">
                 Advanced Pediatric Care Techniques:
               </h4>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-                Enhancing Skills and Knowledge for Modern Nursing
-              </h4>
             </div>
-            <div className="flex items-center mr-[12px]">
+            <div className="flex items-center">
               <button type="button" className="text-white">
                 <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
               </button>
             </div>
           </div>
           <div className="mb-4">
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Institution Name: </span>
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">Institution Name: </span>
               Riverside Health Sciences Institute - Center for Nursing
               Excellence
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Course Type: </span>Seminar
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">Course Type: </span>Seminar
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Field of Study: </span>Geriatric
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">Field of Study: </span>Geriatric
               Nursing
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Start Date: </span>
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">Start Date: </span>
               September 2020
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">End/Expected Date: </span>October
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">End/Expected Date: </span>October
               2024
             </p>
             <div className="flex flex-wrap w-full gap-1.5 mb-2">
-              <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
-                <span className="text-[#5E5E6F]">Skills Acquired: </span>
+              <p className="flex items-center text-base text-secondary font-medium mr-2">
+                <span className="text-body">Skills Acquired: </span>
               </p>
               <button
                 type="button"
-                className="rounded-3xl bg-[#E8E6FF] flex items-center text-[14px] font-medium text-[#7F7F7F] h-[30px] py-[5px] px-[7px]"
+                className="rounded-3xl bg-genericTag flex items-center text-sm font-medium text-secondary py-1 px-2"
               >
                 <span className="mr-2">
                   <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
@@ -317,7 +323,7 @@ const Education = () => {
               </button>
               <button
                 type="button"
-                className="rounded-3xl bg-[#E8E6FF] flex items-center text-[14px] font-medium text-[#7F7F7F] h-[30px] py-[5px] px-[7px]"
+                className="rounded-3xl bg-genericTag flex items-center text-sm font-medium text-secondary py-1 px-2"
               >
                 <span className="mr-2">
                   <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
@@ -326,7 +332,7 @@ const Education = () => {
               </button>
               <button
                 type="button"
-                className="rounded-3xl flex items-center text-[16px] font-medium text-[#7070FF] h-[30px] py-[5px] px-[7px]"
+                className="rounded-3xl flex items-center text-base font-medium text-primary py-1 px-2"
               >
                 <span>
                   <AddPlusIcon className="w-5 h-5" aria-hidden="true" />
@@ -335,13 +341,13 @@ const Education = () => {
               </button>
             </div>
 
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">CEUs Earned: </span>10 CEUs
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">CEUs Earned: </span>10 CEUs
             </p>
             <div className="flex flex-wrap w-full gap-1.5">
               <button
                 type="button"
-                className="rounded-3xl border border-[#1ECA63] flex items-center text-[14px] font-medium text-[#1ECA63] h-[30px] py-[5px] px-[10px]"
+                className="rounded-3xl border border-verified flex items-center text-sm font-medium text-verified py-1 px-2"
               >
                 <span className="mr-2">
                   <CertifiedIcon className="w-5 h-5" aria-hidden="true" />
@@ -365,68 +371,68 @@ const Education = () => {
       />
 
       {/* Training Certifications Component start */}
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <h4 className="text-[19px] font-semibold text-[#7070FF]">Training</h4>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full border-b pb-3">
+          <h4 className="text-5xl text-primary">Training</h4>
         </div>
 
         <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full min-h-[40px]">
+          <div className="flex justify-between items-center w-full h-10">
             <div>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
+              <h4 className="text-4xl text-body mb-2">
                 Training
               </h4>
             </div>
-            <div className="flex items-center mr-[12px]">
+            <div className="flex items-center">
               <button type="button" className="text-white">
                 <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
               </button>
             </div>
           </div>
           <div className="pt-5 border-b">
-            <div className="flex justify-between items-center w-full min-h-[40px]">
+            <div className="flex justify-between items-center w-full h-10">
               <div>
-                <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
+                <h4 className="text-4xl text-body mb-2">
                   Advanced Pediatric Care Techniques:
                 </h4>
-                <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
+                <h4 className="text-4xl text-body mb-2">
                   Enhancing Skills and Knowledge for Modern Nursing
                 </h4>
               </div>
-              <div className="flex items-center mr-[12px]">
+              <div className="flex items-center">
                 <button type="button" className="text-white">
                   <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
                 </button>
               </div>
             </div>
             <div className="mb-4">
-              <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-                <span className="text-[#5E5E6F]">Institution Name: </span>
+              <p className="text-base text-secondary font-medium mb-2">
+                <span className="text-body">Institution Name: </span>
                 Riverside Health Sciences Institute - Center for Nursing
                 Excellence
               </p>
-              <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-                <span className="text-[#5E5E6F]">Course Type: </span>Seminar
+              <p className="text-base text-secondary font-medium mb-2">
+                <span className="text-body">Course Type: </span>Seminar
               </p>
-              <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-                <span className="text-[#5E5E6F]">Field of Study: </span>
+              <p className="text-base text-secondary font-medium mb-2">
+                <span className="text-body">Field of Study: </span>
                 Geriatric Nursing
               </p>
-              <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-                <span className="text-[#5E5E6F]">Start Date: </span>
+              <p className="text-base text-secondary font-medium mb-2">
+                <span className="text-body">Start Date: </span>
                 September 2020
               </p>
-              <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-                <span className="text-[#5E5E6F]">End/Expected Date: </span>
+              <p className="text-base text-secondary font-medium mb-2">
+                <span className="text-body">End/Expected Date: </span>
                 October 2024
               </p>
               <div className="flex flex-wrap w-full gap-1.5 mb-2">
-                <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
-                  <span className="text-[#5E5E6F]">Skills Acquired: </span>
+                <p className="flex items-center text-base text-secondary font-medium mr-2">
+                  <span className="text-body">Skills Acquired: </span>
                 </p>
                 <button
                   type="button"
-                  className="rounded-3xl bg-[#E8E6FF] flex items-center text-[14px] font-medium text-[#7F7F7F] h-[30px] py-[5px] px-[7px]"
+                  className="rounded-3xl bg-genericTag flex items-center text-sm font-medium text-secondary py-1 px-2"
                 >
                   <span className="mr-2">
                     <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
@@ -435,7 +441,7 @@ const Education = () => {
                 </button>
                 <button
                   type="button"
-                  className="rounded-3xl bg-[#E8E6FF] flex items-center text-[14px] font-medium text-[#7F7F7F] h-[30px] py-[5px] px-[7px]"
+                  className="rounded-3xl bg-genericTag flex items-center text-sm font-medium text-secondary py-1 px-2"
                 >
                   <span className="mr-2">
                     <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
@@ -444,7 +450,7 @@ const Education = () => {
                 </button>
                 <button
                   type="button"
-                  className="rounded-3xl flex items-center text-[16px] font-medium text-[#7070FF] h-[30px] py-[5px] px-[7px]"
+                  className="rounded-3xl flex items-center text-base font-medium text-primary py-1 px-2"
                 >
                   <span>
                     <AddPlusIcon className="w-5 h-5" aria-hidden="true" />
@@ -453,13 +459,13 @@ const Education = () => {
                 </button>
               </div>
 
-              <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-                <span className="text-[#5E5E6F]">CEUs Earned: </span>10 CEUs
+              <p className="text-base text-secondary font-medium mb-2">
+                <span className="text-body">CEUs Earned: </span>10 CEUs
               </p>
               <div className="flex flex-wrap w-full gap-1.5">
                 <button
                   type="button"
-                  className="rounded-3xl border border-[#1ECA63] flex items-center text-[14px] font-medium text-[#1ECA63] h-[30px] py-[5px] px-[10px]"
+                  className="rounded-3xl border border-verified flex items-center text-sm font-medium text-verified py-1 px-2"
                 >
                   <span className="mr-2">
                     <CertifiedIcon className="w-5 h-5" aria-hidden="true" />
@@ -470,49 +476,49 @@ const Education = () => {
             </div>
           </div>
           <div className="pt-5 border-b">
-            <div className="flex justify-between items-center w-full min-h-[40px]">
+            <div className="flex justify-between items-center w-full h-10">
               <div>
-                <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
+                <h4 className="text-4xl text-body mb-2">
                   Advanced Pediatric Care Techniques:
                 </h4>
-                <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
+                <h4 className="text-4xl text-body mb-2">
                   Enhancing Skills and Knowledge for Modern Nursing
                 </h4>
               </div>
-              <div className="flex items-center mr-[12px]">
+              <div className="flex items-center">
                 <button type="button" className="text-white">
                   <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
                 </button>
               </div>
             </div>
             <div className="mb-4">
-              <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-                <span className="text-[#5E5E6F]">Institution Name: </span>
+              <p className="text-base text-secondary font-medium mb-2">
+                <span className="text-body">Institution Name: </span>
                 Riverside Health Sciences Institute - Center for Nursing
                 Excellence
               </p>
-              <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-                <span className="text-[#5E5E6F]">Course Type: </span>Seminar
+              <p className="text-base text-secondary font-medium mb-2">
+                <span className="text-body">Course Type: </span>Seminar
               </p>
-              <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-                <span className="text-[#5E5E6F]">Field of Study: </span>
+              <p className="text-base text-secondary font-medium mb-2">
+                <span className="text-body">Field of Study: </span>
                 Geriatric Nursing
               </p>
-              <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-                <span className="text-[#5E5E6F]">Start Date: </span>
+              <p className="text-base text-secondary font-medium mb-2">
+                <span className="text-body">Start Date: </span>
                 September 2020
               </p>
-              <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-                <span className="text-[#5E5E6F]">End/Expected Date: </span>
+              <p className="text-base text-secondary font-medium mb-2">
+                <span className="text-body">End/Expected Date: </span>
                 October 2024
               </p>
               <div className="flex flex-wrap w-full gap-1.5 mb-2">
-                <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
-                  <span className="text-[#5E5E6F]">Skills Acquired: </span>
+                <p className="flex items-center text-base text-secondary font-medium mr-2">
+                  <span className="text-body">Skills Acquired: </span>
                 </p>
                 <button
                   type="button"
-                  className="rounded-3xl bg-[#E8E6FF] flex items-center text-[14px] font-medium text-[#7F7F7F] h-[30px] py-[5px] px-[7px]"
+                  className="rounded-3xl bg-genericTag flex items-center text-sm font-medium text-secondary py-1 px-2"
                 >
                   <span className="mr-2">
                     <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
@@ -521,7 +527,7 @@ const Education = () => {
                 </button>
                 <button
                   type="button"
-                  className="rounded-3xl bg-[#E8E6FF] flex items-center text-[14px] font-medium text-[#7F7F7F] h-[30px] py-[5px] px-[7px]"
+                  className="rounded-3xl bg-genericTag flex items-center text-sm font-medium text-secondary py-1 px-2"
                 >
                   <span className="mr-2">
                     <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
@@ -530,7 +536,7 @@ const Education = () => {
                 </button>
                 <button
                   type="button"
-                  className="rounded-3xl flex items-center text-[16px] font-medium text-[#7070FF] h-[30px] py-[5px] px-[7px]"
+                  className="rounded-3xl flex items-center text-base font-medium text-primary py-1 px-2"
                 >
                   <span>
                     <AddPlusIcon className="w-5 h-5" aria-hidden="true" />
@@ -539,13 +545,13 @@ const Education = () => {
                 </button>
               </div>
 
-              <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-                <span className="text-[#5E5E6F]">CEUs Earned: </span>10 CEUs
+              <p className="text-base text-secondary font-medium mb-2">
+                <span className="text-body">CEUs Earned: </span>10 CEUs
               </p>
               <div className="flex flex-wrap w-full gap-1.5">
                 <button
                   type="button"
-                  className="rounded-3xl border border-[#1ECA63] flex items-center text-[14px] font-medium text-[#1ECA63] h-[30px] py-[5px] px-[10px]"
+                  className="rounded-3xl border border-verified flex items-center text-sm font-medium text-verified py-1 px-2"
                 >
                   <span className="mr-2">
                     <CertifiedIcon className="w-5 h-5" aria-hidden="true" />
@@ -557,49 +563,49 @@ const Education = () => {
           </div>
         </div>
         <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full min-h-[40px]">
+          <div className="flex justify-between items-center w-full h-10">
             <div>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
+              <h4 className="text-4xl text-body mb-2">
                 Advanced Pediatric Care Techniques:
               </h4>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
+              <h4 className="text-4xl text-body mb-2">
                 Enhancing Skills and Knowledge for Modern Nursing
               </h4>
             </div>
-            <div className="flex items-center mr-[12px]">
+            <div className="flex items-center">
               <button type="button" className="text-white">
                 <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
               </button>
             </div>
           </div>
           <div className="mb-4">
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Institution Name: </span>
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">Institution Name: </span>
               Riverside Health Sciences Institute - Center for Nursing
               Excellence
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Course Type: </span>Seminar
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">Course Type: </span>Seminar
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Field of Study: </span>Geriatric
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">Field of Study: </span>Geriatric
               Nursing
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Start Date: </span>
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">Start Date: </span>
               September 2020
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">End/Expected Date: </span>October
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">End/Expected Date: </span>October
               2024
             </p>
             <div className="flex flex-wrap w-full gap-1.5 mb-2">
-              <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
-                <span className="text-[#5E5E6F]">Skills Acquired: </span>
+              <p className="flex items-center text-base text-secondary font-medium mr-2">
+                <span className="text-body">Skills Acquired: </span>
               </p>
               <button
                 type="button"
-                className="rounded-3xl bg-[#E8E6FF] flex items-center text-[14px] font-medium text-[#7F7F7F] h-[30px] py-[5px] px-[7px]"
+                className="rounded-3xl bg-genericTag flex items-center text-sm font-medium text-secondary py-1 px-2"
               >
                 <span className="mr-2">
                   <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
@@ -608,7 +614,7 @@ const Education = () => {
               </button>
               <button
                 type="button"
-                className="rounded-3xl bg-[#E8E6FF] flex items-center text-[14px] font-medium text-[#7F7F7F] h-[30px] py-[5px] px-[7px]"
+                className="rounded-3xl bg-genericTag flex items-center text-sm font-medium text-secondary py-1 px-2"
               >
                 <span className="mr-2">
                   <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
@@ -617,7 +623,7 @@ const Education = () => {
               </button>
               <button
                 type="button"
-                className="rounded-3xl flex items-center text-[16px] font-medium text-[#7070FF] h-[30px] py-[5px] px-[7px]"
+                className="rounded-3xl flex items-center text-base font-medium text-primary py-1 px-2"
               >
                 <span>
                   <AddPlusIcon className="w-5 h-5" aria-hidden="true" />
@@ -626,13 +632,13 @@ const Education = () => {
               </button>
             </div>
 
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">CEUs Earned: </span>10 CEUs
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">CEUs Earned: </span>10 CEUs
             </p>
             <div className="flex flex-wrap w-full gap-1.5">
               <button
                 type="button"
-                className="rounded-3xl border border-[#1ECA63] flex items-center text-[14px] font-medium text-[#1ECA63] h-[30px] py-[5px] px-[10px]"
+                className="rounded-3xl border border-verified flex items-center text-sm font-medium text-verified py-1 px-2"
               >
                 <span className="mr-2">
                   <CertifiedIcon className="w-5 h-5" aria-hidden="true" />

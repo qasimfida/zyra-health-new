@@ -16,8 +16,8 @@ const Card = ({
 
   if (isEmpty) {
     return (
-      <div className="px-5 pb-2 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full h-[67px] border-b">
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full border-b pb-3">
           <div>
             <h4 className="text-[19px] font-semibold text-[#7070FF]">
               {title}

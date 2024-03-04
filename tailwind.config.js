@@ -1,4 +1,25 @@
 /** @type {import('tailwindcss').Config} */
+
+// text-xs = {
+//   font-size: 0.75rem;            12px
+//   line-height: 1rem;             16px
+// }
+// text-sm = {
+//   font-size: 0.875rem;           14px;
+//   line-height: 1.25rem;          20px;
+// }
+// text-base = {
+//   font-size: 1rem                16px;
+//   line-height: 1.5rem            24px;
+// }
+// font-normal	font-weight:         400;
+// text-medium =                    500;
+// font-semibold	font-weight:       600;
+// font-bold	font-weight:           700;
+// font-extrabold	font-weight:     800;
+// font-black	font-weight:         900; 
+
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -31,6 +52,10 @@ module.exports = {
         'button': '#424242',
         'light': '#F3F5F8',
         'grayLignt': '#C7C7C8',
+        'documentBorder': '#299DCF',
+        'unverifiedBorder': '#FF6B2C',
+        'verified': '#1ECA63',
+        'genericTag': '#E8E6FF'
       },
     },
   },

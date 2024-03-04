@@ -21,6 +21,45 @@ const Overview = () => {
     { name: "Email", value: "williamnash@gmail.com" },
   ];
 
+  const emergencyContactData = [
+    { name: "Relationship", value: "Mother" },
+    { name: "Email", value: "meghan.roberts@yahoo.com" },
+    { name: "Phone Number", value: "617-777-9090" },
+  ];
+
+  const socialProfileData = [
+    { name: "Website", value: "www.example.com/username" },
+    { name: "LinkedIn", value: "www.linkedin.com/in/username" },
+    { name: "Twitter", value: "www.twitter.com/username" },
+  ];
+
+  const identityInfoData = [
+    { name: "Pronouns", value: "He/Him" },
+    { name: "Gender", value: "Man" },
+    { name: "Ethnicity", value: "White" },
+  ];
+
+  const languagesData = [
+    {
+      language: "Balgarian",
+      data: [{ name: "Reading", value: "Beginner" },
+      { name: "Writing", value: "Beginner" },
+      { name: "Verbal", value: "Beginner" },]
+    },
+    {
+      language: "Spanish",
+      data: [{ name: "Reading", value: "Beginner" },
+      { name: "Writing", value: "Beginner" },
+      { name: "Verbal", value: "Beginner" },]
+    },
+    {
+      language: "Italian",
+      data: [{ name: "Reading", value: "Beginner" },
+      { name: "Writing", value: "Beginner" },
+      { name: "Verbal", value: "Beginner" },]
+    },
+  ];
+
   return (
     <div>
 
@@ -36,7 +75,7 @@ const Overview = () => {
         heading="Currently located in Charlotte, NC"
         options={contactInformationData}
       />
-      
+
       <Card
         isEmpty={true}
         title={"Languages"}
@@ -60,81 +99,29 @@ const Overview = () => {
             </button>
           </div>
         </div>
-        <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full h-10">
-            <div>
-              <h4 className="text-4xl text-body mb-2">
-                Balgarian
-              </h4>
+        {languagesData.map((item) => {
+          return <div className="pt-5 border-b">
+            <div className="flex justify-between items-center w-full h-10">
+              <div>
+                <h4 className="text-4xl text-body mb-2">
+                  {item.language}
+                </h4>
+              </div>
+              <div className="flex items-center">
+                <button type="button" className="text-white">
+                  <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
+                </button>
+              </div>
             </div>
-            <div className="flex items-center mr-3">
-              <button type="button" className="text-white">
-                <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-              </button>
-            </div>
-          </div>
-          <div className="mb-4">
-            <p className="text-base text-secondary font-medium mb-2">
-              <span className="text-body mr-2">Reading: </span>Beginner
-            </p>
-            <p className="text-base text-secondary font-medium mb-2">
-              <span className="text-body mr-2">Writing: </span>Beginner
-            </p>
-            <p className="text-base text-secondary font-medium mb-2">
-              <span className="text-body mr-2">Verbal: </span>Beginner
-            </p>
-          </div>
-        </div>
-        <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full h-10">
-            <div>
-              <h4 className="text-4xl text-body mb-2">
-                Spanish
-              </h4>
-            </div>
-            <div className="flex items-center mr-3">
-              <button type="button" className="text-white">
-                <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-              </button>
+            <div className="mb-4">
+              {item.data.map(({ name, value }, index) => {
+                return <p key={`${name}-value-${index + 1}`} className="text-base text-secondary font-medium mb-2">
+                  <span className="text-body">{name}: </span>{value}
+                </p>
+              })}
             </div>
           </div>
-          <div className="mb-4">
-            <p className="text-base text-secondary font-medium mb-2">
-              <span className="text-body mr-2">Reading: </span>Beginner
-            </p>
-            <p className="text-base text-secondary font-medium mb-2">
-              <span className="text-body mr-2">Writing: </span>Beginner
-            </p>
-            <p className="text-base text-secondary font-medium mb-2">
-              <span className="text-body mr-2">Verbal: </span>Beginner
-            </p>
-          </div>
-        </div>
-        <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full h-10">
-            <div>
-              <h4 className="text-4xl text-body mb-2">
-                Italian
-              </h4>
-            </div>
-            <div className="flex items-center mr-3">
-              <button type="button" className="text-white">
-                <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-              </button>
-            </div>
-          </div>
-          <div className="mb-4">
-            <p className="text-base text-secondary font-medium mb-2">
-              <span className="text-body mr-2">Reading: </span>Beginner
-            </p>
-            <p className="text-base text-secondary font-medium mb-2">
-              <span className="text-body mr-2">Writing: </span>Beginner
-            </p>
-            <p className="text-base text-secondary font-medium mb-2">
-              <span className="text-body mr-2">Verbal: </span>Beginner
-            </p>
-          </div>
-        </div>
+        })}
       </div>
 
       <Card
@@ -147,42 +134,12 @@ const Overview = () => {
 
       />
 
-      <div className="p-5 mt-6 bg-white  rounded-2xl">
-        <div className="flex justify-between  w-full h-10 border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-primary">
-              Emergency Contacts
-            </h4>
-          </div>
-          <div className="flex items-end">
-            <button type="button" className="text-white">
-              <Icon name="edit" className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
-        </div>
-        <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full h-10">
-            <div>
-              <h4 className="text-4xl text-body mb-2">
-                Meghan Roberts
-              </h4>
-            </div>
-          </div>
-          <div className="mb-4">
-            <p className="text-base text-secondary font-medium mb-2">
-              <span className="text-body  mr-2">Relationship: </span>Mother
-            </p>
-            <p className="text-base text-secondary font-medium mb-2">
-              <span className="text-body  mr-2">Email:</span>
-              meghan.roberts@yahoo.com
-            </p>
-            <p className="text-base text-secondary font-medium mb-2">
-              <span className="text-body  mr-2">Phone Number: </span>
-              617-777-9090
-            </p>
-          </div>
-        </div>
-      </div>
+      <Card
+        title="Emergency Contacts"
+        heading="Meghan Roberts"
+        options={emergencyContactData}
+        hasIcon={false}
+      />
 
       <Card
         isEmpty={true}
@@ -194,51 +151,11 @@ const Overview = () => {
 
       />
 
-      <div className="p-5 mt-6 bg-white  rounded-2xl">
-        <div className="flex justify-between  w-full h-10 border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-primary">
-              Social Profile
-            </h4>
-          </div>
-          <div className="flex items-end">
-            <button type="button" className="text-white">
-              <Icon name="edit" className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
-        </div>
-        <div className="pt-5 border-b">
-          <div className="mb-4">
-            <p className="text-base text-secondary font-medium mb-2 flex">
-              <span className="text-body flex mr-2">
-                <span className="mr-2">
-                  <GlobeIcon className="w-5 h-5" aria-hidden="true" />
-                </span>
-                Website:{" "}
-              </span>
-              www.example.com/username
-            </p>
-            <p className="text-base text-secondary font-medium mb-2 flex">
-              <span className="text-body flex mr-2">
-                <span className="mr-2">
-                  <LinkedInIcon className="w-5 h-5" aria-hidden="true" />
-                </span>
-                LinkedIn:{" "}
-              </span>
-              www.linkedin.com/in/username
-            </p>
-            <p className="text-base text-secondary font-medium mb-2 flex">
-              <span className="text-body flex mr-2">
-                <span className="mr-2">
-                  <TwitterIcon className="w-5 h-5" aria-hidden="true" />
-                </span>
-                Twitter:{" "}
-              </span>
-              www.twitter.com/username
-            </p>
-          </div>
-        </div>
-      </div>
+      <Card
+        title="Social Profile"
+        options={socialProfileData}
+        hasIcon={false}
+      />
 
       <Card
         isEmpty={true}
@@ -247,36 +164,13 @@ const Overview = () => {
         description={
           "Questions or feedback? We are all ears and ready to help!"
         }
-
       />
 
-      <div className="p-5 mt-6 bg-white  rounded-2xl">
-        <div className="flex justify-between  w-full h-10 border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-primary">
-              Identity Information
-            </h4>
-          </div>
-          <div className="flex items-end">
-            <button type="button" className="text-white">
-              <Icon name="edit" className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
-        </div>
-        <div className="pt-5 border-b">
-          <div className="mb-4">
-            <p className="text-base text-secondary font-medium mb-2">
-              <span className="text-body  mr-2">Pronouns: </span>He/Him
-            </p>
-            <p className="text-base text-secondary font-medium mb-2">
-              <span className="text-body  mr-2">Gender:</span>Man
-            </p>
-            <p className="text-base text-secondary font-medium mb-2">
-              <span className="text-body  mr-2">Ethnicity: </span>White
-            </p>
-          </div>
-        </div>
-      </div>
+      <Card
+        title="Identity Information"
+        options={identityInfoData}
+        hasIcon={false}
+      />
     </div>
   );
 };
