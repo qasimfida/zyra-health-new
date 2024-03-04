@@ -316,7 +316,7 @@ const Overview = () => {
         </div>
         <div className="pt-5 border-b">
           <div className="mb-4">
-            <p className="text-base text-primary font-medium mb-2 flex">
+            <p className="text-base text-secondary font-medium mb-2 flex">
               <span className="text-body flex mr-2">
                 <span className="mr-2">
                   <GlobeIcon className="w-5 h-5" aria-hidden="true" />
@@ -325,7 +325,7 @@ const Overview = () => {
               </span>
               www.example.com/username
             </p>
-            <p className="text-base text-primary font-medium mb-2 flex">
+            <p className="text-base text-secondary font-medium mb-2 flex">
               <span className="text-body flex mr-2">
                 <span className="mr-2">
                   <LinkedInIcon className="w-5 h-5" aria-hidden="true" />
@@ -334,7 +334,7 @@ const Overview = () => {
               </span>
               www.linkedin.com/in/username
             </p>
-            <p className="text-base text-primary font-medium mb-2 flex">
+            <p className="text-base text-secondary font-medium mb-2 flex">
               <span className="text-body flex mr-2">
                 <span className="mr-2">
                   <TwitterIcon className="w-5 h-5" aria-hidden="true" />
