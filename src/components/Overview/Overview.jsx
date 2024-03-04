@@ -24,118 +24,7 @@ const Overview = () => {
   ];
 
   return (
-    <div className="w-[calc(100%-3rem)] md:w-[calc(100%-19.5rem)] lg:w-[calc(100%-40rem)] flex flex-col justify-between sm:auto relative">
-      <div className="bg-white rounded-2xl">
-        <div className="sm:hidden">
-          <select
-            id="tabs"
-            className=" border text-body text-sm block w-full p-2.5 rounded-xl"
-          >
-            <option>Overview</option>
-            <option>Credentials</option>
-            <option>Education</option>
-            <option>Experience</option>
-            <option>Documents</option>
-            <option>Skills</option>
-            <option>Preferences</option>
-          </select>
-        </div>
-        <div>
-          <ul className="text-sm font-medium text-center text-gray-500 sm:flex overflow-hidden hidden">
-            <li className="flex items-center w-full py-6 focus-within:z-10">
-              <a
-                href="#"
-                className="flex items-center justify-center w-full border-r text-primary rounded-s-2xl"
-              >
-                <button type="button" className="mr-1">
-                  <DocumentMagnify
-                    className="w-5 h-5"
-                    aria-hidden="true"
-                  />
-                </button>
-
-                <p lassname="text-slate-500 font-medium">Overview</p>
-              </a>
-            </li>
-            <li className="flex items-center w-full py-6 focus-within:z-10">
-              <a
-                href="#"
-                className="flex text-body items-center justify-center w-full border-r hover:text-primary"
-              >
-                <button type="button" className="mr-1">
-                  <DocumentsMinus
-                    className="w-5 h-5"
-                    aria-hidden="true"
-                  />
-
-                </button>
-                <p lassname="text-slate-500 font-medium">Credentials</p>
-              </a>
-            </li>
-            <li className="flex items-center w-full py-6 focus-within:z-10">
-              <a
-                href="#"
-                className="flex items-center justify-center w-full text-body border-r hover:text-primary"
-              >
-                <button type="button" className="mr-1">
-                  <Education
-                    className="w-5 h-5"
-                    aria-hidden="true"
-                  />
-                </button>
-                <p lassname="text-slate-500 font-medium">Education</p>
-              </a>
-            </li>
-            <li className="flex items-center w-full py-6 focus-within:z-10">
-              <a
-                href="#"
-                className="flex items-center justify-center w-full text-body border-r hover:text-primary"
-              >
-                <button type="button" className="mr-1">
-                  <Breifcase
-                    className="w-5 h-5"
-                    aria-hidden="true"
-                  />
-                </button>
-                <p lassname="text-slate-500 font-medium">Experience</p>
-              </a>
-            </li>
-            <li className="flex items-center w-full py-6 focus-within:z-10">
-              <a
-                href="#"
-                className="flex items-center justify-center  w-full text-body border-r hover:text-primary"
-              >
-                <button type="button" className="mr-1">
-                  <Documents className="w-6 h-6" aria-hidden="true" />
-                </button>
-                <p lassname="text-slate-500 font-medium">Documents</p>
-              </a>
-            </li>
-            <li className="flex items-center w-full py-6 focus-within:z-10">
-              <a
-                href="#"
-                className="flex items-center justify-center  w-full text-body border-r hover:text-primary"
-              >
-                <button type="button" className="mr-1">
-                  <Award className="w-6 h-6" aria-hidden="true" />
-                </button>
-                <p lassname="text-slate-500 font-medium">Skills</p>
-              </a>
-            </li>
-            <li className="flex items-center w-full py-6 focus-within:z-10">
-              <a
-                href="#"
-                className="flex items-center justify-center  w-full text-body hover:text-primary rounded-e-2xl"
-              >
-                <button type="button" className="mr-1">
-                  <Settings className="w-6 h-6" aria-hidden="true" />
-                </button>
-                <p lassname="text-slate-500 font-medium">Preferences</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <div>
 
       <Card
         title="Personal Information"
@@ -167,7 +56,7 @@ const Overview = () => {
           </div>
           <div className="flex align-start">
             <button type="button" className="text-white">
-            <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
+              <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
             </button>
           </div>
         </div>

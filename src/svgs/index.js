@@ -1,4 +1,4 @@
-import { Breifcase, DocumentMagnify, DocumentsMinus, Edit, Education, Documents, Award, Settings } from "./icons";
+import { Breifcase, DocumentMagnify, DocumentsMinus, Edit, Education, Documents, Award, Settings, DocumentTagIcon, WarningTagIcon, TimeTagIcon } from "./icons";
 
 export const Icon = ({ name, filled, className }) => {
   const icons = {
@@ -10,6 +10,9 @@ export const Icon = ({ name, filled, className }) => {
     documentMagnify: <DocumentMagnify />,
     documents: <Documents />,
     settings: <Settings />,
+    documentTagIcon: <DocumentTagIcon />,
+    warningTagIcon: <WarningTagIcon />,
+    timeTagIcon: <TimeTagIcon />
   };
 
   if (filled) {
