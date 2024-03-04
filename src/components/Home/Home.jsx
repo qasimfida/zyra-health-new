@@ -1,7 +1,7 @@
 "use client";
 
-import { DocumentMagnify } from "@/svgs/icons";
-import { useState } from "react";
+import { Award, Breifcase, DocumentMagnify, DocumentsMinus, Settings } from "@/svgs/icons";
+import React, { useState } from "react";
 import Overview from "../Overview/Overview";
 import Credentials from "../Credentials/Credentials";
 import Education from "../Education/Education";
@@ -9,6 +9,7 @@ import Experience from "../Experience/Experience";
 import Documents from "../Documents/Documents";
 import Skills from "../Skills/Skills";
 import Preferences from "../Preferences.jsx/Preferences";
+import { EducationIcon } from '../../svgs/EducationIcon'
 
 const Home = () => {
     const [activeTab, setActiveTab] = useState('overview');
@@ -18,37 +19,61 @@ const Home = () => {
     };
 
     const tabData = [
-        { id: 'overview', label: 'Overview', component: <Overview /> },
-        { id: 'credentials', label: 'Credentials', component: <Credentials /> },
-        { id: 'education', label: 'Education', component: <Education /> },
-        { id: 'experience', label: 'Experience', component: <Experience /> },
-        { id: 'documents', label: 'Documents', component: <Documents /> },
-        { id: 'skills', label: 'Skills', component: <Skills /> },
-        { id: 'preferences', label: 'Preferences', component: <Preferences /> },
+        {
+            id: 'overview', label: 'Overview', component: <Overview />, icon: <DocumentMagnify className="w-5 h-5"
+                aria-hidden="true" />
+        },
+        {
+            id: 'credentials', label: 'Credentials', component: <Credentials />, icon: <DocumentsMinus className="w-5 h-5"
+                aria-hidden="true" />
+        },
+        {
+            id: 'education', label: 'Education', component: <Education />, icon: <EducationIcon className="w-5 h-5"
+                aria-hidden="true" />
+        },
+        {
+            id: 'experience', label: 'Experience', component: <Experience />, icon: <Breifcase className="w-5 h-5"
+                aria-hidden="true" />
+        },
+        {
+            id: 'documents', label: 'Documents', component: <Documents />, icon: <Documents className="w-5 h-5"
+                aria-hidden="true" />
+        },
+        {
+            id: 'skills', label: 'Skills', component: <Skills />, icon: <Award className="w-5 h-5"
+                aria-hidden="true" />
+        },
+        {
+            id: 'preferences', label: 'Preferences', component: <Preferences />, icon: <Settings className="w-5 h-5"
+                aria-hidden="true" />
+        },
     ];
 
     const renderTabs = () => {
-        return tabData.map((tab) => (
-            <li key={tab.id} className="flex items-center w-full py-4 focus-within:z-10">
-                <a
-                    onClick={() => handleTabClick(tab.id)}
-                    href="#"
-                    className={`flex items-center justify-center w-full border-r text-body hover:text-primary rounded-s-2xl p-2 ${activeTab === tab.id ? 'text-primary' : 'text-body'
-                        }`}
-                >
-                    <button
-                        type="button"
-                        className="mr-1"
+
+
+
+        return tabData.map((tab) => {
+            // const ComponentIcon = tab.icon;
+            return (
+                <li key={tab.id} className="flex items-center w-full py-4 focus-within:z-10">
+                    <a
+                        onClick={() => handleTabClick(tab.id)}
+                        href="#"
+                        className={`flex items-center justify-center w-full border-r text-body hover:text-primary rounded-s-2xl p-2 ${activeTab === tab.id ? 'text-primary' : 'text-body'
+                            }`}
                     >
-                        <DocumentMagnify
-                            className="w-5 h-5"
-                            aria-hidden="true"
-                        />
-                    </button>
-                    <p lassname="text-slate-500 font-medium">{tab.label}</p>
-                </a>
-            </li>
-        ));
+                        <button
+                            type="button"
+                            className="mr-1"
+                        >
+                            <DocumentsMinus className="w-5 h-5" aria-hidden="true" />
+                        </button>
+                        <p lassname="text-slate-500 font-medium">{tab.label}</p>
+                    </a>
+                </li>
+            )
+        });
     };
 
     const renderTabContent = () => {

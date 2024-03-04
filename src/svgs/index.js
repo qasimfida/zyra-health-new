@@ -1,18 +1,8 @@
-import { Breifcase, DocumentMagnify, DocumentsMinus, Edit, Education, Documents, Award, Settings, DocumentTagIcon, WarningTagIcon, TimeTagIcon } from "./icons";
+import { Edit } from "./icons";
 
 export const Icon = ({ name, filled, className }) => {
   const icons = {
-    award: <Award />,
     edit: <Edit />,
-    breifcase: <Breifcase />,
-    education: <Education />,
-    documentsMinus: <DocumentsMinus />,
-    documentMagnify: <DocumentMagnify />,
-    documents: <Documents />,
-    settings: <Settings />,
-    documentTagIcon: <DocumentTagIcon />,
-    warningTagIcon: <WarningTagIcon />,
-    timeTagIcon: <TimeTagIcon />
   };
 
   if (filled) {
