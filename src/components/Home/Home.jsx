@@ -95,7 +95,7 @@ const Home = () => {
                     </ul>
                 </div>
             </div>
-            <div className="p-5 pb-2 mt-6 bg-white rounded-2xl">
+            <div>
                 {renderTabContent()}
             </div>
         </div>
