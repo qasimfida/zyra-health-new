@@ -7,9 +7,93 @@ import {
   DocumentTagIcon,
   PhoneIcon,
   AddPlusIcon,
+  WarningTagIcon,
+  TimeTagIcon,
 } from "@/svgs/icons";
 import { Icon } from "@/svgs";
 import Card from "../Card/Card";
+import { Button } from "../Button/Button";
+import { VerifiedIcon } from "@/svgs/VerifiedIcon";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
+
+const continuingEducationData = [
+  {
+    country: "Certified Emergency Nurse (CEN) Preparation Course",
+    data: [
+      {
+        name: "Institution Name",
+        value: "Emergency Nurses Association",
+      },
+      { name: "Field of Study", value: "Compact License" },
+      { name: "Course Type", value: "October 2024" },
+      { name: "End/Expected", value: "October 2024" },
+      { name: "GPA", value: "October 2024" },
+      { name: "Honors and Awards", value: "October 2024" },
+      {
+        name: "Skills Acquired",
+        value: [
+          {
+            name: "Elderly Population",
+            type: "tag",
+          },
+        ],
+      },
+      { name: "CEUs Earned:", value: "Not Applicable" },
+    ],
+    tags: [
+      {
+        name: "Name of Document",
+        type: "info",
+      },
+    ],
+  },
+  {
+    country: "Certified Emergency Nurse (CEN) Preparation Course",
+    data: [
+      {
+        name: "Institution Name",
+        value: "Emergency Nurses Association",
+      },
+      { name: "Field of Study", value: "Compact License" },
+      { name: "Course Type", value: "October 2024" },
+      { name: "End/Expected", value: "October 2024" },
+      { name: "GPA", value: "October 2024" },
+      { name: "Honors and Awards", value: "October 2024" },
+      {
+        name: "Skills Acquired",
+        value: [
+          {
+            name: "Elderly Population",
+            type: "tag",
+          },
+          {
+            name: "Elderly Population",
+            type: "tag",
+          },
+        ],
+      },
+      { name: "CEUs Earned:", value: "Not Applicable" },
+    ],
+    tags: [
+      {
+        name: "Name of Document",
+        type: "info",
+      },
+      {
+        name: "Verified",
+        type: "success",
+      },
+      {
+        name: "Expires in 30 days",
+        type: "warning",
+      },
+      {
+        name: "Expired",
+        type: "danger",
+      },
+    ],
+  },
+];
 
 const Experience = () => {
   return (
@@ -72,7 +156,6 @@ const Experience = () => {
       {/* Experience Summary Component End */}
 
       <Card
-        isEmpty={true}
         title={"Work Experience"}
         subTitle={"Add Work Experience"}
         description={
@@ -96,7 +179,101 @@ const Experience = () => {
           </div>
         </div>
 
-        <div className="pt-5 border-b">
+        {continuingEducationData.map((licence) => {
+          return (
+            <div className="pt-5 border-b">
+              <div className="flex justify-between items-center w-full h-10">
+                <div>
+                  <h4 className="text-4xl text-body mb-2">{licence.country}</h4>
+                </div>
+                <div className="flex items-center">
+                  <button type="button" className="text-white">
+                    <EditIconTransparent
+                      className="w-5 h-5"
+                      aria-hidden="true"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div className="mb-4">
+                <h4 className="text-4xl text-body mb-2">{licence.heading}</h4>
+                {licence.data.map(({ name, value }) => {
+                  const cls = Array.isArray(value)
+                  ? "text-base text-secondary font-medium mb-2 flex items-center gap-2"
+                  : "text-base text-secondary font-medium mb-2";
+                  return (
+                    <p
+                      className={cls}
+                    >
+                      <span className="text-body">{name}: </span>
+                      {Array.isArray(value) ? (
+                        <>
+                          {value.map(({ name, type }) => (
+                            <Button
+                              color={type}
+                              variant="tagFilled"
+                              name={name}
+                              size="md"
+                            />
+                          ))}
+                          <button
+                            type="button"
+                            className="rounded-3xl flex items-center text-base font-medium text-primary py-1 px-2"
+                          >
+                            <span>
+                              <AddPlusIcon
+                                className="w-5 h-5"
+                                aria-hidden="true"
+                              />
+                            </span>
+                            View More
+                          </button>
+                        </>
+                      ) : (
+                        value
+                      )}
+                    </p>
+                  );
+                })}
+                <div className="flex flex-wrap w-full gap-1.5">
+                  {licence.tags.map(({ name, type }) => {
+                    return (
+                      <Button
+                        color={type}
+                        variant="tag"
+                        name={name}
+                        size="md"
+                        icon={
+                          type === "info" ? (
+                            <DocumentTagIcon
+                              className="w-5 h-5"
+                              aria-hidden="true"
+                            />
+                          ) : type === "success" ? (
+                            <VerifiedIcon
+                              className="w-5 h-5"
+                              aria-hidden="true"
+                            />
+                          ) : type === "warning" ? (
+                            <WarningTagIcon
+                              className="w-5 h-5"
+                              aria-hidden="true"
+                            />
+                          ) : <TimeTagIcon
+                          className="w-5 h-5"
+                          aria-hidden="true"
+                        />
+                        }
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+
+        {/* <div className="pt-5 border-b">
           <div className="flex justify-between items-center w-full min-h-[40px]">
             <div>
               <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
@@ -532,12 +709,11 @@ const Experience = () => {
               <span>$40/hour</span>
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
       {/* Work Experience Component End */}
 
        <Card
-        isEmpty={true}
         title={"Professional Activities"}
         subTitle={"Add Professional Activities"}
         description={
@@ -876,7 +1052,6 @@ const Experience = () => {
       {/* Professional Activities Component End */}
 
       <Card
-        isEmpty={true}
         title={"References"}
         subTitle={"Add References"}
         description={
@@ -1009,7 +1184,6 @@ const Experience = () => {
       {/* Add References Component End */}
 
       <Card
-        isEmpty={true}
         title={"Tech Proficiency"}
         subTitle={"Add Tech Proficiency"}
         description={

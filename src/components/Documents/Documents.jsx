@@ -14,7 +14,6 @@ const Documents = () => {
   return (
     <div>
       <Card
-        isEmpty={true}
         title={"Resume"}
         subTitle={"Upload Resume Now"}
         description={
@@ -62,11 +61,10 @@ const Documents = () => {
       </div>
 
       <Card
-        isEmpty={true}
         title={"Identification"}
         subTitle={"Upload  ID to Verify  Identity"}
         description={
-          "Get verified to get started. We respect your privacy and never sell or share your information with others."
+          "Get success to get started. We respect your privacy and never sell or share your information with others."
         }
 
       />
@@ -123,7 +121,6 @@ const Documents = () => {
       </div>
 
       <Card
-        isEmpty={true}
         title={"Health Screening"}
         subTitle={"Complete Health Screening"}
         description={
@@ -250,7 +247,6 @@ const Documents = () => {
       </div>
 
       <Card
-        isEmpty={true}
         title={"Immunization"}
         subTitle={"Submit  Immunization Records"}
         description={
@@ -377,7 +373,6 @@ const Documents = () => {
       </div>
 
       <Card
-        isEmpty={true}
         title={"Liability Insurance"}
         subTitle={"Upload  Liability Insurance"}
         description={
@@ -559,7 +554,6 @@ const Documents = () => {
       </div>
 
        <Card
-        isEmpty={true}
         title={"Participation Agreement"}
         subTitle={"Sign the Participation Agreement"}
         description={
@@ -1042,7 +1036,6 @@ const Documents = () => {
       </div>
 
       <Card
-        isEmpty={true}
         title={"Background Check Consent Form"}
         subTitle={"Background Check Consent Form  "}
         description={

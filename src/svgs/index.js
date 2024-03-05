@@ -1,9 +1,10 @@
 import { Edit } from "./icons";
 
-export const Icon = ({ name, filled, className }) => {
+export const Icon = ({ name, filled = false, className = "", iconCls = "" }) => {
   const icons = {
-    edit: <Edit />,
+    edit: (props) => <Edit {...props} />,
   };
+  const Icon = icons[name]
 
   if (filled) {
     return (
@@ -11,16 +12,11 @@ export const Icon = ({ name, filled, className }) => {
         type="button"
         className={`flex items-center justify-center h-10 w-10 rounded-full bg-[#7070FF] hover:bg-white ${className}`}
       >
-        {icons[name]}
+        <Icon iconCls={iconCls} />
       </button>
     );
   }
   return (
-    <button
-      type="button"
-      className={`flex items-center justify-center h-10 w-10  rounded-full ${className}`}
-    >
-      {icons[name]}
-    </button>
+    <Icon iconCls={iconCls} />
   );
 };

@@ -17,8 +17,7 @@
 // font-semibold	font-weight:       600;
 // font-bold	font-weight:           700;
 // font-extrabold	font-weight:     800;
-// font-black	font-weight:         900; 
-
+// font-black	font-weight:         900;
 
 module.exports = {
   content: [
@@ -28,15 +27,20 @@ module.exports = {
   ],
   theme: {
     fontSize: {
-      '4xl': ['1.063rem', { // 17px
-        lineHeight: '1.62rem',
-        fontWeight: '600',
-      }],
-      '5xl': ['1.188rem', { // 19px
-        lineHeight: '1.813rem',
-        fontWeight: '600',
-      }],
-      
+      "4xl": [
+        "1.063rem",
+        {
+          lineHeight: "1.62rem",  // 17px
+          fontWeight: "600",
+        },
+      ],
+      "5xl": [
+        "1.188rem",
+        {
+          lineHeight: "1.813rem", // 19px
+          fontWeight: "600",
+        },
+      ],
     },
     extend: {
       backgroundImage: {
@@ -45,19 +49,20 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        'primary': '#7070FF',
-        'primaryLight': '#9A9AFF',
-        'body': '#5E5E6F',
-        'secondary': '#7F7F7F',
-        'button': '#424242',
-        'light': '#F3F5F8',
-        'grayLignt': '#C7C7C8',
-        'documentBorder': '#299DCF',
-        'unverifiedBorder': '#FF6B2C',
-        'verified': '#1ECA63',
-        'genericTag': '#E8E6FF'
+        success: "#1ECA63",
+        primary: "#7070FF",
+        primaryLight: "#9A9AFF",
+        warning: "#FF6B2C",
+        danger: "#EB3838",
+        tagFilled: "#E8E6FF",
+        body: "#5E5E6F",
+        secondary: "#7F7F7F",
+        button: "#424242",
+        light: "#F3F5F8",
+        grayLignt: "#C7C7C8",
+        info: "#299DCF",
       },
     },
   },
-  plugins: [require("@tailwindcss/forms")]
+  plugins: [require("@tailwindcss/forms")],
 };

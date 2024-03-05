@@ -1,22 +1,18 @@
 "use client";
 
-import {
-  EditIconTransparent,
-  AddPlusIcon
-} from "@/svgs/icons";
+import { EditIconTransparent, AddPlusIcon } from "@/svgs/icons";
 import { Icon } from "@/svgs";
 import Card from "../Card/Card";
 
 const Preferences = () => {
   return (
     <div>
-
       {/* Search Preferences Component start */}
       <div className="px-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between items-center w-full min-h-[67px] border-b">
           <div>
             <h4 className="text-[19px] font-semibold text-[#7070FF]">
-            Search Preferences
+              Search Preferences
             </h4>
           </div>
           <div className="flex items-center">
@@ -29,15 +25,11 @@ const Preferences = () => {
         <div className="pt-5 border-b">
           <div className="mb-4">
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Job Type Preference:
-              </span>
+              <span className="text-[#5E5E6F]">Job Type Preference:</span>
               Full-time
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Job Search Status:
-              </span>
+              <span className="text-[#5E5E6F]">Job Search Status:</span>
               Actively looking for new opportunities
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
@@ -45,14 +37,12 @@ const Preferences = () => {
               Immediately
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Work Style Preference:
-              </span>
+              <span className="text-[#5E5E6F]">Work Style Preference:</span>
               Remote
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
               <span className="text-[#5E5E6F]">
-              Willingness to Travel/Relocate: 
+                Willingness to Travel/Relocate:
               </span>
               Yes, I am willing to travel on
             </p>
@@ -64,21 +54,18 @@ const Preferences = () => {
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Patient Assessment
               </button>
               <button
                 type="button"
                 className="flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Care Planning
               </button>
               <button
                 type="button"
                 className="flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Patient Education
               </button>
               <button
@@ -101,7 +88,7 @@ const Preferences = () => {
         <div className="flex justify-between items-center w-full min-h-[67px] border-b">
           <div>
             <h4 className="text-[19px] font-semibold text-[#7070FF]">
-            Workplace Preferences
+              Workplace Preferences
             </h4>
           </div>
           <div className="flex items-center">
@@ -115,13 +102,13 @@ const Preferences = () => {
           <div className="mb-4">
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
               <span className="text-[#5E5E6F]">
-              Job Opportunity Priorities:
+                Job Opportunity Priorities:
               </span>
               Company Culture
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
               <span className="text-[#5E5E6F]">
-              Preferred Organization Type:
+                Preferred Organization Type:
               </span>
               Hospital chain
             </p>
@@ -134,7 +121,6 @@ const Preferences = () => {
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Adult Day Care Center
               </button>
               <button
@@ -149,9 +135,7 @@ const Preferences = () => {
             </div>
 
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Desired Salary Range:
-              </span>
+              <span className="text-[#5E5E6F]">Desired Salary Range:</span>
               $45,000-$60,000/Year
             </p>
 
@@ -163,14 +147,12 @@ const Preferences = () => {
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Rotating Shifts
               </button>
               <button
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Weekend Shifts
               </button>
               <button
@@ -185,39 +167,32 @@ const Preferences = () => {
             </div>
 
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Management Style:
-              </span>
+              <span className="text-[#5E5E6F]">Management Style:</span>
               Autonomous
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Team Environment:
-              </span>
+              <span className="text-[#5E5E6F]">Team Environment:</span>
               Dynamic
             </p>
-
-            
           </div>
         </div>
       </div>
       {/* Experience Summary Component End */}
 
       <Card
-        isEmpty={true}
         title={"Add Employment Preferences"}
         subTitle={"Add Employment Preferences"}
         description={
-          "Customize your job search by setting your employment preferences"}
-
+          "Customize your job search by setting your employment preferences"
+        }
       />
 
-       {/* Search Preferences Component start */}
-       <div className="px-5 mt-6 bg-white rounded-2xl">
+      {/* Search Preferences Component start */}
+      <div className="px-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between items-center w-full min-h-[67px] border-b">
           <div>
             <h4 className="text-[19px] font-semibold text-[#7070FF]">
-            Search Preferences
+              Search Preferences
             </h4>
           </div>
           <div className="flex items-center">
@@ -230,57 +205,45 @@ const Preferences = () => {
         <div className="pt-5 border-b">
           <div className="mb-4">
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Job Type Preference:
-              </span>
+              <span className="text-[#5E5E6F]">Job Type Preference:</span>
               Full-time
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Job Search Status:
-              </span>
+              <span className="text-[#5E5E6F]">Job Search Status:</span>
               Actively looking for new opportunities
             </p>
 
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Start Date Availability:
-              </span>
+              <span className="text-[#5E5E6F]">Start Date Availability:</span>
               Immediately
             </p>
 
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Work Style Preference:
-              </span>
+              <span className="text-[#5E5E6F]">Work Style Preference:</span>
               Remote
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
               <span className="text-[#5E5E6F]">
-              Willingness to Travel/Relocate: 
+                Willingness to Travel/Relocate:
               </span>
               Yes, I am willing to travel on
             </p>
 
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Preferred Work Location: 
-              </span>
+              <span className="text-[#5E5E6F]">Preferred Work Location:</span>
               Atlanta, GA
             </p>
-
-            
           </div>
         </div>
       </div>
       {/* Experience Summary Component End */}
 
-       {/* Workplace Preferences Component start */}
-       <div className="px-5 mt-6 bg-white rounded-2xl">
+      {/* Workplace Preferences Component start */}
+      <div className="px-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between items-center w-full min-h-[67px] border-b">
           <div>
             <h4 className="text-[19px] font-semibold text-[#7070FF]">
-            Workplace Preferences
+              Workplace Preferences
             </h4>
           </div>
           <div className="flex items-center">
@@ -294,13 +257,13 @@ const Preferences = () => {
           <div className="mb-4">
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
               <span className="text-[#5E5E6F]">
-              Job Opportunity Priorities:
+                Job Opportunity Priorities:
               </span>
               Company Culture
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
               <span className="text-[#5E5E6F]">
-              Preferred Organization Type:
+                Preferred Organization Type:
               </span>
               Hospital chain
             </p>
@@ -313,7 +276,6 @@ const Preferences = () => {
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Adult Day Care Center
               </button>
               <button
@@ -328,9 +290,7 @@ const Preferences = () => {
             </div>
 
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Desired Salary Range:
-              </span>
+              <span className="text-[#5E5E6F]">Desired Salary Range:</span>
               $45,000-$60,000/Year
             </p>
 
@@ -342,14 +302,12 @@ const Preferences = () => {
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Rotating Shifts
               </button>
               <button
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Weekend Shifts
               </button>
               <button
@@ -364,19 +322,13 @@ const Preferences = () => {
             </div>
 
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Management Style:
-              </span>
+              <span className="text-[#5E5E6F]">Management Style:</span>
               Autonomous
             </p>
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Team Environment:
-              </span>
+              <span className="text-[#5E5E6F]">Team Environment:</span>
               Dynamic
             </p>
-
-            
           </div>
         </div>
       </div>
@@ -387,7 +339,7 @@ const Preferences = () => {
         <div className="flex justify-between items-center w-full min-h-[67px] border-b">
           <div>
             <h4 className="text-[19px] font-semibold text-[#7070FF]">
-            Employment Preferences
+              Employment Preferences
             </h4>
           </div>
           <div className="flex items-center">
@@ -398,11 +350,10 @@ const Preferences = () => {
         </div>
 
         <div className="pt-5 border-b">
-
-        <div className="flex justify-between items-center w-full min-h-[40px]">
+          <div className="flex justify-between items-center w-full min-h-[40px]">
             <div>
               <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-              Full-time
+                Full-time
               </h4>
             </div>
             <div className="flex items-center mr-[12px]">
@@ -412,38 +363,34 @@ const Preferences = () => {
             </div>
           </div>
 
-
           <div className="mb-4 border-b">
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Start Date Availability:
-              </span>
+              <span className="text-[#5E5E6F]">Start Date Availability:</span>
               March 2024
             </p>
 
             <div className="flex flex-wrap w-full gap-1.5 mb-2">
               <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
-                <span className="text-[#5E5E6F]">Preferred Work Location: </span>
+                <span className="text-[#5E5E6F]">
+                  Preferred Work Location:{" "}
+                </span>
               </p>
               <button
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Charlotte, NC
               </button>
               <button
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Charleston, SC
               </button>
               <button
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Winston-Salem, NC
               </button>
               <button
@@ -458,9 +405,7 @@ const Preferences = () => {
             </div>
 
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Desired Pay: 
-              </span>
+              <span className="text-[#5E5E6F]">Desired Pay:</span>
               $30/Hour
             </p>
 
@@ -472,14 +417,12 @@ const Preferences = () => {
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Day Shifts
               </button>
               <button
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Weekend Shifts
               </button>
               <button
@@ -492,41 +435,36 @@ const Preferences = () => {
                 View More
               </button>
             </div>
-
-            
           </div>
 
           <div className="mb-4 border-b">
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Start Date Availability:
-              </span>
+              <span className="text-[#5E5E6F]">Start Date Availability:</span>
               March 2024
             </p>
 
             <div className="flex flex-wrap w-full gap-1.5 mb-2">
               <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
-                <span className="text-[#5E5E6F]">Preferred Work Location: </span>
+                <span className="text-[#5E5E6F]">
+                  Preferred Work Location:{" "}
+                </span>
               </p>
               <button
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Charlotte, NC
               </button>
               <button
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Charleston, SC
               </button>
               <button
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Winston-Salem, NC
               </button>
               <button
@@ -541,9 +479,7 @@ const Preferences = () => {
             </div>
 
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Desired Pay: 
-              </span>
+              <span className="text-[#5E5E6F]">Desired Pay:</span>
               $30/Hour
             </p>
 
@@ -555,14 +491,12 @@ const Preferences = () => {
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Day Shifts
               </button>
               <button
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Weekend Shifts
               </button>
               <button
@@ -575,41 +509,36 @@ const Preferences = () => {
                 View More
               </button>
             </div>
-
-            
           </div>
 
           <div className="mb-4 border-b">
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Start Date Availability:
-              </span>
+              <span className="text-[#5E5E6F]">Start Date Availability:</span>
               March 2024
             </p>
 
             <div className="flex flex-wrap w-full gap-1.5 mb-2">
               <p className="flex items-center text-[16px] text-[#7F7F7F] font-medium mr-2">
-                <span className="text-[#5E5E6F]">Preferred Work Location: </span>
+                <span className="text-[#5E5E6F]">
+                  Preferred Work Location:{" "}
+                </span>
               </p>
               <button
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Charlotte, NC
               </button>
               <button
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Charleston, SC
               </button>
               <button
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Winston-Salem, NC
               </button>
               <button
@@ -624,9 +553,7 @@ const Preferences = () => {
             </div>
 
             <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
-              Desired Pay: 
-              </span>
+              <span className="text-[#5E5E6F]">Desired Pay:</span>
               $30/Hour
             </p>
 
@@ -638,14 +565,12 @@ const Preferences = () => {
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Day Shifts
               </button>
               <button
                 type="button"
                 className=" flex items-center text-[14px] font-medium text-[#7F7F7F] py-[5px] px-[7px]"
               >
-                
                 Weekend Shifts
               </button>
               <button
@@ -658,17 +583,10 @@ const Preferences = () => {
                 View More
               </button>
             </div>
-
-            
           </div>
-
-
-
-
         </div>
       </div>
       {/* Experience Summary Component End */}
-
     </div>
   );
 };

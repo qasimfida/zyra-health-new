@@ -10,11 +10,11 @@ const Card = ({
   heading = "",
   icon = <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />,
   options = [],
-  isEmpty = false,
-  subTitle = "Add Subtitle", description = "Please Add Description!"
+  subTitle = "Add Subtitle", 
+  description = ""
 }) => {
 
-  if (isEmpty) {
+  if (description) {
     return (
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-3">
