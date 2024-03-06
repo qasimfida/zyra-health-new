@@ -9,18 +9,13 @@ import ProfileCard from "@/utils/ProfileCard";
 const Experience = () => {
   return (
     <div>
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Experience Summary
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
-            </button>
-          </div>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Experience Summary</h4>
+
+          <button type="button" className="text-white">
+            <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
+          </button>
         </div>
 
         <div className="pt-5 border-b">
@@ -71,18 +66,12 @@ const Experience = () => {
         }
       />
 
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Work Experience
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Work Experience</h4>
+          <button type="button" className="text-white">
+            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
+          </button>
         </div>
 
         {continuingEducationData.map((item) => (
@@ -98,18 +87,12 @@ const Experience = () => {
         }
       />
 
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Professional Activities
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Professional Activities</h4>
+          <button type="button" className="text-white">
+            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
+          </button>
         </div>
 
         {continuingEducationData.map((item) => (
@@ -125,18 +108,12 @@ const Experience = () => {
         }
       />
 
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              References
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">References</h4>
+          <button type="button" className="text-white">
+            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
+          </button>
         </div>
 
         {referencesData.map((item) => (
@@ -152,18 +129,12 @@ const Experience = () => {
         }
       />
 
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Tech Proficiancy
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Tech Proficiancy</h4>
+          <button type="button" className="text-white">
+            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
+          </button>
         </div>
 
         {continuingEducationData.map((item) => (

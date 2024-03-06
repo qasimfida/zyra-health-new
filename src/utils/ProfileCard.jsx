@@ -19,9 +19,9 @@ const ProfileCard = ({ data }) => {
 
   return (
     <div className="pt-5 border-b">
-      <div className="flex justify-between items-center w-full h-10">
+      <div className="flex justify-between items-center w-full ">
         <div>
-          <h4 className="text-4xl text-body mb-2">{data.country}</h4>
+          <h4 className="text-4xl text-body">{data.country}</h4>
         </div>
         <div className="flex items-center">
           <button type="button" className="text-white">

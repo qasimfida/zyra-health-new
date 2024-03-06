@@ -21,18 +21,12 @@ const Credentials = () => {
         }
       />
 
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Licences
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
+<div className="p-5 mt-6 bg-white rounded-2xl">
+      <div className="flex justify-between w-full h-10 border-b">
+        <h4 className="text-5xl text-primary">Licences</h4>
+          <button type="button" className="text-white">
+            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
+          </button>
         </div>
 
         {licensesData.map((item) => (
@@ -48,18 +42,12 @@ const Credentials = () => {
         }
       />
 
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Basic Certifications
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
+<div className="p-5 mt-6 bg-white rounded-2xl">
+      <div className="flex justify-between w-full h-10 border-b">
+        <h4 className="text-5xl text-primary">Basic Certifications</h4>
+          <button type="button" className="text-white">
+            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
+          </button>
         </div>
 
         {basicCertificationsData.map((item) => (
@@ -75,18 +63,12 @@ const Credentials = () => {
         }
       />
 
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Speciality Certifications
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
+<div className="p-5 mt-6 bg-white rounded-2xl">
+      <div className="flex justify-between w-full h-10 border-b">
+        <h4 className="text-5xl text-primary">Speciality Certifications</h4>
+          <button type="button" className="text-white">
+            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
+          </button>
         </div>
 
         {specialityCertificationsData.map((item) => (
@@ -102,18 +84,12 @@ const Credentials = () => {
         }
       />
 
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              other Certifications
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
+<div className="p-5 mt-6 bg-white rounded-2xl">
+      <div className="flex justify-between w-full h-10 border-b">
+        <h4 className="text-5xl text-primary">Other Certifications</h4>
+          <button type="button" className="text-white">
+            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
+          </button>
         </div>
 
         {otherCertificationsData.map((item) => (

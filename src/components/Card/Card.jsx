@@ -16,12 +16,10 @@ const Card = ({
   if (description) {
     return (
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full border-b pb-3">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
+      <div className="flex justify-between w-full h-10 border-b">
+        <h4 className="text-5xl text-primary">
               {title}
             </h4>
-          </div>
           <div></div>
         </div>
         <div className="flex justify-center pt-5">
@@ -30,11 +28,11 @@ const Card = ({
           </button>
         </div>
         <div className="flex flex-col items-center justify-center">
-          <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2 mt-4">
+          <h4 className="text-4xl text-body mb-2 mt-4">
             {subTitle}
           </h4>
 
-          <p className="text-[16px] text-[#5E5E6F] font-medium mb-8">
+          <p className="text-base text-body font-medium mb-8">
             {description}
           </p>
         </div>

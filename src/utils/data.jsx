@@ -93,6 +93,195 @@ export const continuingEducationData = [
   },
 ];
 
+export const resumeData = [
+  {
+    country: "Authorized to work in the US",
+    data: [
+      {
+        name: "Uploaded",
+        value: "December 23, 2024",
+      },
+    ],
+    tags: [
+      {
+        name: "Unconfirmed 896614.crdownload",
+        type: "info",
+      },
+    ],
+  },
+];
+
+export const identificationData = [
+  {
+    country: "Driver’s License",
+    data: [
+      {
+        name: "Issued by",
+        value: "Massachusetts",
+      },
+      {
+        name: "Issue Date",
+        value: "September 2020",
+      },
+      {
+        name: "Expiration Date",
+        value: "November 2026",
+      },
+    ],
+    tags: [
+      {
+        name: "Name of Uploaded Document",
+        type: "info",
+      },
+    ],
+  },
+];
+
+export const healthScreeningData = [
+  {
+    country: "Drug Test",
+    data: [
+      {
+        name: "Issue Date",
+        value: "September 2020",
+      },
+      {
+        name: "Expiration Date",
+        value: "None",
+      },
+    ],
+    tags: [
+      {
+        name: "Name of Document",
+        type: "info",
+      },
+    ],
+  },
+  {
+    country: "TB Test",
+    data: [
+      {
+        name: "Issue Date",
+        value: "September 2020",
+      },
+      {
+        name: "Expiration Date",
+        value: "None",
+      },
+    ],
+    tags: [
+      {
+        name: "Name of Document",
+        type: "info",
+      },
+    ],
+  },
+  {
+    country: "Physical Exam",
+    data: [
+      {
+        name: "Issue Date",
+        value: "September 2020",
+      },
+      {
+        name: "Expiration Date",
+        value: "None",
+      },
+    ],
+    tags: [
+      {
+        name: "Name of Document",
+        type: "info",
+      },
+    ],
+  },
+];
+
+export const immunizationData = [
+  {
+    country: "MMR or Rubella/Rubella Titer",
+    data: [
+      {
+        name: "Issue Date",
+        value: "September 2020",
+      },
+      {
+        name: "Expiration Date",
+        value: "None",
+      },
+    ],
+    tags: [
+      {
+        name: "Name of Document",
+        type: "info",
+      },
+    ],
+  },
+  {
+    country: "TB Test",
+    data: [
+      {
+        name: "Issue Date",
+        value: "September 2020",
+      },
+      {
+        name: "Expiration Date",
+        value: "None",
+      },
+    ],
+    tags: [
+      {
+        name: "Name of Document",
+        type: "info",
+      },
+    ],
+  },
+  {
+    country: "Tdap (Tetanus, Diphtheria, Pertussis) Vaccine",
+    data: [
+      {
+        name: "Issue Date",
+        value: "September 2020",
+      },
+      {
+        name: "Expiration Date",
+        value: "None",
+      },
+    ],
+    tags: [
+      {
+        name: "Name of Document",
+        type: "info",
+      },
+    ],
+  },
+];
+
+export const liabilityInsuranceData = [
+  {
+    country: "Liability Insurance for William Brute Nash",
+    data: [
+      {
+        name: "Insured by",
+        value: "State Farm",
+      },
+      {
+        name: "Expiration Date",
+        value: "None",
+      },
+      {
+        name: "Expiration Date",
+        value: "None",
+      },
+    ],
+    tags: [
+      {
+        name: "Name of Document",
+        type: "info",
+      },
+    ],
+  },]
+
 export const referencesData = [
   {
     country: "Certified Emergency Nurse (CEN) Preparation Course",
@@ -424,7 +613,7 @@ export const identityInfoData = [
 
 export const languagesData = [
   {
-    language: "Balgarian",
+    country: "Balgarian",
     data: [
       { name: "Reading", value: "Beginner" },
       { name: "Writing", value: "Beginner" },
@@ -432,7 +621,7 @@ export const languagesData = [
     ],
   },
   {
-    language: "Spanish",
+    country: "Spanish",
     data: [
       { name: "Reading", value: "Beginner" },
       { name: "Writing", value: "Beginner" },
@@ -440,7 +629,7 @@ export const languagesData = [
     ],
   },
   {
-    language: "Italian",
+    country: "Italian",
     data: [
       { name: "Reading", value: "Beginner" },
       { name: "Writing", value: "Beginner" },

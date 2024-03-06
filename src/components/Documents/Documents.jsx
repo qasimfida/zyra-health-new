@@ -2,13 +2,18 @@
 
 import {
   BackIcon,
-  EditIconTransparent,
   AddIconSmall,
   DownloadIcon,
-  DocumentTagIcon,
 } from "@/svgs/icons";
 import { Icon } from "@/svgs";
 import Card from "../Card/Card";
+import {
+  healthScreeningData,
+  identificationData,
+  liabilityInsuranceData,
+  resumeData,
+} from "@/utils/data";
+import ProfileCard from "@/utils/ProfileCard";
 
 const Documents = () => {
   return (
@@ -21,42 +26,17 @@ const Documents = () => {
         }
       />
 
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">Resume</h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
-            </button>
-          </div>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Resume</h4>
+          <button type="button" className="text-white">
+            <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
+          </button>
         </div>
 
-        <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full min-h-[40px]">
-            <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-              Authorized to work in the US
-            </h4>
-          </div>
-          <div className="mb-4">
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F] text-[16px] font-medium">
-                Uploaded:
-              </span>
-              December 23, 2024
-            </p>
-            <button
-              type="button"
-              className="rounded-3xl border border-[#299DCF] flex items-center text-[14px] font-medium text-[#299DCF] h-[30px] py-[5px] px-[10px]"
-            >
-              <span className="mr-2">
-                <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
-              </span>
-              Unconfirmed 896614.crdownload
-            </button>
-          </div>
-        </div>
+        {resumeData.map((item) => (
+          <ProfileCard key={item.country} data={item} />
+        ))}
       </div>
 
       <Card
@@ -67,55 +47,17 @@ const Documents = () => {
         }
       />
 
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Identification
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Identification</h4>
+          <button type="button" className="text-white">
+            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
+          </button>
         </div>
 
-        <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full min-h-[40px]">
-            <div>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-                Driver’s License
-              </h4>
-            </div>
-            <div className="flex items-center mr-[12px]">
-              <button type="button" className="text-white">
-                <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-              </button>
-            </div>
-          </div>
-          <div className="mb-4">
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Issued by: </span>Massachusetts
-            </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Issue Date: </span>September 2020
-            </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Expiration Date: </span>November
-              2026
-            </p>
-            <button
-              type="button"
-              className="rounded-3xl border border-[#299DCF] flex items-center text-[14px] font-medium text-[#299DCF] h-[30px] py-[5px] px-[10px]"
-            >
-              <span className="mr-2">
-                <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
-              </span>
-              Name of Uploaded Document
-            </button>
-          </div>
-        </div>
+        {identificationData.map((item) => (
+          <ProfileCard key={item.country} data={item} />
+        ))}
       </div>
 
       <Card
@@ -126,121 +68,17 @@ const Documents = () => {
         }
       />
 
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Health Screening
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Health Screening</h4>
+          <button type="button" className="text-white">
+            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
+          </button>
         </div>
 
-        <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full min-h-[40px]">
-            <div>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-                Drug Test
-              </h4>
-            </div>
-            <div className="flex items-center mr-[12px]">
-              <button type="button" className="text-white">
-                <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-              </button>
-            </div>
-          </div>
-          <div className="mb-4">
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Issue Date: </span>September 2020
-            </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Expiration Date: </span>None
-            </p>
-            <div className="flex flex-wrap w-full gap-1.5">
-              <button
-                type="button"
-                className="rounded-3xl border border-[#299DCF] flex items-center text-[14px] font-medium text-[#299DCF] h-[30px] py-[5px] px-[10px]"
-              >
-                <span className="mr-2">
-                  <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
-                </span>
-                Name of Document
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full min-h-[40px]">
-            <div>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-                TB Test
-              </h4>
-            </div>
-            <div className="flex items-center mr-[12px]">
-              <button type="button" className="text-white">
-                <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-              </button>
-            </div>
-          </div>
-          <div className="mb-4">
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Issue Date: </span>September 2020
-            </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Expiration Date: </span>None
-            </p>
-            <div className="flex flex-wrap w-full gap-1.5">
-              <button
-                type="button"
-                className="rounded-3xl border border-[#299DCF] flex items-center text-[14px] font-medium text-[#299DCF] h-[30px] py-[5px] px-[10px]"
-              >
-                <span className="mr-2">
-                  <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
-                </span>
-                Name of Document
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full min-h-[40px]">
-            <div>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-                Physical Exam
-              </h4>
-            </div>
-            <div className="flex items-center mr-[12px]">
-              <button type="button" className="text-white">
-                <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-              </button>
-            </div>
-          </div>
-          <div className="mb-4">
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Issue Date: </span>September 2020
-            </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Expiration Date: </span>None
-            </p>
-            <div className="flex flex-wrap w-full gap-1.5">
-              <button
-                type="button"
-                className="rounded-3xl border border-[#299DCF] flex items-center text-[14px] font-medium text-[#299DCF] h-[30px] py-[5px] px-[10px]"
-              >
-                <span className="mr-2">
-                  <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
-                </span>
-                Name of Document
-              </button>
-            </div>
-          </div>
-        </div>
+        {healthScreeningData.map((item) => (
+          <ProfileCard key={item.country} data={item} />
+        ))}
       </div>
 
       <Card
@@ -251,121 +89,17 @@ const Documents = () => {
         }
       />
 
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Immunization
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Immunization</h4>
+          <button type="button" className="text-white">
+            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
+          </button>
         </div>
 
-        <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full min-h-[40px]">
-            <div>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-                MMR or Rubella/Rubella Titer
-              </h4>
-            </div>
-            <div className="flex items-center mr-[12px]">
-              <button type="button" className="text-white">
-                <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-              </button>
-            </div>
-          </div>
-          <div className="mb-4">
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Issue Date: </span>September 2020
-            </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Expiration Date: </span>None
-            </p>
-            <div className="flex flex-wrap w-full gap-1.5">
-              <button
-                type="button"
-                className="rounded-3xl border border-[#299DCF] flex items-center text-[14px] font-medium text-[#299DCF] h-[30px] py-[5px] px-[10px]"
-              >
-                <span className="mr-2">
-                  <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
-                </span>
-                Name of Document
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full min-h-[40px]">
-            <div>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-                TB Test
-              </h4>
-            </div>
-            <div className="flex items-center mr-[12px]">
-              <button type="button" className="text-white">
-                <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-              </button>
-            </div>
-          </div>
-          <div className="mb-4">
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Issue Date: </span>September 2020
-            </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Expiration Date: </span>None
-            </p>
-            <div className="flex flex-wrap w-full gap-1.5">
-              <button
-                type="button"
-                className="rounded-3xl border border-[#299DCF] flex items-center text-[14px] font-medium text-[#299DCF] h-[30px] py-[5px] px-[10px]"
-              >
-                <span className="mr-2">
-                  <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
-                </span>
-                Name of Document
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full min-h-[40px]">
-            <div>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-                Tdap (Tetanus, Diphtheria, Pertussis) Vaccine
-              </h4>
-            </div>
-            <div className="flex items-center mr-[12px]">
-              <button type="button" className="text-white">
-                <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-              </button>
-            </div>
-          </div>
-          <div className="mb-4">
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Issue Date: </span>September 2020
-            </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Expiration Date: </span>None
-            </p>
-            <div className="flex flex-wrap w-full gap-1.5">
-              <button
-                type="button"
-                className="rounded-3xl border border-[#299DCF] flex items-center text-[14px] font-medium text-[#299DCF] h-[30px] py-[5px] px-[10px]"
-              >
-                <span className="mr-2">
-                  <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
-                </span>
-                Name of Document
-              </button>
-            </div>
-          </div>
-        </div>
+        {healthScreeningData.map((item) => (
+          <ProfileCard key={item.country} data={item} />
+        ))}
       </div>
 
       <Card
@@ -376,57 +110,17 @@ const Documents = () => {
         }
       />
 
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Liability Insurance
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
-            </button>
-          </div>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Liability Insurance</h4>
+          <button type="button" className="text-white">
+            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
+          </button>
         </div>
 
-        <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full min-h-[40px]">
-            <div>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-                Liability Insurance for William Brute Nash
-              </h4>
-            </div>
-            <div className="flex items-center mr-[12px]">
-              <button type="button" className="text-white">
-                <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-              </button>
-            </div>
-          </div>
-          <div className="mb-4">
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Insured by: </span>State Farm
-            </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Issue Date: </span>November 2023
-            </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Expiration Date: </span>November
-              2026
-            </p>
-            <div className="flex flex-wrap w-full gap-1.5">
-              <button
-                type="button"
-                className="rounded-3xl border border-[#299DCF] flex items-center text-[14px] font-medium text-[#299DCF] h-[30px] py-[5px] px-[10px]"
-              >
-                <span className="mr-2">
-                  <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
-                </span>
-                Name of Document
-              </button>
-            </div>
-          </div>
-        </div>
+        {liabilityInsuranceData.map((item) => (
+          <ProfileCard key={item.country} data={item} />
+        ))}
       </div>
 
       {/* Libility Insurance */}
@@ -448,12 +142,11 @@ const Documents = () => {
             type="button"
             className="flex text-[16px] font-medium text-[#5E5E6F] mb-4 items-center"
           >
-            {/* <CheckboxIcon className="w-5 h-5 mr-2" aria-hidden="true" /> */}
             <input
               id="inline-checkbox"
               type="checkbox"
               value=""
-              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded"
+              class="w-5 h-5 text-success bg-white border-2 border-success focus:ring-[none] rounded"
             />
             <span className="ml-2">
               I do not have an active liability insurance
