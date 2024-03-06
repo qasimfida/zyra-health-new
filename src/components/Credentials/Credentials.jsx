@@ -1,17 +1,14 @@
 "use client";
 
-import { EditIconTransparent } from "@/svgs/icons";
-import { Icon } from "@/svgs";
+import { AddIconSmall } from "@/svgs/icons";
 import Card from "../Card/Card";
-import { Button } from "../Button/Button";
-import { renderValue } from "@/utils/helper";
 import {
   basicCertificationsData,
-  iconTypes,
   licensesData,
   otherCertificationsData,
   specialityCertificationsData,
 } from "@/utils/data";
+import ProfileCard from "@/utils/ProfileCard";
 
 const Credentials = () => {
   return (
@@ -24,69 +21,23 @@ const Credentials = () => {
         }
       />
 
-      <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full border-b pb-3">
+      <div className="px-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
           <div>
-            <h4 className="text-5xl text-primary">Licenses</h4>
+            <h4 className="text-[19px] font-semibold text-[#7070FF]">
+              Licences
+            </h4>
           </div>
           <div className="flex items-center">
             <button type="button" className="text-white">
-              <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
+              <AddIconSmall className="w-5 h-5" aria-hidden="true" />
             </button>
           </div>
         </div>
 
-        {licensesData.map((licence) => {
-          return (
-            <div className="pt-5 border-b">
-              <div className="flex justify-between items-center w-full h-10">
-                <div>
-                  <h4 className="text-4xl text-body mb-2">{licence.country}</h4>
-                </div>
-                <div className="flex items-center">
-                  <button type="button" className="text-white">
-                    <EditIconTransparent
-                      className="w-5 h-5"
-                      aria-hidden="true"
-                    />
-                  </button>
-                </div>
-              </div>
-              <div className="mb-4">
-                <h4 className="text-4xl text-body mb-2">{licence.heading}</h4>
-                {licence.data.map(({ name, value }) => {
-                  const cls = `text-base ${
-                    name.toLocaleLowerCase().includes("email")
-                      ? "text-primary"
-                      : "text-secondary"
-                  } font-medium mb-2 ${
-                    Array.isArray(value) ? "flex items-center gap-2" : ""
-                  }`;
-
-                  return (
-                    <p className={cls}>
-                      <span className="text-body">{name}: </span>
-                      {renderValue(value)}
-                    </p>
-                  );
-                })}
-                <div className="flex flex-wrap w-full gap-1.5">
-                  {licence.tags.map(({ name, type }) => {
-                    return (
-                      <Button
-                        color={type}
-                        variant="tag"
-                        name={name}
-                        size="md"
-                        icon={iconTypes[type]}
-                      />
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          );
-        })}
+        {licensesData.map((item) => (
+          <ProfileCard key={item.country} data={item} />
+        ))}
       </div>
 
       <Card
@@ -97,69 +48,23 @@ const Credentials = () => {
         }
       />
 
-      <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full border-b pb-3">
+      <div className="px-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
           <div>
-            <h4 className="text-5xl text-primary">Basic Certifications</h4>
+            <h4 className="text-[19px] font-semibold text-[#7070FF]">
+              Basic Certifications
+            </h4>
           </div>
           <div className="flex items-center">
             <button type="button" className="text-white">
-              <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
+              <AddIconSmall className="w-5 h-5" aria-hidden="true" />
             </button>
           </div>
         </div>
 
-        {basicCertificationsData.map((licence) => {
-          return (
-            <div className="pt-5 border-b">
-              <div className="flex justify-between items-center w-full h-10">
-                <div>
-                  <h4 className="text-4xl text-body mb-2">{licence.country}</h4>
-                </div>
-                <div className="flex items-center">
-                  <button type="button" className="text-white">
-                    <EditIconTransparent
-                      className="w-5 h-5"
-                      aria-hidden="true"
-                    />
-                  </button>
-                </div>
-              </div>
-              <div className="mb-4">
-                <h4 className="text-4xl text-body mb-2">{licence.heading}</h4>
-                {licence.data.map(({ name, value }) => {
-                  const cls = `text-base ${
-                    name.toLocaleLowerCase().includes("email")
-                      ? "text-primary"
-                      : "text-secondary"
-                  } font-medium mb-2 ${
-                    Array.isArray(value) ? "flex items-center gap-2" : ""
-                  }`;
-
-                  return (
-                    <p className={cls}>
-                      <span className="text-body">{name}: </span>
-                      {renderValue(value)}
-                    </p>
-                  );
-                })}
-                <div className="flex flex-wrap w-full gap-1.5">
-                  {licence.tags.map(({ name, type }) => {
-                    return (
-                      <Button
-                        color={type}
-                        variant="tag"
-                        name={name}
-                        size="md"
-                        icon={iconTypes[type]}
-                      />
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          );
-        })}
+        {basicCertificationsData.map((item) => (
+          <ProfileCard key={item.country} data={item} />
+        ))}
       </div>
 
       <Card
@@ -170,69 +75,23 @@ const Credentials = () => {
         }
       />
 
-      <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full border-b pb-3">
+      <div className="px-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
           <div>
-            <h4 className="text-5xl text-primary">Specialty Certifications</h4>
+            <h4 className="text-[19px] font-semibold text-[#7070FF]">
+              Speciality Certifications
+            </h4>
           </div>
           <div className="flex items-center">
             <button type="button" className="text-white">
-              <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
+              <AddIconSmall className="w-5 h-5" aria-hidden="true" />
             </button>
           </div>
         </div>
 
-        {specialityCertificationsData.map((licence) => {
-          return (
-            <div className="pt-5 border-b">
-              <div className="flex justify-between items-center w-full h-10">
-                <div>
-                  <h4 className="text-4xl text-body mb-2">{licence.country}</h4>
-                </div>
-                <div className="flex items-center">
-                  <button type="button" className="text-white">
-                    <EditIconTransparent
-                      className="w-5 h-5"
-                      aria-hidden="true"
-                    />
-                  </button>
-                </div>
-              </div>
-              <div className="mb-4">
-                <h4 className="text-4xl text-body mb-2">{licence.heading}</h4>
-                {licence.data.map(({ name, value }) => {
-                  const cls = `text-base ${
-                    name.toLocaleLowerCase().includes("email")
-                      ? "text-primary"
-                      : "text-secondary"
-                  } font-medium mb-2 ${
-                    Array.isArray(value) ? "flex items-center gap-2" : ""
-                  }`;
-
-                  return (
-                    <p className={cls}>
-                      <span className="text-body">{name}: </span>
-                      {renderValue(value)}
-                    </p>
-                  );
-                })}
-                <div className="flex flex-wrap w-full gap-1.5">
-                  {licence.tags.map(({ name, type }) => {
-                    return (
-                      <Button
-                        color={type}
-                        variant="tag"
-                        name={name}
-                        size="md"
-                        icon={iconTypes[type]}
-                      />
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          );
-        })}
+        {specialityCertificationsData.map((item) => (
+          <ProfileCard key={item.country} data={item} />
+        ))}
       </div>
 
       <Card
@@ -243,69 +102,23 @@ const Credentials = () => {
         }
       />
 
-      <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full border-b pb-3">
+      <div className="px-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
           <div>
-            <h4 className="text-5xl text-primary">Other Certifications</h4>
+            <h4 className="text-[19px] font-semibold text-[#7070FF]">
+              other Certifications
+            </h4>
           </div>
           <div className="flex items-center">
             <button type="button" className="text-white">
-              <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
+              <AddIconSmall className="w-5 h-5" aria-hidden="true" />
             </button>
           </div>
         </div>
 
-        {otherCertificationsData.map((licence) => {
-          return (
-            <div className="pt-5 border-b">
-              <div className="flex justify-between items-center w-full h-10">
-                <div>
-                  <h4 className="text-4xl text-body mb-2">{licence.country}</h4>
-                </div>
-                <div className="flex items-center">
-                  <button type="button" className="text-white">
-                    <EditIconTransparent
-                      className="w-5 h-5"
-                      aria-hidden="true"
-                    />
-                  </button>
-                </div>
-              </div>
-              <div className="mb-4">
-                <h4 className="text-4xl text-body mb-2">{licence.heading}</h4>
-                {licence.data.map(({ name, value }) => {
-                  const cls = `text-base ${
-                    name.toLocaleLowerCase().includes("email")
-                      ? "text-primary"
-                      : "text-secondary"
-                  } font-medium mb-2 ${
-                    Array.isArray(value) ? "flex items-center gap-2" : ""
-                  }`;
-
-                  return (
-                    <p className={cls}>
-                      <span className="text-body">{name}: </span>
-                      {renderValue(value)}
-                    </p>
-                  );
-                })}
-                <div className="flex flex-wrap w-full gap-1.5">
-                  {licence.tags.map(({ name, type }) => {
-                    return (
-                      <Button
-                        color={type}
-                        variant="tag"
-                        name={name}
-                        size="md"
-                        icon={iconTypes[type]}
-                      />
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          );
-        })}
+        {otherCertificationsData.map((item) => (
+          <ProfileCard key={item.country} data={item} />
+        ))}
       </div>
     </div>
   );

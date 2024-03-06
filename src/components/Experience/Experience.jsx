@@ -3,14 +3,11 @@
 import { EditIconTransparent, AddIconSmall } from "@/svgs/icons";
 import { Icon } from "@/svgs";
 import Card from "../Card/Card";
-import { Button } from "../Button/Button";
-import { renderValue } from "@/utils/helper";
 import {
   continuingEducationData,
-  educationIcons,
-  iconTypes,
   referencesData,
 } from "@/utils/data";
+import ProfileCard from "@/utils/ProfileCard";
 
 const Experience = () => {
   return (
@@ -91,57 +88,9 @@ const Experience = () => {
           </div>
         </div>
 
-        {continuingEducationData.map((licence) => {
-          return (
-            <div className="pt-5 border-b">
-              <div className="flex justify-between items-center w-full h-10">
-                <div>
-                  <h4 className="text-4xl text-body mb-2">{licence.country}</h4>
-                </div>
-                <div className="flex items-center">
-                  <button type="button" className="text-white">
-                    <EditIconTransparent
-                      className="w-5 h-5"
-                      aria-hidden="true"
-                    />
-                  </button>
-                </div>
-              </div>
-              <div className="mb-4">
-                <h4 className="text-4xl text-body mb-2">{licence.heading}</h4>
-                {licence.data.map(({ name, value }) => {
-                  const cls = `text-base ${
-                    name.toLocaleLowerCase().includes("email")
-                      ? "text-primary"
-                      : "text-secondary"
-                  } font-medium mb-2 ${
-                    Array.isArray(value) ? "flex items-center gap-2" : ""
-                  }`;
-
-                  return (
-                    <p className={cls}>
-                      <span className="text-body">{name}: </span>
-                      {renderValue(value)}
-                    </p>
-                  );
-                })}
-                <div className="flex flex-wrap w-full gap-1.5">
-                  {licence.tags.map(({ name, type }) => {
-                    return (
-                      <Button
-                        color={type}
-                        variant="tag"
-                        name={name}
-                        size="md"
-                        icon={iconTypes[type]}
-                      />
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          );
-        })}
+        {continuingEducationData.map((item) => (
+          <ProfileCard key={item.country} data={item} />
+        ))}
       </div>
 
       <Card
@@ -165,56 +114,10 @@ const Experience = () => {
             </button>
           </div>
         </div>
-        {continuingEducationData.map((licence) => {
-          return (
-            <div className="pt-5 border-b">
-              <div className="flex justify-between items-center w-full h-10">
-                <div>
-                  <h4 className="text-4xl text-body mb-2">{licence.country}</h4>
-                </div>
-                <div className="flex items-center">
-                  <button type="button" className="text-white">
-                    <EditIconTransparent
-                      className="w-5 h-5"
-                      aria-hidden="true"
-                    />
-                  </button>
-                </div>
-              </div>
-              <div className="mb-4">
-                <h4 className="text-4xl text-body mb-2">{licence.heading}</h4>
-                {licence.data.map(({ name, value }) => {
-                  const cls = `text-base ${
-                    name.toLocaleLowerCase().includes("email")
-                      ? "text-primary"
-                      : "text-secondary"
-                  } font-medium mb-2 ${
-                    Array.isArray(value) ? "flex items-center gap-2" : ""
-                  }`;
-                  return (
-                    <p className={cls}>
-                      <span className="text-body">{name}: </span>
-                      {renderValue(value)}
-                    </p>
-                  );
-                })}
-                <div className="flex flex-wrap w-full gap-1.5">
-                  {licence.tags.map(({ name, type }) => {
-                    return (
-                      <Button
-                        color={type}
-                        variant="tag"
-                        name={name}
-                        size="md"
-                        icon={iconTypes[type]}
-                      />
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          );
-        })}
+
+        {continuingEducationData.map((item) => (
+          <ProfileCard key={item.country} data={item} />
+        ))}
       </div>
 
       <Card
@@ -239,56 +142,9 @@ const Experience = () => {
           </div>
         </div>
 
-        {referencesData.map((licence) => {
-          return (
-            <div className="pt-5 border-b">
-              <div className="flex justify-between items-center w-full h-10">
-                <div>
-                  <h4 className="text-4xl text-body mb-2">{licence.country}</h4>
-                </div>
-                <div className="flex items-center">
-                  <button type="button" className="text-white">
-                    <EditIconTransparent
-                      className="w-5 h-5"
-                      aria-hidden="true"
-                    />
-                  </button>
-                </div>
-              </div>
-              <div className="mb-4">
-                <h4 className="text-4xl text-body mb-2">{licence.heading}</h4>
-                {licence.data.map(({ name, value }) => {
-                  const cls = `text-base ${
-                    name.toLocaleLowerCase().includes("email")
-                      ? "text-primary"
-                      : "text-secondary"
-                  } font-medium mb-2 ${
-                    Array.isArray(value) ? "flex items-center gap-2" : ""
-                  }`;
-                  return (
-                    <p className={cls}>
-                      <span className="text-body">{name}: </span>
-                      {renderValue(value)}
-                    </p>
-                  );
-                })}
-                <div className="flex flex-wrap w-full gap-1.5">
-                  {licence.tags.map(({ name, type }) => {
-                    return (
-                      <Button
-                        color={type}
-                        variant="tag"
-                        name={name}
-                        size="md"
-                        icon={educationIcons[type]}
-                      />
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          );
-        })}
+        {referencesData.map((item) => (
+          <ProfileCard key={item.country} data={item} />
+        ))}
       </div>
 
       <Card
@@ -303,7 +159,7 @@ const Experience = () => {
         <div className="flex justify-between items-center w-full min-h-[67px] border-b">
           <div>
             <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Tech Proficiency
+              Tech Proficiancy
             </h4>
           </div>
           <div className="flex items-center">
@@ -313,56 +169,9 @@ const Experience = () => {
           </div>
         </div>
 
-        {continuingEducationData.map((licence) => {
-          return (
-            <div className="pt-5 border-b">
-              <div className="flex justify-between items-center w-full h-10">
-                <div>
-                  <h4 className="text-4xl text-body mb-2">{licence.country}</h4>
-                </div>
-                <div className="flex items-center">
-                  <button type="button" className="text-white">
-                    <EditIconTransparent
-                      className="w-5 h-5"
-                      aria-hidden="true"
-                    />
-                  </button>
-                </div>
-              </div>
-              <div className="mb-4">
-                <h4 className="text-4xl text-body mb-2">{licence.heading}</h4>
-                {licence.data.map(({ name, value }) => {
-                  const cls = `text-base ${
-                    name.toLocaleLowerCase().includes("email")
-                      ? "text-primary"
-                      : "text-secondary"
-                  } font-medium mb-2 ${
-                    Array.isArray(value) ? "flex items-center gap-2" : ""
-                  }`;
-                  return (
-                    <p className={cls}>
-                      <span className="text-body">{name}: </span>
-                      {renderValue(value)}
-                    </p>
-                  );
-                })}
-                <div className="flex flex-wrap w-full gap-1.5">
-                  {licence.tags.map(({ name, type }) => {
-                    return (
-                      <Button
-                        color={type}
-                        variant="tag"
-                        name={name}
-                        size="md"
-                        icon={iconTypes[type]}
-                      />
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          );
-        })}
+        {continuingEducationData.map((item) => (
+          <ProfileCard key={item.country} data={item} />
+        ))}
       </div>
     </div>
   );

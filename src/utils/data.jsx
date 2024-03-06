@@ -1,11 +1,8 @@
 import { VerifiedIcon } from "@/svgs/VerifiedIcon";
 import {
-  EditIconTransparent,
-  AddIconSmall,
   PhoneDisconnectIcon,
   DocumentTagIcon,
   PhoneIcon,
-  AddPlusIcon,
   WarningTagIcon,
   TimeTagIcon,
 } from "@/svgs/icons";
