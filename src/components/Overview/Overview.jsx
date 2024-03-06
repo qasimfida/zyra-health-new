@@ -1,75 +1,20 @@
 "use client";
 
-import {
-  GlobeIcon,
-  EditIconTransparent,
-  TwitterIcon,
-  LinkedInIcon,
-} from "@/svgs/icons";
+import { EditIconTransparent } from "@/svgs/icons";
 import Card from "../Card/Card";
 import { Icon } from "@/svgs";
+import {
+  contactInformationData,
+  emergencyContactData,
+  iconTypes,
+  identityInfoData,
+  languagesData,
+  profileData,
+  socialProfileData,
+} from "@/utils/data";
+import { renderValue } from "@/utils/helper";
 
 const Overview = () => {
-  const profileData = [
-    { name: "Discipline Type", value: "Nursing" },
-    { name: "Clinician Type", value: "Registered Nurse (RN)" },
-    {
-      name: "Bio",
-      value:
-        "Committed and versatile healthcare professional with extensive experience across a variety of healthcare settings. Known for providing top-notch care and support, excelling in fast-paced environments, and adept at addressing diverse patient needs with empathy and proficiency. With a strong foundation in patient care principles, equipped to deliver exceptional service whether in direct patient care, administrative roles, or team collaboration. Driven by a passion for improving patient outcomes and enhancing the quality of healthcare delivery",
-    },
-  ];
-
-  const contactInformationData = [
-    { name: "Phone Number", value: "617-777-7788" },
-    { name: "Email", value: "williamnash@gmail.com" },
-  ];
-
-  const emergencyContactData = [
-    { name: "Relationship", value: "Mother" },
-    { name: "Email", value: "meghan.roberts@yahoo.com" },
-    { name: "Phone Number", value: "617-777-9090" },
-  ];
-
-  const socialProfileData = [
-    { name: "Website", value: "www.example.com/username" },
-    { name: "LinkedIn", value: "www.linkedin.com/in/username" },
-    { name: "Twitter", value: "www.twitter.com/username" },
-  ];
-
-  const identityInfoData = [
-    { name: "Pronouns", value: "He/Him" },
-    { name: "Gender", value: "Man" },
-    { name: "Ethnicity", value: "White" },
-  ];
-
-  const languagesData = [
-    {
-      language: "Balgarian",
-      data: [
-        { name: "Reading", value: "Beginner" },
-        { name: "Writing", value: "Beginner" },
-        { name: "Verbal", value: "Beginner" },
-      ],
-    },
-    {
-      language: "Spanish",
-      data: [
-        { name: "Reading", value: "Beginner" },
-        { name: "Writing", value: "Beginner" },
-        { name: "Verbal", value: "Beginner" },
-      ],
-    },
-    {
-      language: "Italian",
-      data: [
-        { name: "Reading", value: "Beginner" },
-        { name: "Writing", value: "Beginner" },
-        { name: "Verbal", value: "Beginner" },
-      ],
-    },
-  ];
-
   return (
     <div>
       <Card
@@ -128,17 +73,37 @@ const Overview = () => {
                 </div>
               </div>
               <div className="mb-4">
-                {item.data.map(({ name, value }, index) => {
+                <h4 className="text-4xl text-body mb-2">{item.heading}</h4>
+                {item.data.map(({ name, value }) => {
+                  const cls = `text-base ${
+                    name.toLocaleLowerCase().includes("email")
+                      ? "text-primary"
+                      : "text-secondary"
+                  } font-medium mb-2 ${
+                    Array.isArray(value) ? "flex items-center gap-2" : ""
+                  }`;
+
                   return (
-                    <p
-                      key={`${name}-value-${index + 1}`}
-                      className="text-base text-secondary font-medium mb-2"
-                    >
+                    <p className={cls}>
                       <span className="text-body">{name}: </span>
-                      {value}
+                      {renderValue(value)}
                     </p>
                   );
                 })}
+                <div className="flex flex-wrap w-full gap-1.5">
+                  {item.tags &&
+                    item.tags.map(({ name, type }) => {
+                      return (
+                        <Button
+                          color={type}
+                          variant="tag"
+                          name={name}
+                          size="md"
+                          icon={iconTypes[type]}
+                        />
+                      );
+                    })}
+                </div>
               </div>
             </div>
           );

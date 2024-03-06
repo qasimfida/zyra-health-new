@@ -1,156 +1,19 @@
 "use client";
 
-import {
-  EditIconTransparent,
-  DocumentTagIcon,
-  TimeTagIcon,
-  WarningTagIcon,
-} from "@/svgs/icons";
+import { EditIconTransparent } from "@/svgs/icons";
 import { Icon } from "@/svgs";
 import Card from "../Card/Card";
-import { VerifiedIcon } from "@/svgs/VerifiedIcon";
-import { Button, tags } from "../Button/Button";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { Button } from "../Button/Button";
+import { renderValue } from "@/utils/helper";
+import {
+  basicCertificationsData,
+  iconTypes,
+  licensesData,
+  otherCertificationsData,
+  specialityCertificationsData,
+} from "@/utils/data";
 
 const Credentials = () => {
-  const licensesData = [
-    {
-      country: "Registered Nurse License (RN)",
-      data: [
-        {
-          name: "Issuing Institution",
-          value: "North Carolina Board of Nursing",
-        },
-        { name: "License State", value: "Compact License" },
-        { name: "License Number", value: "XYZ23091234" },
-        { name: "Expiry Date", value: "October 2024" },
-      ],
-      tags: [
-        {
-          name: "Name of Document",
-          type: "info",
-        },
-        {
-          name: "Licence not verified",
-          type: "warning",
-        },
-        {
-          name: "Expired",
-          type: "danger",
-        },
-      ],
-    },
-    {
-      country: "Registered Nurse License (RN)",
-      data: [
-        {
-          name: "Issuing Institution",
-          value: "North Carolina Board of Nursing",
-        },
-        { name: "License State", value: "Compact License" },
-        { name: "License Number", value: "XYZ23091234" },
-        { name: "Expiry Date", value: "October 2024" },
-      ],
-      tags: [
-        {
-          name: "Name of Document",
-          type: "info",
-        },
-        {
-          name: "licence Verified",
-          type: "success",
-        },
-        {
-          name: "Expires in 30 days",
-          type: "warning",
-        },
-      ],
-    },
-  ];
-
-  const basicCertificationsData = [
-    {
-      country: "Advanced Cardiovascular Life Support (ACLS)",
-      data: [{ name: "Expiry Date", value: "September 2025" }],
-      tags: [
-        {
-          name: "Name of Document",
-          type: "info",
-        },
-        {
-          name: "Expires in 30 days",
-          type: "warning",
-        },
-      ],
-    },
-    {
-      country: "Basic Life Support (BLS)",
-      data: [{ name: "Expiry Date", value: "August 2024" }],
-      tags: [
-        {
-          name: "Name of Document",
-          type: "info",
-        },
-        {
-          name: "Expires in 30 days",
-          type: "warning",
-        },
-        {
-          name: "Expired",
-          type: "danger",
-        },
-      ],
-    },
-  ];
-
-  const specialityCertificationsData = [
-    {
-      country: "Cardiac Medicine Certification",
-      data: [
-        {
-          name: "Issuing Institution",
-          value: "American Association of Critical Care Nurses (AACN)",
-        },
-        { name: "Expiry Date", value: "April 2027" },
-      ],
-      tags: [
-        {
-          name: "Name of Document",
-          type: "info",
-        },
-      ],
-    },
-    {
-      country: "Trauma Certified Registered Nurse (TCRN)",
-      data: [
-        {
-          name: "Issuing Institution",
-          value: "American Association of Critical Care Nurses (AACN)",
-        },
-        { name: "Expiry Date", value: "April 2027" },
-      ],
-      tags: [
-        {
-          name: "Name of Document",
-          type: "info",
-        },
-      ],
-    },
-  ];
-
-  const otherCertificationsData = [
-    {
-      country: "Test Certification",
-      data: [
-        {
-          name: "Issuing Institution",
-          value: "American Association of Critical Care Nurses (AACN)",
-        },
-        { name: "Expiry Date", value: "April 2027" },
-      ],
-      tags: [],
-    },
-  ];
   return (
     <div>
       <Card
@@ -192,47 +55,31 @@ const Credentials = () => {
               <div className="mb-4">
                 <h4 className="text-4xl text-body mb-2">{licence.heading}</h4>
                 {licence.data.map(({ name, value }) => {
+                  const cls = `text-base ${
+                    name.toLocaleLowerCase().includes("email")
+                      ? "text-primary"
+                      : "text-secondary"
+                  } font-medium mb-2 ${
+                    Array.isArray(value) ? "flex items-center gap-2" : ""
+                  }`;
+
                   return (
-                    <p className="text-base text-secondary font-medium mb-2">
+                    <p className={cls}>
                       <span className="text-body">{name}: </span>
-                      {value}
+                      {renderValue(value)}
                     </p>
                   );
                 })}
                 <div className="flex flex-wrap w-full gap-1.5">
                   {licence.tags.map(({ name, type }) => {
                     return (
-                      <div>
-                        <Button
-                          color={type}
-                          variant="tag"
-                          name={name}
-                          size="md"
-                          icon={
-                            type === tags.INFO ? (
-                              <DocumentTagIcon
-                                className="w-5 h-5"
-                                aria-hidden="true"
-                              />
-                            ) : type === tags.SUCCESS ? (
-                              <VerifiedIcon
-                                className="w-5 h-5"
-                                aria-hidden="true"
-                              />
-                            ) : type === tags.WARNING ? (
-                              <WarningTagIcon
-                                className="w-5 h-5"
-                                aria-hidden="true"
-                              />
-                            ) : (
-                              <TimeTagIcon
-                                className="w-5 h-5"
-                                aria-hidden="true"
-                              />
-                            )
-                          }
-                        />
-                      </div>
+                      <Button
+                        color={type}
+                        variant="tag"
+                        name={name}
+                        size="md"
+                        icon={iconTypes[type]}
+                      />
                     );
                   })}
                 </div>
@@ -281,10 +128,18 @@ const Credentials = () => {
               <div className="mb-4">
                 <h4 className="text-4xl text-body mb-2">{licence.heading}</h4>
                 {licence.data.map(({ name, value }) => {
+                  const cls = `text-base ${
+                    name.toLocaleLowerCase().includes("email")
+                      ? "text-primary"
+                      : "text-secondary"
+                  } font-medium mb-2 ${
+                    Array.isArray(value) ? "flex items-center gap-2" : ""
+                  }`;
+
                   return (
-                    <p className="text-base text-secondary font-medium mb-2">
+                    <p className={cls}>
                       <span className="text-body">{name}: </span>
-                      {value}
+                      {renderValue(value)}
                     </p>
                   );
                 })}
@@ -296,34 +151,7 @@ const Credentials = () => {
                         variant="tag"
                         name={name}
                         size="md"
-                        icon={
-                          type === "info" ? (
-                            <DocumentTagIcon
-                              className="w-5 h-5"
-                              aria-hidden="true"
-                            />
-                          ) : type === "success" ? (
-                            <VerifiedIcon
-                              className="w-5 h-5"
-                              aria-hidden="true"
-                            />
-                          ) : type === "warning" ? (
-                            <WarningTagIcon
-                              className="w-5 h-5"
-                              aria-hidden="true"
-                            />
-                          ) : type === "danger" ? (
-                            <TimeTagIcon
-                              className="w-5 h-5"
-                              aria-hidden="true"
-                            />
-                          ) : (
-                            <ArrowRightIcon
-                              className="w-5 h-5"
-                              aria-hidden="true"
-                            />
-                          )
-                        }
+                        icon={iconTypes[type]}
                       />
                     );
                   })}
@@ -373,10 +201,18 @@ const Credentials = () => {
               <div className="mb-4">
                 <h4 className="text-4xl text-body mb-2">{licence.heading}</h4>
                 {licence.data.map(({ name, value }) => {
+                  const cls = `text-base ${
+                    name.toLocaleLowerCase().includes("email")
+                      ? "text-primary"
+                      : "text-secondary"
+                  } font-medium mb-2 ${
+                    Array.isArray(value) ? "flex items-center gap-2" : ""
+                  }`;
+
                   return (
-                    <p className="text-base text-secondary font-medium mb-2">
+                    <p className={cls}>
                       <span className="text-body">{name}: </span>
-                      {value}
+                      {renderValue(value)}
                     </p>
                   );
                 })}
@@ -388,34 +224,7 @@ const Credentials = () => {
                         variant="tag"
                         name={name}
                         size="md"
-                        icon={
-                          type === "info" ? (
-                            <DocumentTagIcon
-                              className="w-5 h-5"
-                              aria-hidden="true"
-                            />
-                          ) : type === "success" ? (
-                            <VerifiedIcon
-                              className="w-5 h-5"
-                              aria-hidden="true"
-                            />
-                          ) : type === "warning" ? (
-                            <WarningTagIcon
-                              className="w-5 h-5"
-                              aria-hidden="true"
-                            />
-                          ) : type === "danger" ? (
-                            <TimeTagIcon
-                              className="w-5 h-5"
-                              aria-hidden="true"
-                            />
-                          ) : (
-                            <ArrowRightIcon
-                              className="w-5 h-5"
-                              aria-hidden="true"
-                            />
-                          )
-                        }
+                        icon={iconTypes[type]}
                       />
                     );
                   })}
@@ -465,10 +274,18 @@ const Credentials = () => {
               <div className="mb-4">
                 <h4 className="text-4xl text-body mb-2">{licence.heading}</h4>
                 {licence.data.map(({ name, value }) => {
+                  const cls = `text-base ${
+                    name.toLocaleLowerCase().includes("email")
+                      ? "text-primary"
+                      : "text-secondary"
+                  } font-medium mb-2 ${
+                    Array.isArray(value) ? "flex items-center gap-2" : ""
+                  }`;
+
                   return (
-                    <p className="text-base text-secondary font-medium mb-2">
+                    <p className={cls}>
                       <span className="text-body">{name}: </span>
-                      {value}
+                      {renderValue(value)}
                     </p>
                   );
                 })}
@@ -480,34 +297,7 @@ const Credentials = () => {
                         variant="tag"
                         name={name}
                         size="md"
-                        icon={
-                          type === "info" ? (
-                            <DocumentTagIcon
-                              className="w-5 h-5"
-                              aria-hidden="true"
-                            />
-                          ) : type === "success" ? (
-                            <VerifiedIcon
-                              className="w-5 h-5"
-                              aria-hidden="true"
-                            />
-                          ) : type === "warning" ? (
-                            <WarningTagIcon
-                              className="w-5 h-5"
-                              aria-hidden="true"
-                            />
-                          ) : type === "danger" ? (
-                            <TimeTagIcon
-                              className="w-5 h-5"
-                              aria-hidden="true"
-                            />
-                          ) : (
-                            <ArrowRightIcon
-                              className="w-5 h-5"
-                              aria-hidden="true"
-                            />
-                          )
-                        }
+                        icon={iconTypes[type]}
                       />
                     );
                   })}

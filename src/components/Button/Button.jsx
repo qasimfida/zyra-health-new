@@ -1,13 +1,13 @@
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
-export const tags= {
+export const tags = {
   INFO: "info",
   TAG: "tag",
   SUCCESS: "success",
   PRIMARY: "primary",
   WARNING: "warning",
-  DANGER: "danger"
-}
+  DANGER: "danger",
+};
 const COLORS = {
   success: "border-success text-success",
   info: "border-info text-info",
@@ -51,9 +51,15 @@ export const Button = ({
         variant === tags.TAG ? "gap-2" : ""
       }`}
     >
-      {variant === tags.TAG && variant !== "tagFilled" && variant !== "tagOutlined" && icon}
+      {variant === tags.TAG &&
+        variant !== "tagFilled" &&
+        variant !== "tagOutlined" &&
+        icon}
       {name}
-      {variant !== tags.TAG && variant !== "tagFilled"  && variant !== "tagOutlined" && icon}
+      {variant !== tags.TAG &&
+        variant !== "tagFilled" &&
+        variant !== "tagOutlined" &&
+        icon}
     </button>
   );
 };
