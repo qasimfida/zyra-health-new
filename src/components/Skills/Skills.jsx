@@ -16,14 +16,10 @@ import CustomCheckbox from "../CustomCheckbox/CustomCheckbox";
 const Skills = () => {
   return (
     <div>
-      <div className="px-5 pb-6 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Add a Checklist
-            </h4>
-          </div>
-          <div></div>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Add a Checklist</h4>
+          <button></button>
         </div>
         <div className="flex justify-center pt-5">
           <button
@@ -73,14 +69,10 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="px-5 pb-6 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Completed Chekcklists
-            </h4>
-          </div>
-          <div></div>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Completed Chekcklists</h4>
+          <button></button>
         </div>
         <div className="pt-5 border flex justify-between px-[16px] py-[14px] items-center rounded-3xl mt-6">
           <div>
@@ -208,14 +200,10 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="px-5 pb-6 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Add a Checklist
-            </h4>
-          </div>
-          <div></div>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Add a Checklist</h4>
+          <button></button>
         </div>
         <div className="pt-5 border flex justify-between px-[16px] py-[14px] items-center rounded-3xl mt-6">
           <div>
@@ -246,14 +234,10 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="px-5 pb-6 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Add a Checklist
-            </h4>
-          </div>
-          <div></div>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Add a Checklist</h4>
+          <button></button>
         </div>
         <div className="flex justify-center pt-5">
           {/* Dropdown menu */}
@@ -328,8 +312,8 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="px-5 py-6 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
           <div className="flex items-center">
             <button type="button" className="mr-4 text-white">
               <BackIcon className="w-5 h-5" aria-hidden="true" />
@@ -380,8 +364,8 @@ const Skills = () => {
         <ProgressBar filled={30} />
       </div>
 
-      <div className="px-5 py-6 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
           <div className="flex items-center">
             <h4 className="text-[19px] font-semibold text-[#7070FF]">
               Administrative Duties
@@ -669,8 +653,8 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="px-5 py-6 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
           <div className="flex items-center">
             <h4 className="text-[19px] font-semibold text-[#7070FF]">
               Computer Skills
@@ -804,8 +788,8 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="px-5 py-6 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
           <div className="flex items-center">
             <h4 className="text-[19px] font-semibold text-[#7070FF]">
               Age-Specific Competencies

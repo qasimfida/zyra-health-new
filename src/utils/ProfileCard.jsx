@@ -19,7 +19,7 @@ const ProfileCard = ({ data }) => {
 
   return (
     <div className="pt-5 border-b">
-      <div className="flex justify-between items-center w-full ">
+      {data.country && <div className="flex justify-between items-center w-full ">
         <div>
           <h4 className="text-4xl text-body">{data.country}</h4>
         </div>
@@ -28,7 +28,7 @@ const ProfileCard = ({ data }) => {
             <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
-      </div>
+      </div>}
       <div className="mb-4">
         <h4 className="text-4xl text-body mb-2">{data.heading}</h4>
         {data.data.map(({ name, value }) => {

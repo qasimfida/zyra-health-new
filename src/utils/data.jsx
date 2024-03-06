@@ -93,6 +93,79 @@ export const continuingEducationData = [
   },
 ];
 
+export const searchPreferencesData = [
+  {
+    country: "",
+    data: [
+      {
+        name: "Job Type Preference",
+        value: "Full-time",
+      },
+      { name: "Job Search Status", value: "Actively looking for new opportunities" },
+      { name: "Start Date Availability", value: "October 2024" },
+      { name: "End/Expected", value: "Immediately" },
+      { name: "Work Style Preference", value: "Remote" },
+      { name: "Honors and Awards", value: "October 2024" },
+      {
+        name: "Skills Acquired",
+        value: [
+          {
+            name: "Patient Assessmentsss",
+            type: "text",
+          },
+          {
+            name: "Care Planningss",
+            type: "text",
+          },
+          {
+            name: "Patient Educationss",
+            type: "text",
+          },
+        ],
+      },
+    ],
+  },
+];
+
+export const workplacePreferencesData = [
+  {
+    country: "",
+    data: [
+      {
+        name: "Job Opportunity Priorities",
+        value: "Company Culture",
+      },
+      {
+        name: "Preferred Job Settings",
+        value: [
+          {
+            name: "Adult Day Care Center",
+            type: "text", 
+          },
+          {
+            name: "Care Planningss",
+            type: "text",
+          },
+        ],
+      },
+      { name: "Preferred Organization Type", value: "Hospital chain" },
+      {
+        name: "Skills Acquired",
+        value: [
+          {
+            name: "Adult Day Care Center",
+            type: "text",
+          },
+          {
+            name: "Care Planningss",
+            type: "text",
+          },
+        ],
+      },
+    ],
+  },
+];
+
 export const resumeData = [
   {
     country: "Authorized to work in the US",

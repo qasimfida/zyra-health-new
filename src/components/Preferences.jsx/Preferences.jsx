@@ -3,23 +3,18 @@
 import { EditIconTransparent, AddPlusIcon } from "@/svgs/icons";
 import { Icon } from "@/svgs";
 import Card from "../Card/Card";
+import { searchPreferencesData, workplacePreferencesData } from "@/utils/data";
+import ProfileCard from "@/utils/ProfileCard";
 
 const Preferences = () => {
   return (
     <div>
-      {/* Search Preferences Component start */}
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Search Preferences
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
-            </button>
-          </div>
+      {/* <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Search Preferences</h4>
+          <button type="button" className="text-white">
+            <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
+          </button>
         </div>
 
         <div className="pt-5 border-b">
@@ -80,22 +75,27 @@ const Preferences = () => {
             </div>
           </div>
         </div>
-      </div>
-      {/* Experience Summary Component End */}
+      </div> */}
 
-      {/* Workplace Preferences Component start */}
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Workplace Preferences
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
-            </button>
-          </div>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Search Preferences</h4>
+          <button type="button" className="text-white">
+            <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
+          </button>
+        </div>
+
+        {searchPreferencesData.map((item) => (
+          <ProfileCard key={item.country} data={item} />
+        ))}
+      </div>
+
+      {/* <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Workplace Preferences</h4>
+          <button type="button" className="text-white">
+            <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
+          </button>
         </div>
 
         <div className="pt-5 border-b">
@@ -176,8 +176,20 @@ const Preferences = () => {
             </p>
           </div>
         </div>
+      </div> */}
+
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Workplace Preferences</h4>
+          <button type="button" className="text-white">
+            <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
+          </button>
+        </div>
+
+        {workplacePreferencesData.map((item) => (
+          <ProfileCard key={item.country} data={item} />
+        ))}
       </div>
-      {/* Experience Summary Component End */}
 
       <Card
         title={"Add Employment Preferences"}
@@ -187,19 +199,14 @@ const Preferences = () => {
         }
       />
 
-      {/* Search Preferences Component start */}
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Search Preferences
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
-            </button>
-          </div>
+      {/* Continueing */}
+
+      {/* <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Search Preferences</h4>
+          <button type="button" className="text-white">
+            <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
+          </button>
         </div>
 
         <div className="pt-5 border-b">
@@ -236,21 +243,13 @@ const Preferences = () => {
           </div>
         </div>
       </div>
-      {/* Experience Summary Component End */}
 
-      {/* Workplace Preferences Component start */}
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Workplace Preferences
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
-            </button>
-          </div>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Workplace Preferences</h4>
+          <button type="button" className="text-white">
+            <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
+          </button>
         </div>
 
         <div className="pt-5 border-b">
@@ -332,21 +331,13 @@ const Preferences = () => {
           </div>
         </div>
       </div>
-      {/* Experience Summary Component End */}
 
-      {/* Employment Preferences Component start */}
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Employment Preferences
-            </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
-            </button>
-          </div>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full h-10 border-b">
+          <h4 className="text-5xl text-primary">Employment Preferences</h4>
+          <button type="button" className="text-white">
+            <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
+          </button>
         </div>
 
         <div className="pt-5 border-b">
@@ -585,8 +576,7 @@ const Preferences = () => {
             </div>
           </div>
         </div>
-      </div>
-      {/* Experience Summary Component End */}
+      </div> */}
     </div>
   );
 };

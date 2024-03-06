@@ -5,9 +5,15 @@ export const renderValue = (value) => {
   if (Array.isArray(value)) {
     return (
       <>
-        {value.map(({ name, type }) => (
-          <Button color={type} variant="tagFilled" name={name} size="md" />
-        ))}
+        {value.map(({ name, type }) =>
+          type === "text" ? (
+            <p className="text-[16px] text-[#7F7F7F] font-medium">
+              {name}
+            </p>
+          ) : (
+            <Button color={type} variant="tagFilled" name={name} size="md" />
+          )
+        )}
         <button
           type="button"
           className="rounded-3xl flex items-center text-base font-medium text-primary py-1 px-2"

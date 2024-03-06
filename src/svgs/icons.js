@@ -380,7 +380,7 @@ return <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http:/
 }
 
 export const BackIcon = () => {
-return <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+return <svg width="30" height="31" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="-0.5" y="0.5" width="39" height="39" rx="19.5" transform="matrix(-1 0 0 1 39 0.5)" fill="white"/>
 <rect x="-0.5" y="0.5" width="39" height="39" rx="19.5" transform="matrix(-1 0 0 1 39 0.5)" stroke="#EAEAF1"/>
 <rect width="20" height="20" transform="matrix(-1 0 0 1 30 10.5)" fill="white" fill-opacity="0.01"/>
