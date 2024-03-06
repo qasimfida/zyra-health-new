@@ -10,10 +10,9 @@ const Card = ({
   heading = "",
   icon = <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />,
   options = [],
-  subTitle = "Add Subtitle", 
-  description = ""
+  subTitle = "Add Subtitle",
+  description = "",
 }) => {
-
   if (description) {
     return (
       <div className="p-5 mt-6 bg-white rounded-2xl">
@@ -23,14 +22,10 @@ const Card = ({
               {title}
             </h4>
           </div>
-          <div>
-          </div>
+          <div></div>
         </div>
         <div className="flex justify-center pt-5">
-          <button
-            type="button"
-            className="text-white"
-          >
+          <button type="button" className="text-white">
             <AddIcon className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
@@ -44,7 +39,7 @@ const Card = ({
           </p>
         </div>
       </div>
-    )
+    );
   }
   return (
     <div className="p-5 mt-6 bg-white rounded-2xl">
@@ -53,11 +48,7 @@ const Card = ({
         {hasIcon && icon && <div>{icon}</div>}
       </div>
       <div className="pt-5">
-        {heading && (
-          <h4 className="text-4xl text-body mb-2">
-            {heading}
-          </h4>
-        )}
+        {heading && <h4 className="text-4xl text-body mb-2">{heading}</h4>}
         {options.map((option, index) => {
           return (
             <p

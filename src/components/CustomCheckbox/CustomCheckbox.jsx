@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function CustomCheckbox({ variant = "red", checkedDefault = false }) {
   const [checked, setChecked] = useState(checkedDefault);
@@ -28,10 +28,7 @@ function CustomCheckbox({ variant = "red", checkedDefault = false }) {
   }
 
   return (
-    <div
-      className={colorStyle}
-      onClick={() => setChecked(!checked)}
-    ></div>
+    <div className={colorStyle} onClick={() => setChecked(!checked)}></div>
   );
 }
 

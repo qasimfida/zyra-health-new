@@ -3,10 +3,7 @@
 import { EditIconTransparent, AddIconSmall } from "@/svgs/icons";
 import { Icon } from "@/svgs";
 import Card from "../Card/Card";
-import {
-  continuingEducationData,
-  referencesData,
-} from "@/utils/data";
+import { continuingEducationData, referencesData } from "@/utils/data";
 import ProfileCard from "@/utils/ProfileCard";
 
 const Experience = () => {

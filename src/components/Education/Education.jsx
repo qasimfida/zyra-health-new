@@ -24,7 +24,7 @@ const Education = () => {
         <div className="flex justify-between items-center w-full min-h-[67px] border-b">
           <div>
             <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              education
+              Education
             </h4>
           </div>
           <div className="flex items-center">

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 function ProgressBar({ filled = 0 }) {
   const progressStyle = {
     width: `${filled}%`,
-    background: '#1ECA63',
+    background: "#1ECA63",
   };
 
   return (
@@ -19,7 +19,6 @@ function ProgressBar({ filled = 0 }) {
             className="absolute top-0 left-0 h-full rounded-3xl"
             style={progressStyle}
           ></div>
-          
         </div>
       </div>
       <div className="h-full w-[4%] pt-[28px]">
@@ -27,7 +26,8 @@ function ProgressBar({ filled = 0 }) {
           <span className="text-[14px] font-medium text-[#5E5E6F]">
             {filled}%
           </span>
-        </div></div>
+        </div>
+      </div>
     </div>
   );
 }

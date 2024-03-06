@@ -16,9 +16,6 @@ import CustomCheckbox from "../CustomCheckbox/CustomCheckbox";
 const Skills = () => {
   return (
     <div>
-
-      {/* New Card Empty component */}
-
       <div className="px-5 pb-6 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between items-center w-full h-[67px] border-b">
           <div>
@@ -29,7 +26,6 @@ const Skills = () => {
           <div></div>
         </div>
         <div className="flex justify-center pt-5">
-          {/* Dropdown menu */}
           <button
             id=" dropdownOffsetButton"
             data-dropdown-toggle="dropdownSkidding"
@@ -385,583 +381,577 @@ const Skills = () => {
       </div>
 
       <div className="px-5 py-6 mt-6 bg-white rounded-2xl">
-          <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-            <div className="flex items-center">
-              <h4 className="text-[19px] font-semibold text-[#7070FF]">
+        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+          <div className="flex items-center">
+            <h4 className="text-[19px] font-semibold text-[#7070FF]">
               Administrative Duties
-              </h4>
-            </div>
+            </h4>
           </div>
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Data Entry
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" checkedDefault={true} />
-                    <CustomCheckbox variant="yellow" checkedDefault={true} />
-                    <CustomCheckbox variant="green" />
-                </div>
+        </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Data Entry
+            </h4>
           </div>
-
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Medical Records - Entry
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" checkedDefault={true} />
-                    <CustomCheckbox variant="green" checkedDefault={true} />
-                </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" checkedDefault={true} />
+            <CustomCheckbox variant="yellow" checkedDefault={true} />
+            <CustomCheckbox variant="green" />
           </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Medical Records - Maintenance
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" checkedDefault={true} />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Medical Records - Entry
+            </h4>
           </div>
-
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Electronic Medical Records - Entry  
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" checkedDefault={true} />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" checkedDefault={true} />
+            <CustomCheckbox variant="green" checkedDefault={true} />
           </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Electronic Medical Records - Maintenance
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Medical Records - Maintenance
+            </h4>
           </div>
-
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Electronic Medical Records - Maintenance
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" checkedDefault={true} />
+            <CustomCheckbox variant="green" />
           </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Gathers data and runs reports
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Electronic Medical Records - Entry
+            </h4>
           </div>
-
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Patient Files - Set up, report, and record
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" checkedDefault={true} />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
           </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Completion and filing/distribution of reports
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Electronic Medical Records - Maintenance
+            </h4>
           </div>
-
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Schedules appointments/tests
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
           </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Takes, distributes, and prioritizes messages
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Electronic Medical Records - Maintenance
+            </h4>
           </div>
-
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Assists physicians with procedures
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
           </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Assists nursing staff
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Gathers data and runs reports
+            </h4>
           </div>
-
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Prepares patients for appointments and exams
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
           </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Gathers patient history and VS
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Patient Files - Set up, report, and record
+            </h4>
           </div>
-
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Gives injections as directed
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
           </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Performs phlebotomy skills
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Completion and filing/distribution of reports
+            </h4>
           </div>
-
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Collects lab. Specimens
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
           </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Administer EKGs
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Schedules appointments/tests
+            </h4>
           </div>
-
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Completes specimen testing, i.e. glucose, strep, mono, flu
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
           </div>
+        </div>
 
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Takes, distributes, and prioritizes messages
+            </h4>
+          </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
 
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Assists physicians with procedures
+            </h4>
+          </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
 
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Assists nursing staff
+            </h4>
+          </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
+
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Prepares patients for appointments and exams
+            </h4>
+          </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
+
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Gathers patient history and VS
+            </h4>
+          </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
+
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Gives injections as directed
+            </h4>
+          </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
+
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Performs phlebotomy skills
+            </h4>
+          </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
+
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Collects lab. Specimens
+            </h4>
+          </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
+
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Administer EKGs
+            </h4>
+          </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
+
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Completes specimen testing, i.e. glucose, strep, mono, flu
+            </h4>
+          </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
       </div>
 
       <div className="px-5 py-6 mt-6 bg-white rounded-2xl">
-          <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-            <div className="flex items-center">
-              <h4 className="text-[19px] font-semibold text-[#7070FF]">
+        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+          <div className="flex items-center">
+            <h4 className="text-[19px] font-semibold text-[#7070FF]">
               Computer Skills
-              </h4>
-            </div>
+            </h4>
           </div>
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Medic, Medic Soft
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" checkedDefault={true} />
-                    <CustomCheckbox variant="yellow" checkedDefault={true} />
-                    <CustomCheckbox variant="green" />
-                </div>
+        </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Medic, Medic Soft
+            </h4>
           </div>
-
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Centricity
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" checkedDefault={true} />
-                    <CustomCheckbox variant="green" checkedDefault={true} />
-                </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" checkedDefault={true} />
+            <CustomCheckbox variant="yellow" checkedDefault={true} />
+            <CustomCheckbox variant="green" />
           </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Medical Manager
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" checkedDefault={true} />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Centricity
+            </h4>
           </div>
-
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  HIS
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" checkedDefault={true} />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" checkedDefault={true} />
+            <CustomCheckbox variant="green" checkedDefault={true} />
           </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Word, Word Perfect
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Medical Manager
+            </h4>
           </div>
-
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Soft
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" checkedDefault={true} />
+            <CustomCheckbox variant="green" />
           </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Windows
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              HIS
+            </h4>
           </div>
-
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  IDX
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" checkedDefault={true} />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
           </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Meditech
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Word, Word Perfect
+            </h4>
           </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
 
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Soft
+            </h4>
+          </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
 
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Windows
+            </h4>
+          </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
+
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              IDX
+            </h4>
+          </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
+
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Meditech
+            </h4>
+          </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
       </div>
 
       <div className="px-5 py-6 mt-6 bg-white rounded-2xl">
-          <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-            <div className="flex items-center">
-              <h4 className="text-[19px] font-semibold text-[#7070FF]">
+        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+          <div className="flex items-center">
+            <h4 className="text-[19px] font-semibold text-[#7070FF]">
               Age-Specific Competencies
-              </h4>
-            </div>
+            </h4>
           </div>
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Newborn (birth to 30 days)
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" checkedDefault={true} />
-                    <CustomCheckbox variant="yellow" checkedDefault={true} />
-                    <CustomCheckbox variant="green" />
-                </div>
+        </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Newborn (birth to 30 days)
+            </h4>
           </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" checkedDefault={true} />
+            <CustomCheckbox variant="yellow" checkedDefault={true} />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Infant (31 days to 1 year)
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" checkedDefault={true} />
-                    <CustomCheckbox variant="green" checkedDefault={true} />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Infant (31 days to 1 year)
+            </h4>
           </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" checkedDefault={true} />
+            <CustomCheckbox variant="green" checkedDefault={true} />
+          </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Toddler (ages 2-3 years)
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" checkedDefault={true} />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Toddler (ages 2-3 years)
+            </h4>
           </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" checkedDefault={true} />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Preschooler (ages 4-5 years)
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" checkedDefault={true} />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Preschooler (ages 4-5 years)
+            </h4>
           </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" checkedDefault={true} />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Childhood (ages 6-12 years)
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Childhood (ages 6-12 years)
+            </h4>
           </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Adolescents (ages 13-21 years)
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Adolescents (ages 13-21 years)
+            </h4>
           </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Young Adults (ages 22-39 years)
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Young Adults (ages 22-39 years)
+            </h4>
           </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Adults (ages 40-64 years)
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Adults (ages 40-64 years)
+            </h4>
           </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Older Adults (ages 65 -79 years)
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Older Adults (ages 65 -79 years)
+            </h4>
           </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
 
-          <div className="mt-6 border-b h-[54px] flex justify-between">
-                <div>
-                  <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-                  Elderly (ages 80+ years)
-                  </h4>
-                </div>
-                <div className="flex gap-2">
-                    <CustomCheckbox variant="red" />
-                    <CustomCheckbox variant="orange" />
-                    <CustomCheckbox variant="yellow" />
-                    <CustomCheckbox variant="green" />
-                </div>
+        <div className="mt-6 border-b h-[54px] flex justify-between">
+          <div>
+            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
+              Elderly (ages 80+ years)
+            </h4>
           </div>
+          <div className="flex gap-2">
+            <CustomCheckbox variant="red" />
+            <CustomCheckbox variant="orange" />
+            <CustomCheckbox variant="yellow" />
+            <CustomCheckbox variant="green" />
+          </div>
+        </div>
       </div>
-
     </div>
   );
 };

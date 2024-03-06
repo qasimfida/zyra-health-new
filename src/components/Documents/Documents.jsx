@@ -19,7 +19,6 @@ const Documents = () => {
         description={
           "Upload your most up to date resume to help us find you the next best opportunity."
         }
-
       />
 
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -66,7 +65,6 @@ const Documents = () => {
         description={
           "Get success to get started. We respect your privacy and never sell or share your information with others."
         }
-
       />
 
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -126,7 +124,6 @@ const Documents = () => {
         description={
           "We require health screening submissions to ensure safely performance of duties."
         }
-
       />
 
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -252,7 +249,6 @@ const Documents = () => {
         description={
           "We require immunization records from applicants as part of the application process."
         }
-
       />
 
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -378,7 +374,6 @@ const Documents = () => {
         description={
           "Clinicians engaged in contract work must upload liability insurance for continued protection."
         }
-
       />
 
       <div className="px-5 mt-6 bg-white rounded-2xl">
@@ -454,7 +449,12 @@ const Documents = () => {
             className="flex text-[16px] font-medium text-[#5E5E6F] mb-4 items-center"
           >
             {/* <CheckboxIcon className="w-5 h-5 mr-2" aria-hidden="true" /> */}
-            <input id="inline-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded" />
+            <input
+              id="inline-checkbox"
+              type="checkbox"
+              value=""
+              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded"
+            />
             <span className="ml-2">
               I do not have an active liability insurance
             </span>
@@ -553,13 +553,12 @@ const Documents = () => {
         </div>
       </div>
 
-       <Card
+      <Card
         title={"Participation Agreement"}
         subTitle={"Sign the Participation Agreement"}
         description={
           "Review and sign the participation agreement to confirm your understanding and acceptance of the terms."
         }
-
       />
 
       {/* Participation Agreement */}
@@ -1007,7 +1006,12 @@ const Documents = () => {
               className="flex text-[16px] font-medium text-[#5E5E6F] mb-4 items-center"
             >
               {/* <CheckboxIcon className="w-5 h-5 mr-2" aria-hidden="true" /> */}
-              <input id="inline-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded" />
+              <input
+                id="inline-checkbox"
+                type="checkbox"
+                value=""
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded"
+              />
               <span className="ml-2">
                 I have read and understand the Participation Agreement and agree
                 to all terms
@@ -1041,7 +1045,6 @@ const Documents = () => {
         description={
           "We require your approval for the background check to maintain safety and compliance standards."
         }
-
       />
 
       {/* Participation Agreement */}
@@ -1065,61 +1068,92 @@ const Documents = () => {
           <div className="mt-4 mb-4">
             <p className="mb-2">
               <span className="text-[#5E5E6F] text-[16px] font-medium leading-6 ">
-              Please check this box if you would like to receive a copy of an investigative consumer report or
-              consumer credit report at no charge if one is obtained by the Company whenever you have a right to
-              receive such a copy under California law.
+                Please check this box if you would like to receive a copy of an
+                investigative consumer report or consumer credit report at no
+                charge if one is obtained by the Company whenever you have a
+                right to receive such a copy under California law.
               </span>
             </p>
             <h4 className="text-[16px] font-bold text-[#7070FF] leading-6 mb-4 mt-4">
-            Receive Report?
+              Receive Report?
             </h4>
             <div className="flex items-center mb-4">
-            <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 mr-4 text-blue-600 bg-gray-100 rounded" />
-            <h4 className="text-[16px] font-medium text-[#5E5E6F] leading-6 mr-4">
-            yes
-            </h4>
-            <h4 className="text-[16px] font-medium text-[#5E5E6F] leading-6 ">
-            No
-            </h4>
-            </div>            
+              <input
+                id="default-checkbox"
+                type="checkbox"
+                value=""
+                className="w-4 h-4 mr-4 text-blue-600 bg-gray-100 rounded"
+              />
+              <h4 className="text-[16px] font-medium text-[#5E5E6F] leading-6 mr-4">
+                yes
+              </h4>
+              <h4 className="text-[16px] font-medium text-[#5E5E6F] leading-6 ">
+                No
+              </h4>
+            </div>
             <p className="mb-2">
               <span className="text-[#5E5E6F] text-[16px] font-medium leading-6 ">
-              DISCLOSURE REGARDING BACKGROUND INVESTIGATION ZyraHealth (&quot;the Company&quot;) may
-              obtain information about you from a third-party consumer reporting agency for employment
-              purposes. Thus, you may be the subject of a &quot;consumer report&quot; and/or an &quot;investigative consumer report&quot; which may include information about your character, general reputation, personal characteristics, and/or mode of living, and which can involve personal interviews with sources such
-              as your neighbors, friends, or associates.
+                DISCLOSURE REGARDING BACKGROUND INVESTIGATION ZyraHealth
+                (&quot;the Company&quot;) may obtain information about you from
+                a third-party consumer reporting agency for employment purposes.
+                Thus, you may be the subject of a &quot;consumer report&quot;
+                and/or an &quot;investigative consumer report&quot; which may
+                include information about your character, general reputation,
+                personal characteristics, and/or mode of living, and which can
+                involve personal interviews with sources such as your neighbors,
+                friends, or associates.
               </span>
             </p>
             <p className="mb-2">
               <span className="text-[#5E5E6F] text-[16px] font-medium leading-6 ">
-              DISCLOSURE REGARDING BACKGROUND INVESTIGATION ZyraHealth (&quot;the Company&quot;) may
-              obtain information about you from a third-party consumer reporting agency for employment
-              purposes. Thus, you may be the subject of a &quot;consumer report&quot; and/or an &quot;investigative consumer report&quot; which may include information about your character, general reputation, personal characteristics, and/or mode of living, and which can involve personal interviews with sources such
-              as your neighbors, friends, or associates.
+                DISCLOSURE REGARDING BACKGROUND INVESTIGATION ZyraHealth
+                (&quot;the Company&quot;) may obtain information about you from
+                a third-party consumer reporting agency for employment purposes.
+                Thus, you may be the subject of a &quot;consumer report&quot;
+                and/or an &quot;investigative consumer report&quot; which may
+                include information about your character, general reputation,
+                personal characteristics, and/or mode of living, and which can
+                involve personal interviews with sources such as your neighbors,
+                friends, or associates.
               </span>
             </p>
             <p className="mb-2">
               <span className="text-[#5E5E6F] text-[16px] font-medium leading-6 ">
-              DISCLOSURE REGARDING BACKGROUND INVESTIGATION ZyraHealth (&quot;the Company&quot;) may
-              obtain information about you from a third-party consumer reporting agency for employment
-              purposes. Thus, you may be the subject of a &quot;consumer report&quot; and/or an &quot;investigative consumer report&quot; which may include information about your character, general reputation, personal characteristics, and/or mode of living, and which can involve personal interviews with sources such
-              as your neighbors, friends, or associates.
+                DISCLOSURE REGARDING BACKGROUND INVESTIGATION ZyraHealth
+                (&quot;the Company&quot;) may obtain information about you from
+                a third-party consumer reporting agency for employment purposes.
+                Thus, you may be the subject of a &quot;consumer report&quot;
+                and/or an &quot;investigative consumer report&quot; which may
+                include information about your character, general reputation,
+                personal characteristics, and/or mode of living, and which can
+                involve personal interviews with sources such as your neighbors,
+                friends, or associates.
               </span>
             </p>
             <p className="mb-2">
               <span className="text-[#5E5E6F] text-[16px] font-medium leading-6 ">
-              DISCLOSURE REGARDING BACKGROUND INVESTIGATION ZyraHealth (&quot;the Company&quot;) may
-              obtain information about you from a third-party consumer reporting agency for employment
-              purposes. Thus, you may be the subject of a &quot;consumer report&quot; and/or an &quot;investigative consumer report&quot; which may include information about your character, general reputation, personal characteristics, and/or mode of living, and which can involve personal interviews with sources such
-              as your neighbors, friends, or associates.
+                DISCLOSURE REGARDING BACKGROUND INVESTIGATION ZyraHealth
+                (&quot;the Company&quot;) may obtain information about you from
+                a third-party consumer reporting agency for employment purposes.
+                Thus, you may be the subject of a &quot;consumer report&quot;
+                and/or an &quot;investigative consumer report&quot; which may
+                include information about your character, general reputation,
+                personal characteristics, and/or mode of living, and which can
+                involve personal interviews with sources such as your neighbors,
+                friends, or associates.
               </span>
             </p>
             <p className="mb-2">
               <span className="text-[#5E5E6F] text-[16px] font-medium leading-6 ">
-              DISCLOSURE REGARDING BACKGROUND INVESTIGATION ZyraHealth (&quot;the Company&quot;) may
-              obtain information about you from a third-party consumer reporting agency for employment
-              purposes. Thus, you may be the subject of a &quot;consumer report&quot; and/or an &quot;investigative consumer report&quot; which may include information about your character, general reputation, personal characteristics, and/or mode of living, and which can involve personal interviews with sources such
-              as your neighbors, friends, or associates.
+                DISCLOSURE REGARDING BACKGROUND INVESTIGATION ZyraHealth
+                (&quot;the Company&quot;) may obtain information about you from
+                a third-party consumer reporting agency for employment purposes.
+                Thus, you may be the subject of a &quot;consumer report&quot;
+                and/or an &quot;investigative consumer report&quot; which may
+                include information about your character, general reputation,
+                personal characteristics, and/or mode of living, and which can
+                involve personal interviews with sources such as your neighbors,
+                friends, or associates.
               </span>
             </p>
           </div>

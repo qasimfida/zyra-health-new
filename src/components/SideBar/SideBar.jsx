@@ -1,10 +1,15 @@
 "use client";
 
-import { DocumentIcon, HomeIcon, ProfileIcon, MessagesIcon, BuildingIcon, LogoutIcon } from "@/svgs/icons";
-
 import {
-  Cog8ToothIcon,
-} from "@heroicons/react/24/outline";
+  DocumentIcon,
+  HomeIcon,
+  ProfileIcon,
+  MessagesIcon,
+  BuildingIcon,
+  LogoutIcon,
+} from "@/svgs/icons";
+
+import { Cog8ToothIcon } from "@heroicons/react/24/outline";
 
 const SideBar = () => {
   return (
@@ -12,13 +17,13 @@ const SideBar = () => {
       <div className="flex flex-col items-center w-full gap-1">
         <div className="flex items-center w-52 h-12 justify-start rounded-2xl text-body cursor-pointer hover:text-white hover:bg-primary">
           <button type="button" className="ml-5 mr-6">
-            <HomeIcon className="w-5 h-5"  aria-hidden="true" />
+            <HomeIcon className="w-5 h-5" aria-hidden="true" />
           </button>
           <p lassname=" text-body font-medium">Home</p>
         </div>
         <div className="flex items-center w-52 h-12 bg-primary text-white justify-start rounded-2xl text-body cursor-pointer hover:text-white hover:bg-primaryLight">
           <button type="button" className="ml-2 mr-4">
-            <ProfileIcon className="w-5 h-5"  aria-hidden="true" />
+            <ProfileIcon className="w-5 h-5" aria-hidden="true" />
           </button>
           <p lassname=" text-white font-medium">Profile</p>
         </div>
@@ -30,10 +35,7 @@ const SideBar = () => {
         </div>
         <div className="flex items-center w-52 h-12 justify-start rounded-2xl text-body cursor-pointer hover:text-white hover:bg-primary">
           <button type="button" className="ml-2 mr-4">
-            <MessagesIcon
-              className="w-6 h-6"
-              aria-hidden="true"
-            />
+            <MessagesIcon className="w-6 h-6" aria-hidden="true" />
           </button>
           <p lassname=" text-body font-medium">Messages</p>
         </div>
@@ -60,6 +62,6 @@ const SideBar = () => {
       </div>
     </div>
   );
-};  
+};
 
 export default SideBar;

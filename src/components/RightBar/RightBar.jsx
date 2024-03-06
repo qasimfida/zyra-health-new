@@ -16,15 +16,12 @@ const RightBar = () => {
           Fast track your way to a better, <br /> more fulfilling job.
         </p>
 
-
         <Button
           color="primary"
           variant="outlined"
           name="Find your Fit"
           size="sm"
         />
-
-
       </div>
       <h4 className="text-base font-semibold text-body mb-2">Featured Jobs</h4>
 
@@ -51,12 +48,7 @@ const RightBar = () => {
           </div>
         </div>
       </div>
-      <Button
-          color="primary"
-          variant="outlined"
-          name="Show More"
-          size="lg"
-        />
+      <Button color="primary" variant="outlined" name="Show More" size="lg" />
     </div>
   );
 };
