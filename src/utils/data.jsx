@@ -1,3 +1,4 @@
+import { EducationIcon } from "@/svgs/EducationIcon";
 import { VerifiedIcon } from "@/svgs/VerifiedIcon";
 import {
   PhoneDisconnectIcon,
@@ -5,6 +6,12 @@ import {
   PhoneIcon,
   WarningTagIcon,
   TimeTagIcon,
+  DocumentMagnify,
+  DocumentsMinus,
+  Breifcase,
+  DocumentsIcon,
+  Award,
+  Settings,
 } from "@/svgs/icons";
 
 export const continuingEducationData = [
@@ -447,6 +454,16 @@ export const iconTypes = {
   success: <VerifiedIcon className="w-5 h-5" aria-hidden="true" />,
   warning: <WarningTagIcon className="w-5 h-5" aria-hidden="true" />,
   danger: <TimeTagIcon className="w-5 h-5" aria-hidden="true" />,
+};
+
+export const tabIconTypes = {
+  overview: <DocumentMagnify className="w-5 h-5" aria-hidden="true" />,
+  credentials: <DocumentsMinus className="w-5 h-5" aria-hidden="true" />,
+  education: <EducationIcon className="w-5 h-5" aria-hidden="true" />,
+  experience: <Breifcase className="w-5 h-5" aria-hidden="true" />,
+  documents: <DocumentsIcon className="w-5 h-5" aria-hidden="true" />,
+  skills: <Award className="w-5 h-5" aria-hidden="true" />,
+  preferences: <Settings className="w-5 h-5" aria-hidden="true" />,
 };
 
 export const educationIcons = {
