@@ -7,9 +7,7 @@ export const renderValue = (value) => {
       <>
         {value.map(({ name, type }) =>
           type === "text" ? (
-            <p className="text-[16px] text-[#7F7F7F] font-medium">
-              {name}
-            </p>
+            <p className="text-[16px] text-[#7F7F7F] font-medium">{name}</p>
           ) : (
             <Button color={type} variant="tagFilled" name={name} size="md" />
           )

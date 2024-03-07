@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  BackIcon,
-  AddIconSmall,
-  DownloadIcon,
-} from "@/svgs/icons";
+import { BackIcon, AddIconSmall, DownloadIcon } from "@/svgs/icons";
 import { Icon } from "@/svgs";
 import Card from "../Card/Card";
 import {
@@ -27,11 +23,9 @@ const Documents = () => {
       />
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Resume</h4>
-          <button type="button" className="text-white">
-            <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
-          </button>
+          <Icon name="edit" aria-hidden="true" filled />
         </div>
 
         {resumeData.map((item) => (
@@ -48,11 +42,9 @@ const Documents = () => {
       />
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Identification</h4>
-          <button type="button" className="text-white">
-            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-          </button>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
         {identificationData.map((item) => (
@@ -69,7 +61,7 @@ const Documents = () => {
       />
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Health Screening</h4>
           <button type="button" className="text-white">
             <AddIconSmall className="w-5 h-5" aria-hidden="true" />
@@ -90,11 +82,9 @@ const Documents = () => {
       />
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Immunization</h4>
-          <button type="button" className="text-white">
-            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-          </button>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
         {healthScreeningData.map((item) => (
@@ -111,11 +101,9 @@ const Documents = () => {
       />
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Liability Insurance</h4>
-          <button type="button" className="text-white">
-            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-          </button>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
         {liabilityInsuranceData.map((item) => (
@@ -124,18 +112,12 @@ const Documents = () => {
       </div>
 
       {/* Libility Insurance */}
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <div>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
+            <h4 className="text-5xl text-primary">
               Liability Insurance
             </h4>
-          </div>
-          <div className="flex items-center">
-            <button type="button" className="text-white">
-              <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
-            </button>
-          </div>
+            <Icon name="edit" aria-hidden="true" filled />
         </div>
         <div className="flex mt-6">
           <button
@@ -156,9 +138,9 @@ const Documents = () => {
       </div>
 
       {/* Legal and Consents */}
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <h4 className="text-[19px] font-semibold text-[#7070FF]">
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
+            <h4 className="text-5xl text-primary">
             Legal and Consents
           </h4>
         </div>
@@ -184,9 +166,9 @@ const Documents = () => {
       </div>
 
       {/* Legal and Consents */}
-      <div className="px-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between items-center w-full min-h-[67px] border-b">
-          <h4 className="text-[19px] font-semibold text-[#7070FF]">
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
+            <h4 className="text-5xl text-primary">
             Legal and Consents
           </h4>
         </div>
@@ -256,8 +238,8 @@ const Documents = () => {
 
       {/* Participation Agreement */}
       <div className="mt-6">
-        <div className="px-5 bg-white rounded-2xl">
-          <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+        <div className="p-5 mt-6 bg-white rounded-2xl">
+          <div className="flex justify-between w-full border-b pb-2 items-center">
             <div className="flex items-center">
               <button type="button" className="mr-4 text-white">
                 <BackIcon className="w-5 h-5" aria-hidden="true" />
@@ -742,8 +724,8 @@ const Documents = () => {
 
       {/* Participation Agreement */}
       <div className="mt-6">
-        <div className="px-5 bg-white rounded-2xl pb-4">
-          <div className="flex justify-between items-center w-full min-h-[67px] border-b">
+        <div className="p-5 bg-white rounded-2xl pb-4">
+          <div className="flex justify-between w-full border-b pb-2 items-center">
             <div className="flex items-center">
               <button type="button" className="mr-4 text-white">
                 <BackIcon className="w-5 h-5" aria-hidden="true" />

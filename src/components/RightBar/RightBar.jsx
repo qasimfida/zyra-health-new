@@ -20,7 +20,7 @@ const RightBar = () => {
           color="primary"
           variant="outlined"
           name="Find your Fit"
-          size="sm"
+          size="xl"
         />
       </div>
       <h4 className="text-base font-semibold text-body mb-2">Featured Jobs</h4>

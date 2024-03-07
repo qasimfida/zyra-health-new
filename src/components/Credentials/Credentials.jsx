@@ -9,6 +9,7 @@ import {
   specialityCertificationsData,
 } from "@/utils/data";
 import ProfileCard from "@/utils/ProfileCard";
+import { Icon } from "@/svgs";
 
 const Credentials = () => {
   return (
@@ -21,12 +22,10 @@ const Credentials = () => {
         }
       />
 
-<div className="p-5 mt-6 bg-white rounded-2xl">
-      <div className="flex justify-between w-full h-10 border-b">
-        <h4 className="text-5xl text-primary">Licences</h4>
-          <button type="button" className="text-white">
-            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-          </button>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
+          <h4 className="text-5xl text-primary">Licences</h4>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
         {licensesData.map((item) => (
@@ -42,12 +41,10 @@ const Credentials = () => {
         }
       />
 
-<div className="p-5 mt-6 bg-white rounded-2xl">
-      <div className="flex justify-between w-full h-10 border-b">
-        <h4 className="text-5xl text-primary">Basic Certifications</h4>
-          <button type="button" className="text-white">
-            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-          </button>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
+          <h4 className="text-5xl text-primary">Basic Certifications</h4>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
         {basicCertificationsData.map((item) => (
@@ -63,12 +60,10 @@ const Credentials = () => {
         }
       />
 
-<div className="p-5 mt-6 bg-white rounded-2xl">
-      <div className="flex justify-between w-full h-10 border-b">
-        <h4 className="text-5xl text-primary">Speciality Certifications</h4>
-          <button type="button" className="text-white">
-            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-          </button>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
+          <h4 className="text-5xl text-primary">Speciality Certifications</h4>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
         {specialityCertificationsData.map((item) => (
@@ -84,12 +79,10 @@ const Credentials = () => {
         }
       />
 
-<div className="p-5 mt-6 bg-white rounded-2xl">
-      <div className="flex justify-between w-full h-10 border-b">
-        <h4 className="text-5xl text-primary">Other Certifications</h4>
-          <button type="button" className="text-white">
-            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-          </button>
+      <div className="p-5 mt-6 bg-white rounded-2xl">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
+          <h4 className="text-5xl text-primary">Other Certifications</h4>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
         {otherCertificationsData.map((item) => (

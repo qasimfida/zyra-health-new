@@ -3,6 +3,7 @@ import { Button } from "@/components/Button/Button";
 import { EditIconTransparent } from "@/svgs/icons";
 import { renderValue } from "./helper";
 import { iconTypes } from "./data";
+import { Icon } from "@/svgs";
 
 const ProfileCard = ({ data }) => {
   const renderTagsWithIcons = (tags) => {
@@ -18,25 +19,21 @@ const ProfileCard = ({ data }) => {
   };
 
   return (
-    <div className="pt-5 border-b">
-      {data.country && <div className="flex justify-between items-center w-full ">
-        <div>
+    <div className="py-4 border-b  flex flex-col gap-2.5">
+      {data.country && (
+        <div className="flex justify-between items-center w-full">
           <h4 className="text-4xl text-body">{data.country}</h4>
+          <Icon name="edit" aria-hidden="true" />
         </div>
-        <div className="flex items-center">
-          <button type="button" className="text-white">
-            <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-          </button>
-        </div>
-      </div>}
-      <div className="mb-4">
-        <h4 className="text-4xl text-body mb-2">{data.heading}</h4>
-        {data.data.map(({ name, value }) => {
+      )}
+      <div>
+        <h4 className="text-4xl text-body">{data.heading}</h4>
+        {data?.data?.map(({ name, value }) => {
           const cls = `text-base ${
             name.toLocaleLowerCase().includes("email")
               ? "text-primary"
               : "text-secondary"
-          } font-medium mb-2 ${
+          } font-medium mb-2.5 ${
             Array.isArray(value) ? "flex items-center gap-2" : ""
           }`;
 
@@ -47,7 +44,7 @@ const ProfileCard = ({ data }) => {
             </p>
           );
         })}
-        <div className="flex flex-wrap w-full gap-1.5">
+        <div className="flex flex-wrap w-full gap-2">
           {data.tags && renderTagsWithIcons(data.tags)}
         </div>
       </div>

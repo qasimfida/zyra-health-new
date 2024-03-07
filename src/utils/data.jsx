@@ -14,6 +14,58 @@ import {
   Settings,
 } from "@/svgs/icons";
 
+export const completedChecklistData = [
+  {
+    heading: "Clinical Nurse Specialist (CNS) – Oncology",
+    data: {
+      name: "Company Name",
+      value: "City Health Oncology Center",
+    },
+    percentage: {
+      name: "70% Complete",
+      type: "warning"
+    }
+  },
+  {
+    heading: "Clinical Nurse Specialist (CNS) – Oncology",
+    data: {
+      name: "Company Name",
+      value: "City Health Oncology Center",
+    },
+    percentage: {
+      name: "50% Complete",
+      type: "danger"
+    }
+  },
+  {
+    heading: "Clinical Nurse Specialist (CNS) – Oncology",
+    data: {
+      name: "Company Name",
+      value: "City Health Oncology Center",
+    },
+    percentage: {
+      name: "90% Complete",
+      type: "success"
+    }
+  },
+
+]
+
+export const addChecklistData = [
+  {
+    heading: "Clinical Nurse Specialist (CNS) – Oncology",
+    data: {
+      name: "Company Name",
+      value: "City Health Oncology Center",
+    },
+    percentage: {
+      name: "Cm_Checklist913.pdf",
+      type: "info"
+    }
+  },
+
+]
+
 export const continuingEducationData = [
   {
     country: "Certified Emergency Nurse (CEN) Preparation Course",
@@ -101,7 +153,10 @@ export const searchPreferencesData = [
         name: "Job Type Preference",
         value: "Full-time",
       },
-      { name: "Job Search Status", value: "Actively looking for new opportunities" },
+      {
+        name: "Job Search Status",
+        value: "Actively looking for new opportunities",
+      },
       { name: "Start Date Availability", value: "October 2024" },
       { name: "End/Expected", value: "Immediately" },
       { name: "Work Style Preference", value: "Remote" },
@@ -140,7 +195,7 @@ export const workplacePreferencesData = [
         value: [
           {
             name: "Adult Day Care Center",
-            type: "text", 
+            type: "text",
           },
           {
             name: "Care Planningss",
@@ -158,6 +213,328 @@ export const workplacePreferencesData = [
           },
           {
             name: "Care Planningss",
+            type: "text",
+          },
+        ],
+      },
+    ],
+  },
+];
+
+export const searchData = [
+  {
+    country: "",
+    data: [
+      {
+        name: "Job Type Preference",
+        value: "Full-time",
+      },
+      {
+        name: "Job Search Status",
+        value: "Actively looking for new opportunities",
+      },
+      {
+        name: "Start Date Availability",
+        value: "Immediately",
+      },
+      {
+        name: "Work Style Preference",
+        value: "Remote",
+      },
+      {
+        name: "Willingness to Travel/Relocate",
+        value: "Yes, I am willing to travel on",
+      },
+      {
+        name: "Preferred Work Location",
+        value: "Atlanta, GA",
+      },
+    ],
+  },
+];
+
+export const preferencesData = [
+  {
+    country: "",
+    data: [
+      {
+        name: "Job Opportunity Priorities",
+        value: "Company Culture",
+      },
+      {
+        name: "Preferred Organization Type",
+        value: "Hospital chain",
+      },
+      {
+        name: "Skills Acquired",
+        value: [
+          {
+            name: "Adult Day Care Center",
+            type: "text",
+          },
+          {
+            name: "Care Planningss",
+            type: "text",
+          },
+        ],
+      },
+      { name: "Desired Salary Range", value: "$45,000-$60,000/Year" },
+      {
+        name: "Skills Acquired",
+        value: [
+          {
+            name: "Rotating Shifts",
+            type: "text",
+          },
+          {
+            name: "Weekend Shifts",
+            type: "text",
+          },
+        ],
+      },
+      {
+        name: "Management Style",
+        value: "Autonomous",
+      },
+    ],
+  },
+];
+
+export const employemntData = [
+  {
+    country: "Full-time",
+    data: [
+      {
+        name: "Start Date Availability",
+        value: "March 2024",
+      },
+      {
+        name: "Preferred Organization Type",
+        value: "Hospital chain",
+      },
+      {
+        name: "Preferred Work Locations",
+        value: [
+          {
+            name: "Charlotte, NC",
+            type: "text",
+          },
+          {
+            name: "Charleston, SC",
+            type: "text",
+          },
+          {
+            name: "Winston-Salem, NC",
+            type: "text",
+          },
+        ],
+      },
+      { name: "Start Date Availability", value: "March 2024" },
+      {
+        name: "Preferred Work Location",
+        value: [
+          {
+            name: "Charlotte, NC",
+            type: "text",
+          },
+          {
+            name: "Charleston, SC",
+            type: "text",
+          },
+          {
+            name: "Winston-Salem, NC",
+            type: "text",
+          },
+        ],
+      },
+      { name: "Start Date Availability", value: "March 2024" },
+      {
+        name: "Shift Preferences",
+        value: [
+          {
+            name: "Day Shifts",
+            type: "text",
+          },
+          {
+            name: "Weekend Shifts",
+            type: "text",
+          },
+        ],
+      },
+      { name: "Start Date Availability", value: "March 2024" },
+      {
+        name: "Preferred Work Location",
+        value: [
+          {
+            name: "Charlotte, NC",
+            type: "text",
+          },
+          {
+            name: "Charleston, SC",
+            type: "text",
+          },
+          {
+            name: "Winston-Salem, NC",
+            type: "text",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    country: "Travel/Contract",
+    data: [
+      {
+        name: "Start Date Availability",
+        value: "March 2024",
+      },
+      {
+        name: "Preferred Organization Type",
+        value: "Hospital chain",
+      },
+      {
+        name: "Preferred Work Locations",
+        value: [
+          {
+            name: "Charlotte, NC",
+            type: "text",
+          },
+          {
+            name: "Charleston, SC",
+            type: "text",
+          },
+          {
+            name: "Winston-Salem, NC",
+            type: "text",
+          },
+        ],
+      },
+      { name: "Start Date Availability", value: "March 2024" },
+      {
+        name: "Preferred Work Location",
+        value: [
+          {
+            name: "Charlotte, NC",
+            type: "text",
+          },
+          {
+            name: "Charleston, SC",
+            type: "text",
+          },
+          {
+            name: "Winston-Salem, NC",
+            type: "text",
+          },
+        ],
+      },
+      { name: "Start Date Availability", value: "March 2024" },
+      {
+        name: "Shift Preferences",
+        value: [
+          {
+            name: "Day Shifts",
+            type: "text",
+          },
+          {
+            name: "Weekend Shifts",
+            type: "text",
+          },
+        ],
+      },
+      { name: "Start Date Availability", value: "March 2024" },
+      {
+        name: "Preferred Work Location",
+        value: [
+          {
+            name: "Charlotte, NC",
+            type: "text",
+          },
+          {
+            name: "Charleston, SC",
+            type: "text",
+          },
+          {
+            name: "Winston-Salem, NC",
+            type: "text",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    country: "Per Diem",
+    data: [
+      {
+        name: "Start Date Availability",
+        value: "March 2024",
+      },
+      {
+        name: "Preferred Organization Type",
+        value: "Hospital chain",
+      },
+      {
+        name: "Preferred Work Locations",
+        value: [
+          {
+            name: "Charlotte, NC",
+            type: "text",
+          },
+          {
+            name: "Charleston, SC",
+            type: "text",
+          },
+          {
+            name: "Winston-Salem, NC",
+            type: "text",
+          },
+        ],
+      },
+      { name: "Start Date Availability", value: "March 2024" },
+      {
+        name: "Preferred Work Location",
+        value: [
+          {
+            name: "Charlotte, NC",
+            type: "text",
+          },
+          {
+            name: "Charleston, SC",
+            type: "text",
+          },
+          {
+            name: "Winston-Salem, NC",
+            type: "text",
+          },
+        ],
+      },
+      { name: "Start Date Availability", value: "March 2024" },
+      {
+        name: "Shift Preferences",
+        value: [
+          {
+            name: "Day Shifts",
+            type: "text",
+          },
+          {
+            name: "Weekend Shifts",
+            type: "text",
+          },
+        ],
+      },
+      { name: "Start Date Availability", value: "March 2024" },
+      {
+        name: "Preferred Work Location",
+        value: [
+          {
+            name: "Charlotte, NC",
+            type: "text",
+          },
+          {
+            name: "Charleston, SC",
+            type: "text",
+          },
+          {
+            name: "Winston-Salem, NC",
             type: "text",
           },
         ],
@@ -353,7 +730,8 @@ export const liabilityInsuranceData = [
         type: "info",
       },
     ],
-  },]
+  },
+];
 
 export const referencesData = [
   {

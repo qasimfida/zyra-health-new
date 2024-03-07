@@ -10,46 +10,37 @@ const Experience = () => {
   return (
     <div>
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Experience Summary</h4>
-
-          <button type="button" className="text-white">
-            <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
-          </button>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
         <div className="pt-5 border-b">
-          <div className="flex justify-between items-center w-full min-h-[40px]">
-            <div>
-              <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
+          <div className="flex justify-between items-center w-full">
+              <h4 className="text-4xl text-body mb-2">
                 Authorized to work in the US
               </h4>
-            </div>
-            <div className="flex items-center mr-[12px]">
-              <button type="button" className="text-white">
-                <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-              </button>
-            </div>
+            <Icon name="edit" aria-hidden="true" />
           </div>
           <div className="mb-4">
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">
                 Sponsorship for Employment:{" "}
               </span>
               YES
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">
                 Total Years of Work Experience:{" "}
               </span>
               5 years
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Specialties: </span>
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">Specialties: </span>
               “Acute Care”,“Cancer Care”, “Ambulatory Care”.
             </p>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">
+            <p className="text-base text-secondary font-medium mb-2">
+              <span className="text-body">
                 End/Experience with Each Specialty:{" "}
               </span>
               1 Year, 2 Years, 2 Years
@@ -67,11 +58,9 @@ const Experience = () => {
       />
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
+        <div className="flex justify-between w-full pb-2 items-center border-b">
           <h4 className="text-5xl text-primary">Work Experience</h4>
-          <button type="button" className="text-white">
-            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-          </button>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
         {continuingEducationData.map((item) => (
@@ -88,11 +77,9 @@ const Experience = () => {
       />
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
+        <div className="flex justify-between w-full pb-2 items-center border-b">
           <h4 className="text-5xl text-primary">Professional Activities</h4>
-          <button type="button" className="text-white">
-            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-          </button>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
         {continuingEducationData.map((item) => (
@@ -109,11 +96,9 @@ const Experience = () => {
       />
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
+        <div className="flex justify-between w-full pb-2 items-center border-b">
           <h4 className="text-5xl text-primary">References</h4>
-          <button type="button" className="text-white">
-            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-          </button>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
         {referencesData.map((item) => (
@@ -130,11 +115,9 @@ const Experience = () => {
       />
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
+        <div className="flex justify-between w-full pb-2 items-center border-b">
           <h4 className="text-5xl text-primary">Tech Proficiancy</h4>
-          <button type="button" className="text-white">
-            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-          </button>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
         {continuingEducationData.map((item) => (

@@ -61,6 +61,7 @@ module.exports = {
         light: "#F3F5F8",
         grayLignt: "#C7C7C8",
         info: "#299DCF",
+        buttonBorder: '#EAEAF1'
       },
     },
   },

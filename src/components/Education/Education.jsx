@@ -8,6 +8,7 @@ import {
   trainingData,
 } from "@/utils/data";
 import ProfileCard from "@/utils/ProfileCard";
+import { Icon } from "@/svgs";
 
 const Education = () => {
   return (
@@ -21,11 +22,9 @@ const Education = () => {
       />
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Education</h4>
-          <button type="button" className="text-white">
-            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-          </button>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
         {educationData.map((item) => (
@@ -42,11 +41,9 @@ const Education = () => {
       />
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Continuing Education</h4>
-          <button type="button" className="text-white">
-            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-          </button>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
         {continuingEducationData.map((item) => (
@@ -63,11 +60,9 @@ const Education = () => {
       />
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Training</h4>
-          <button type="button" className="text-white">
-            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-          </button>
+            <Icon name="add" aria-hidden="true" filled />
         </div>
 
         {trainingData.map((item) => (

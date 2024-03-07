@@ -12,12 +12,19 @@ import {
 } from "@/svgs/icons";
 import ProgressBar from "../CustomProgressbar/CustomProgressbar";
 import CustomCheckbox from "../CustomCheckbox/CustomCheckbox";
+import {
+  addChecklistData,
+  completedChecklistData,
+  iconTypes,
+} from "@/utils/data";
+import { Icon } from "@/svgs";
+import { Button } from "../Button/Button";
 
 const Skills = () => {
   return (
     <div>
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Add a Checklist</h4>
           <button></button>
         </div>
@@ -70,172 +77,69 @@ const Skills = () => {
       </div>
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Completed Chekcklists</h4>
-          <button></button>
-        </div>
-        <div className="pt-5 border flex justify-between px-[16px] py-[14px] items-center rounded-3xl mt-6">
-          <div>
-            <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-              Clinical Nurse Specialist (CNS) – Oncology
-            </h4>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Company Name: </span>City Health
-              Oncology Center
-            </p>
-          </div>
-          <div>
-            <button
-              type="button"
-              className="rounded-3xl border border-[#F46A4C] flex items-center text-[14px] font-medium text-[#F46A4C] h-[30px] py-[5px] px-[14px]"
-            >
-              70% Complete
-            </button>
-          </div>
-          <div>
-            <button type="button" className="text-white">
-              <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
+          <Icon name="edit" aria-hidden="true" filled />
         </div>
 
-        <div className="pt-5 border flex justify-between px-[16px] py-[14px] items-center rounded-3xl mt-6">
-          <div>
-            <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-              Clinical Nurse Specialist (CNS) – Oncology
-            </h4>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Company Name: </span>City Health
-              Oncology Center
-            </p>
-          </div>
-          <div>
-            <button
-              type="button"
-              className="rounded-3xl border border-[#EB3838] flex items-center text-[14px] font-medium text-[#EB3838] h-[30px] py-[5px] px-[14px]"
-            >
-              50% Complete
-            </button>
-          </div>
-          <div>
-            <button type="button" className="text-white">
-              <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
-        </div>
-
-        <div className="pt-5 border flex justify-between px-[16px] py-[14px] items-center rounded-3xl mt-6">
-          <div>
-            <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-              Clinical Nurse Specialist (CNS) – Oncology
-            </h4>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Company Name: </span>City Health
-              Oncology Center
-            </p>
-          </div>
-          <div>
-            <button
-              type="button"
-              className="rounded-3xl border border-[#1ECA63] flex items-center text-[14px] font-medium text-[#1ECA63] h-[30px] py-[5px] px-[14px]"
-            >
-              90% Complete
-            </button>
-          </div>
-          <div>
-            <button type="button" className="text-white">
-              <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
-        </div>
-
-        <div className="pt-5 border flex justify-between px-[16px] py-[14px] items-center rounded-3xl mt-6">
-          <div>
-            <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-              Clinical Nurse Specialist (CNS) – Oncology
-            </h4>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Company Name: </span>City Health
-              Oncology Center
-            </p>
-          </div>
-          <div>
-            <button
-              type="button"
-              className="rounded-3xl border border-[#F46A4C] flex items-center text-[14px] font-medium text-[#F46A4C] h-[30px] py-[5px] px-[14px]"
-            >
-              70% Complete
-            </button>
-          </div>
-          <div>
-            <button type="button" className="text-white">
-              <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
-        </div>
-
-        <div className="pt-5 border flex justify-between px-[16px] py-[14px] items-center rounded-3xl mt-6">
-          <div>
-            <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-              Clinical Nurse Specialist (CNS) – Oncology
-            </h4>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Company Name: </span>City Health
-              Oncology Center
-            </p>
-          </div>
-          <div>
-            <button
-              type="button"
-              className="rounded-3xl border border-[#1ECA63] flex items-center text-[14px] font-medium text-[#1ECA63] h-[30px] py-[5px] px-[14px]"
-            >
-              70% Complete
-            </button>
-          </div>
-          <div>
-            <button type="button" className="text-white">
-              <EditIconTransparent className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
-        </div>
+        {completedChecklistData.map(({ heading, data, percentage }) => {
+          return (
+            <div className="p-5 border flex justify-between px-[16px] py-[14px] items-center rounded-3xl mt-6">
+              <div>
+                <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
+                  {heading}
+                </h4>
+                <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+                  <span className="text-[#5E5E6F]">data.name: </span>
+                  {data.value}
+                </p>
+              </div>
+              <Button
+                color={percentage.type}
+                variant="tag"
+                name={percentage.name}
+                size="md"
+                icon={iconTypes[percentage.type]}
+              />
+              <Icon name="edit" aria-hidden="true" />
+            </div>
+          );
+        })}
       </div>
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
-          <h4 className="text-5xl text-primary">Add a Checklist</h4>
-          <button></button>
+        <div className="flex justify-between w-full border-b pb-2 items-center">
+          <h4 className="text-5xl text-primary">Add a Chekcklists</h4>
+          <Icon name="edit" aria-hidden="true" filled />
         </div>
-        <div className="pt-5 border flex justify-between px-[16px] py-[14px] items-center rounded-3xl mt-6">
-          <div>
-            <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-              Clinical Nurse Specialist (CNS) – Oncology
-            </h4>
-            <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-              <span className="text-[#5E5E6F]">Company Name: </span>City Health
-              Oncology Center
-            </p>
-          </div>
-          <div>
-            <button
-              type="button"
-              className="rounded-3xl border border-[#299DCF] flex items-center text-[14px] font-medium text-[#299DCF] h-[30px] py-[5px] px-[14px]"
-            >
-              <span className="mr-2">
-                <DocumentTagIcon className="w-5 h-5" aria-hidden="true" />
-              </span>
-              Cm_Checklist913.pdf
-            </button>
-          </div>
-          <div>
-            <button type="button" className="text-white">
-              <DeleteIcon className="w-5 h-5" aria-hidden="true" />
-            </button>
-          </div>
-        </div>
+
+        {addChecklistData.map(({ heading, data, percentage }) => {
+          return (
+            <div className="p-5 border flex justify-between px-[16px] py-[14px] items-center rounded-3xl mt-6">
+              <div>
+                <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
+                  {heading}
+                </h4>
+                <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
+                  <span className="text-[#5E5E6F]">data.name: </span>
+                  {data.value}
+                </p>
+              </div>
+              <Button
+                color={percentage.type}
+                variant="tag"
+                name={percentage.name}
+                size="md"
+                icon={iconTypes[percentage.type]}
+              />
+              <Icon name="delete" aria-hidden="true" />
+            </div>
+          );
+        })}
       </div>
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Add a Checklist</h4>
           <button></button>
         </div>
@@ -313,15 +217,11 @@ const Skills = () => {
       </div>
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
-          <div className="flex items-center">
-            <button type="button" className="mr-4 text-white">
-              <BackIcon className="w-5 h-5" aria-hidden="true" />
-            </button>
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Please fill out your Administrative RN Skills
-            </h4>
-          </div>
+        <div className="flex justify-between w-full border-b pb-2 items-center">
+          <Icon name="back" aria-hidden="true" />
+          <h4 className="text-[19px] font-semibold text-[#7070FF]">
+            Please fill out your Administrative RN Skills
+          </h4>
         </div>
         <div className="flex justify-between mt-6">
           <div>
@@ -360,6 +260,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
+
       <div className="pt-5 border flex flex-col justify-start px-[16px] py-[14px] rounded-3xl mt-6 bg-[#CDE1E1] h-[100px]">
         <ProgressBar filled={30} />
       </div>

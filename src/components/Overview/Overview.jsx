@@ -20,9 +20,6 @@ const Overview = () => {
         title="Personal Information"
         heading="William Brute Nash"
         options={profileData}
-        icon={
-          <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
-        }
       />
 
       <Card
@@ -40,11 +37,9 @@ const Overview = () => {
       />
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
+        <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Languages</h4>
-          <button type="button" className="text-white">
-            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-          </button>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
         {languagesData.map((item) => (
