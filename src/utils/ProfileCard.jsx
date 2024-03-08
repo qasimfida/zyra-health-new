@@ -22,7 +22,7 @@ const ProfileCard = ({ data }) => {
       {data.country && (
         <div className="flex justify-between items-center w-full">
           <h4 className="text-4xl text-body">{data.country}</h4>
-          <Icon name="edit" aria-hidden="true" />
+          <Icon name="edit" className="w-8 h-8" aria-hidden="true" />
         </div>
       )}
       <div className="flex flex-col gap-2.5">

@@ -1,6 +1,5 @@
 "use client";
 
-import { AddIconSmall } from "@/svgs/icons";
 import Card from "../Card/Card";
 import {
   continuingEducationData,
@@ -24,7 +23,7 @@ const Education = () => {
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Education</h4>
-          <Icon name="add" aria-hidden="true" filled />
+          <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
         {educationData.map((item) => (
@@ -43,7 +42,7 @@ const Education = () => {
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Continuing Education</h4>
-          <Icon name="add" aria-hidden="true" filled />
+          <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
         {continuingEducationData.map((item) => (
@@ -62,7 +61,7 @@ const Education = () => {
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Training</h4>
-            <Icon name="add" aria-hidden="true" filled />
+            <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
         {trainingData.map((item) => (

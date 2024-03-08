@@ -8,7 +8,7 @@ const Card = ({
   title = "",
   hasIcon = true,
   heading = "",
-  icon = <Icon name="edit" aria-hidden="true" filled />,
+  icon = <Icon name="edit" className="w-8 h-8" aria-hidden="true" filled />,
   options = [],
   subTitle = "Add Subtitle",
   description = "",
@@ -21,7 +21,7 @@ const Card = ({
           <div></div>
         </div>
         <div className="flex justify-center py-3">
-          <Icon name="add" className="w-14 h-14" aria-hidden="true" filled />
+          <Icon name="add" className="w-10 h-10" aria-hidden="true" filled />
         </div>
         <div className="flex flex-col items-center justify-center gap-2 pb-2.5">
           <h4 className="text-4xl text-body">{subTitle}</h4>

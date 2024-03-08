@@ -134,13 +134,31 @@ const Skills = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-          <h4 className="text-5xl text-primary">Add a Chekcklists</h4>
+          <h4 className="text-5xl text-primary">External Checkhlist</h4>
           <Icon name="edit" aria-hidden="true" filled />
         </div>
 
         {addChecklistData.map(({ heading, data, percentage }) => {
           return (
-            <Checkbox heading={heading} data={data} percentage={percentage} />
+            <div className="p-5 border flex justify-between px-base py-[14px] items-center rounded-3xl mt-6">
+              <div>
+                <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
+                  {heading}
+                </h4>
+                <p className="text-base text-[#7F7F7F] font-medium mb-2">
+                  <span className="text-[#5E5E6F]">data.name: </span>
+                  {data.value}
+                </p>
+              </div>
+              <Button
+                color={percentage.type}
+                variant="tag"
+                name={percentage.name}
+                size="md"
+                icon={iconTypes[percentage.type]}
+              />
+              <Icon name="delete" aria-hidden="true" />
+            </div>
           );
         })}
       </div>
@@ -247,17 +265,17 @@ const Skills = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full pb-2 items-center border-b">
-          <h4 className="text-5xl text-primary">Administrative Dutiesiii</h4>
+          <h4 className="text-5xl text-primary">Administrative Duties</h4>
           <Icon name="add" aria-hidden="true" filled />
         </div>
 
         {checkboxData?.map((group) => (
           <div
             key={group?.heading}
-            className="mt-6 border-b h-[54px] flex justify-between"
+            className=" border-b py-4 flex justify-between items-center"
           >
             <div>
-              <h4 className="text-base font-semibold text-body mb-2">
+              <h4 className="text-base font-semibold text-body">
                 {group?.heading}
               </h4>
             </div>
@@ -284,7 +302,7 @@ const Skills = () => {
         {computerData?.map((group) => (
           <div
             key={group?.heading}
-            className="mt-6 border-b h-[54px] flex justify-between"
+            className=" border-b py-4 flex justify-between items-center"
           >
             <div>
               <h4 className="text-base font-semibold text-body mb-2">
@@ -314,10 +332,10 @@ const Skills = () => {
         {ageSpecificData?.map((group) => (
           <div
             key={group?.heading}
-            className="mt-6 border-b h-[54px] flex justify-between"
+            className=" border-b py-4 flex justify-between items-center"
           >
             <div>
-              <h4 className="text-base font-semibold text-body mb-2">
+              <h4 className="text-base font-semibold text-body">
                 {group?.heading}
               </h4>
             </div>

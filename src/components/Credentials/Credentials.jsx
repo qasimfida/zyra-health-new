@@ -25,7 +25,7 @@ const Credentials = () => {
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Licences</h4>
-          <Icon name="add" aria-hidden="true" filled />
+          <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
         {licensesData.map((item) => (
@@ -44,7 +44,7 @@ const Credentials = () => {
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Basic Certifications</h4>
-          <Icon name="add" aria-hidden="true" filled />
+          <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
         {basicCertificationsData.map((item) => (
@@ -63,7 +63,7 @@ const Credentials = () => {
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Speciality Certifications</h4>
-          <Icon name="add" aria-hidden="true" filled />
+          <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
         {specialityCertificationsData.map((item) => (
@@ -82,7 +82,7 @@ const Credentials = () => {
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Other Certifications</h4>
-          <Icon name="add" aria-hidden="true" filled />
+          <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
         {otherCertificationsData.map((item) => (

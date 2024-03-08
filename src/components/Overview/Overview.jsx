@@ -39,7 +39,7 @@ const Overview = () => {
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Languages</h4>
-          <Icon name="add" aria-hidden="true" filled />
+          <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
         {languagesData.map((item) => (
@@ -59,7 +59,7 @@ const Overview = () => {
         title="Emergency Contacts"
         heading="Meghan Roberts"
         options={emergencyContactData}
-        hasIcon={false}
+        icon={<Icon name="add" className="w-8 h-8" aria-hidden="true" filled />}
       />
 
       <Card
@@ -73,7 +73,7 @@ const Overview = () => {
       <Card
         title="Social Profile"
         options={socialProfileData}
-        hasIcon={false}
+        icon={<Icon name="add" className="w-8 h-8" aria-hidden="true" filled />}
       />
 
       <Card
@@ -87,7 +87,7 @@ const Overview = () => {
       <Card
         title="Identity Information"
         options={identityInfoData}
-        hasIcon={false}
+        icon={<Icon name="add" className="w-8 h-8" aria-hidden="true" filled />}
       />
     </div>
   );

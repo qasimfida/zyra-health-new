@@ -23,8 +23,8 @@ export const completedChecklistData = [
     },
     percentage: {
       name: "70% Complete",
-      type: "warning"
-    }
+      type: "warning",
+    },
   },
   {
     heading: "Clinical Nurse Specialist (CNS) – Oncology",
@@ -34,8 +34,8 @@ export const completedChecklistData = [
     },
     percentage: {
       name: "50% Complete",
-      type: "danger"
-    }
+      type: "danger",
+    },
   },
   {
     heading: "Clinical Nurse Specialist (CNS) – Oncology",
@@ -45,11 +45,10 @@ export const completedChecklistData = [
     },
     percentage: {
       name: "90% Complete",
-      type: "success"
-    }
+      type: "success",
+    },
   },
-
-]
+];
 
 export const addChecklistData = [
   {
@@ -60,11 +59,10 @@ export const addChecklistData = [
     },
     percentage: {
       name: "Cm_Checklist913.pdf",
-      type: "info"
-    }
+      type: "info",
+    },
   },
-
-]
+];
 
 export const checklistData = [
   {
@@ -90,8 +88,8 @@ export const checklistData = [
         id: 4,
         name: "green",
         checked: false,
-      }
-    ]
+      },
+    ],
   },
   {
     id: 2,
@@ -116,8 +114,8 @@ export const checklistData = [
         id: 4,
         name: "green",
         checked: false,
-      }
-    ]
+      },
+    ],
   },
   {
     id: 3,
@@ -142,11 +140,10 @@ export const checklistData = [
         id: 4,
         name: "green",
         checked: false,
-      }
-    ]
+      },
+    ],
   },
-
-]
+];
 
 export const computerSkillsData = [
   {
@@ -172,8 +169,8 @@ export const computerSkillsData = [
         id: 4,
         name: "green",
         checked: false,
-      }
-    ]
+      },
+    ],
   },
   {
     id: 2,
@@ -198,8 +195,8 @@ export const computerSkillsData = [
         id: 4,
         name: "green",
         checked: false,
-      }
-    ]
+      },
+    ],
   },
   {
     id: 3,
@@ -224,8 +221,8 @@ export const computerSkillsData = [
         id: 4,
         name: "green",
         checked: false,
-      }
-    ]
+      },
+    ],
   },
   {
     id: 4,
@@ -250,10 +247,10 @@ export const computerSkillsData = [
         id: 4,
         name: "green",
         checked: false,
-      }
-    ]
+      },
+    ],
   },
-]
+];
 
 export const ageData = [
   {
@@ -279,8 +276,8 @@ export const ageData = [
         id: 4,
         name: "green",
         checked: false,
-      }
-    ]
+      },
+    ],
   },
   {
     id: 2,
@@ -305,8 +302,8 @@ export const ageData = [
         id: 4,
         name: "green",
         checked: false,
-      }
-    ]
+      },
+    ],
   },
   {
     id: 3,
@@ -331,8 +328,8 @@ export const ageData = [
         id: 4,
         name: "green",
         checked: false,
-      }
-    ]
+      },
+    ],
   },
   {
     id: 4,
@@ -357,10 +354,10 @@ export const ageData = [
         id: 4,
         name: "green",
         checked: false,
-      }
-    ]
+      },
+    ],
   },
-]
+];
 
 export const continuingEducationData = [
   {
@@ -836,6 +833,96 @@ export const employemntData = [
         ],
       },
     ],
+  },
+];
+
+export const legalData = [
+  {
+    country: "Privacy Policy and Terms of Use",
+    data: {
+      name: "Signed Nov",
+      value: "December 23,2024",
+    },
+  },
+  {
+    country: "Privacy Policy and Terms of Use",
+    data: {
+      name: "Signed Nov",
+      value: "December 23,2024",
+    },
+  },
+  {
+    country: "Privacy Policy and Terms of Use",
+    data: {
+      name: "Signed Nov",
+      value: "December 23,2024",
+    },
+  },
+  {
+    country: "Privacy Policy and Terms of Use",
+    data: {
+      name: "Signed Nov",
+      value: "December 23,2024",
+    },
+  },
+  {
+    country: "Privacy Policy and Terms of Use",
+    data: {
+      name: "Signed Nov",
+      value: "December 23,2024",
+    },
+  },
+];
+
+export const agreementData = [
+  {
+    heading: "Privacy Policy and Terms of Use",
+    paragraph: "This ZyraHealth Participation Agreement (this &quot;Agreement&quot;) is made effective on the date you execute this Agreement (such date referred to herein as the &quot;Effective Date&quot;). The parties to this Agreement are: (i) You, and (ii) ZyraHealth, Inc., a Delaware corporation, with principal offices located at 999 Peachtree Street NE, Suite 2750, Atlanta, GA 30309 (hereafter referred to as &quot;ZyraHealth&quot;). You and ZyraHealth are individually referred to herein as a &quot;Party&quot; and collectively referred to herein as &quot;Parties&quot;. ZyraHealth is in the business of providing tech-based staffing solutions to hospitals and other healthcare entities (such hospitals and other healthcare entities referred to herein as &quot;Participating Organizations&quot;) that need efficient and quick access to healthcare providers (&quot;Clinicians&quot;) wanting to fill available assignments, positions, and shifts. ZyraHealth provides technical applications and platforms for use by Participating Organizations and Clinicians in order to optimize the staffing experience for all involved. Such technical applications and platforms are referred to herein individually and collectively as the &quot;ZyraHealth Application&quot;. By executing this Agreement in the space provided below, you are indicating your willingness to participate in the ZyraHealth Application and your agreement to all of the terms and conditions of this Agreement. In consideration of the mutual promises herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties, intending to be legally bound, hereby agree as follows:"
+  },
+  {
+    heading: "Privacy Policy and Terms of Use",
+    paragraph: "This ZyraHealth Participation Agreement (this &quot;Agreement&quot;) is made effective on the date you execute this Agreement (such date referred to herein as the &quot;Effective Date&quot;). The parties to this Agreement are: (i) You, and (ii) ZyraHealth, Inc., a Delaware corporation, with principal offices located at 999 Peachtree Street NE, Suite 2750, Atlanta, GA 30309 (hereafter referred to as &quot;ZyraHealth&quot;). You and ZyraHealth are individually referred to herein as a &quot;Party&quot; and collectively referred to herein as &quot;Parties&quot;. ZyraHealth is in the business of providing tech-based staffing solutions to hospitals and other healthcare entities (such hospitals and other healthcare entities referred to herein as &quot;Participating Organizations&quot;) that need efficient and quick access to healthcare providers (&quot;Clinicians&quot;) wanting to fill available assignments, positions, and shifts. ZyraHealth provides technical applications and platforms for use by Participating Organizations and Clinicians in order to optimize the staffing experience for all involved. Such technical applications and platforms are referred to herein individually and collectively as the &quot;ZyraHealth Application&quot;. By executing this Agreement in the space provided below, you are indicating your willingness to participate in the ZyraHealth Application and your agreement to all of the terms and conditions of this Agreement. In consideration of the mutual promises herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties, intending to be legally bound, hereby agree as follows:"
+  },
+  {
+    heading: "Privacy Policy and Terms of Use",
+    paragraph: "This ZyraHealth Participation Agreement (this &quot;Agreement&quot;) is made effective on the date you execute this Agreement (such date referred to herein as the &quot;Effective Date&quot;). The parties to this Agreement are: (i) You, and (ii) ZyraHealth, Inc., a Delaware corporation, with principal offices located at 999 Peachtree Street NE, Suite 2750, Atlanta, GA 30309 (hereafter referred to as &quot;ZyraHealth&quot;). You and ZyraHealth are individually referred to herein as a &quot;Party&quot; and collectively referred to herein as &quot;Parties&quot;. ZyraHealth is in the business of providing tech-based staffing solutions to hospitals and other healthcare entities (such hospitals and other healthcare entities referred to herein as &quot;Participating Organizations&quot;) that need efficient and quick access to healthcare providers (&quot;Clinicians&quot;) wanting to fill available assignments, positions, and shifts. ZyraHealth provides technical applications and platforms for use by Participating Organizations and Clinicians in order to optimize the staffing experience for all involved. Such technical applications and platforms are referred to herein individually and collectively as the &quot;ZyraHealth Application&quot;. By executing this Agreement in the space provided below, you are indicating your willingness to participate in the ZyraHealth Application and your agreement to all of the terms and conditions of this Agreement. In consideration of the mutual promises herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties, intending to be legally bound, hereby agree as follows:"
+  },
+  {
+    heading: "Privacy Policy and Terms of Use",
+    paragraph: "This ZyraHealth Participation Agreement (this &quot;Agreement&quot;) is made effective on the date you execute this Agreement (such date referred to herein as the &quot;Effective Date&quot;). The parties to this Agreement are: (i) You, and (ii) ZyraHealth, Inc., a Delaware corporation, with principal offices located at 999 Peachtree Street NE, Suite 2750, Atlanta, GA 30309 (hereafter referred to as &quot;ZyraHealth&quot;). You and ZyraHealth are individually referred to herein as a &quot;Party&quot; and collectively referred to herein as &quot;Parties&quot;. ZyraHealth is in the business of providing tech-based staffing solutions to hospitals and other healthcare entities (such hospitals and other healthcare entities referred to herein as &quot;Participating Organizations&quot;) that need efficient and quick access to healthcare providers (&quot;Clinicians&quot;) wanting to fill available assignments, positions, and shifts. ZyraHealth provides technical applications and platforms for use by Participating Organizations and Clinicians in order to optimize the staffing experience for all involved. Such technical applications and platforms are referred to herein individually and collectively as the &quot;ZyraHealth Application&quot;. By executing this Agreement in the space provided below, you are indicating your willingness to participate in the ZyraHealth Application and your agreement to all of the terms and conditions of this Agreement. In consideration of the mutual promises herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties, intending to be legally bound, hereby agree as follows:"
+  },
+  {
+    heading: "Privacy Policy and Terms of Use",
+    paragraph: "This ZyraHealth Participation Agreement (this &quot;Agreement&quot;) is made effective on the date you execute this Agreement (such date referred to herein as the &quot;Effective Date&quot;). The parties to this Agreement are: (i) You, and (ii) ZyraHealth, Inc., a Delaware corporation, with principal offices located at 999 Peachtree Street NE, Suite 2750, Atlanta, GA 30309 (hereafter referred to as &quot;ZyraHealth&quot;). You and ZyraHealth are individually referred to herein as a &quot;Party&quot; and collectively referred to herein as &quot;Parties&quot;. ZyraHealth is in the business of providing tech-based staffing solutions to hospitals and other healthcare entities (such hospitals and other healthcare entities referred to herein as &quot;Participating Organizations&quot;) that need efficient and quick access to healthcare providers (&quot;Clinicians&quot;) wanting to fill available assignments, positions, and shifts. ZyraHealth provides technical applications and platforms for use by Participating Organizations and Clinicians in order to optimize the staffing experience for all involved. Such technical applications and platforms are referred to herein individually and collectively as the &quot;ZyraHealth Application&quot;. By executing this Agreement in the space provided below, you are indicating your willingness to participate in the ZyraHealth Application and your agreement to all of the terms and conditions of this Agreement. In consideration of the mutual promises herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties, intending to be legally bound, hereby agree as follows:"
+  },
+  {
+    heading: "Privacy Policy and Terms of Use",
+    paragraph: "This ZyraHealth Participation Agreement (this &quot;Agreement&quot;) is made effective on the date you execute this Agreement (such date referred to herein as the &quot;Effective Date&quot;). The parties to this Agreement are: (i) You, and (ii) ZyraHealth, Inc., a Delaware corporation, with principal offices located at 999 Peachtree Street NE, Suite 2750, Atlanta, GA 30309 (hereafter referred to as &quot;ZyraHealth&quot;). You and ZyraHealth are individually referred to herein as a &quot;Party&quot; and collectively referred to herein as &quot;Parties&quot;. ZyraHealth is in the business of providing tech-based staffing solutions to hospitals and other healthcare entities (such hospitals and other healthcare entities referred to herein as &quot;Participating Organizations&quot;) that need efficient and quick access to healthcare providers (&quot;Clinicians&quot;) wanting to fill available assignments, positions, and shifts. ZyraHealth provides technical applications and platforms for use by Participating Organizations and Clinicians in order to optimize the staffing experience for all involved. Such technical applications and platforms are referred to herein individually and collectively as the &quot;ZyraHealth Application&quot;. By executing this Agreement in the space provided below, you are indicating your willingness to participate in the ZyraHealth Application and your agreement to all of the terms and conditions of this Agreement. In consideration of the mutual promises herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties, intending to be legally bound, hereby agree as follows:"
+  },
+  {
+    heading: "Privacy Policy and Terms of Use",
+    paragraph: "This ZyraHealth Participation Agreement (this &quot;Agreement&quot;) is made effective on the date you execute this Agreement (such date referred to herein as the &quot;Effective Date&quot;). The parties to this Agreement are: (i) You, and (ii) ZyraHealth, Inc., a Delaware corporation, with principal offices located at 999 Peachtree Street NE, Suite 2750, Atlanta, GA 30309 (hereafter referred to as &quot;ZyraHealth&quot;). You and ZyraHealth are individually referred to herein as a &quot;Party&quot; and collectively referred to herein as &quot;Parties&quot;. ZyraHealth is in the business of providing tech-based staffing solutions to hospitals and other healthcare entities (such hospitals and other healthcare entities referred to herein as &quot;Participating Organizations&quot;) that need efficient and quick access to healthcare providers (&quot;Clinicians&quot;) wanting to fill available assignments, positions, and shifts. ZyraHealth provides technical applications and platforms for use by Participating Organizations and Clinicians in order to optimize the staffing experience for all involved. Such technical applications and platforms are referred to herein individually and collectively as the &quot;ZyraHealth Application&quot;. By executing this Agreement in the space provided below, you are indicating your willingness to participate in the ZyraHealth Application and your agreement to all of the terms and conditions of this Agreement. In consideration of the mutual promises herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties, intending to be legally bound, hereby agree as follows:"
+  },
+  {
+    heading: "Privacy Policy and Terms of Use",
+    paragraph: "This ZyraHealth Participation Agreement (this &quot;Agreement&quot;) is made effective on the date you execute this Agreement (such date referred to herein as the &quot;Effective Date&quot;). The parties to this Agreement are: (i) You, and (ii) ZyraHealth, Inc., a Delaware corporation, with principal offices located at 999 Peachtree Street NE, Suite 2750, Atlanta, GA 30309 (hereafter referred to as &quot;ZyraHealth&quot;). You and ZyraHealth are individually referred to herein as a &quot;Party&quot; and collectively referred to herein as &quot;Parties&quot;. ZyraHealth is in the business of providing tech-based staffing solutions to hospitals and other healthcare entities (such hospitals and other healthcare entities referred to herein as &quot;Participating Organizations&quot;) that need efficient and quick access to healthcare providers (&quot;Clinicians&quot;) wanting to fill available assignments, positions, and shifts. ZyraHealth provides technical applications and platforms for use by Participating Organizations and Clinicians in order to optimize the staffing experience for all involved. Such technical applications and platforms are referred to herein individually and collectively as the &quot;ZyraHealth Application&quot;. By executing this Agreement in the space provided below, you are indicating your willingness to participate in the ZyraHealth Application and your agreement to all of the terms and conditions of this Agreement. In consideration of the mutual promises herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties, intending to be legally bound, hereby agree as follows:"
+  },
+];
+export const disclousureData = [
+  {
+    paragraph: "This ZyraHealth Participation Agreement (this &quot;Agreement&quot;) is made effective on the date you execute this Agreement (such date referred to herein as the &quot;Effective Date&quot;). The parties to this Agreement are: (i) You, and (ii) ZyraHealth, Inc., a Delaware corporation, with principal offices located at 999 Peachtree Street NE, Suite 2750, Atlanta, GA 30309 (hereafter referred to as &quot;ZyraHealth&quot;). You and ZyraHealth are individually referred to herein as a &quot;Party&quot; and collectively referred to herein as &quot;Parties&quot;. ZyraHealth is in the business of providing tech-based staffing solutions to hospitals and other healthcare entities (such hospitals and other healthcare entities referred to herein as &quot;Participating Organizations&quot;) that need efficient and quick access to healthcare providers (&quot;Clinicians&quot;) wanting to fill available assignments, positions, and shifts. ZyraHealth provides technical applications and platforms for use by Participating Organizations and Clinicians in order to optimize the staffing experience for all involved. Such technical applications and platforms are referred to herein individually and collectively as the &quot;ZyraHealth Application&quot;. By executing this Agreement in the space provided below, you are indicating your willingness to participate in the ZyraHealth Application and your agreement to all of the terms and conditions of this Agreement. In consideration of the mutual promises herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties, intending to be legally bound, hereby agree as follows:"
+  },
+  {
+    paragraph: "This ZyraHealth Participation Agreement (this &quot;Agreement&quot;) is made effective on the date you execute this Agreement (such date referred to herein as the &quot;Effective Date&quot;). The parties to this Agreement are: (i) You, and (ii) ZyraHealth, Inc., a Delaware corporation, with principal offices located at 999 Peachtree Street NE, Suite 2750, Atlanta, GA 30309 (hereafter referred to as &quot;ZyraHealth&quot;). You and ZyraHealth are individually referred to herein as a &quot;Party&quot; and collectively referred to herein as &quot;Parties&quot;. ZyraHealth is in the business of providing tech-based staffing solutions to hospitals and other healthcare entities (such hospitals and other healthcare entities referred to herein as &quot;Participating Organizations&quot;) that need efficient and quick access to healthcare providers (&quot;Clinicians&quot;) wanting to fill available assignments, positions, and shifts. ZyraHealth provides technical applications and platforms for use by Participating Organizations and Clinicians in order to optimize the staffing experience for all involved. Such technical applications and platforms are referred to herein individually and collectively as the &quot;ZyraHealth Application&quot;. By executing this Agreement in the space provided below, you are indicating your willingness to participate in the ZyraHealth Application and your agreement to all of the terms and conditions of this Agreement. In consideration of the mutual promises herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties, intending to be legally bound, hereby agree as follows:"
+  },
+  {
+    paragraph: "This ZyraHealth Participation Agreement (this &quot;Agreement&quot;) is made effective on the date you execute this Agreement (such date referred to herein as the &quot;Effective Date&quot;). The parties to this Agreement are: (i) You, and (ii) ZyraHealth, Inc., a Delaware corporation, with principal offices located at 999 Peachtree Street NE, Suite 2750, Atlanta, GA 30309 (hereafter referred to as &quot;ZyraHealth&quot;). You and ZyraHealth are individually referred to herein as a &quot;Party&quot; and collectively referred to herein as &quot;Parties&quot;. ZyraHealth is in the business of providing tech-based staffing solutions to hospitals and other healthcare entities (such hospitals and other healthcare entities referred to herein as &quot;Participating Organizations&quot;) that need efficient and quick access to healthcare providers (&quot;Clinicians&quot;) wanting to fill available assignments, positions, and shifts. ZyraHealth provides technical applications and platforms for use by Participating Organizations and Clinicians in order to optimize the staffing experience for all involved. Such technical applications and platforms are referred to herein individually and collectively as the &quot;ZyraHealth Application&quot;. By executing this Agreement in the space provided below, you are indicating your willingness to participate in the ZyraHealth Application and your agreement to all of the terms and conditions of this Agreement. In consideration of the mutual promises herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties, intending to be legally bound, hereby agree as follows:"
+  },
+  {
+    paragraph: "This ZyraHealth Participation Agreement (this &quot;Agreement&quot;) is made effective on the date you execute this Agreement (such date referred to herein as the &quot;Effective Date&quot;). The parties to this Agreement are: (i) You, and (ii) ZyraHealth, Inc., a Delaware corporation, with principal offices located at 999 Peachtree Street NE, Suite 2750, Atlanta, GA 30309 (hereafter referred to as &quot;ZyraHealth&quot;). You and ZyraHealth are individually referred to herein as a &quot;Party&quot; and collectively referred to herein as &quot;Parties&quot;. ZyraHealth is in the business of providing tech-based staffing solutions to hospitals and other healthcare entities (such hospitals and other healthcare entities referred to herein as &quot;Participating Organizations&quot;) that need efficient and quick access to healthcare providers (&quot;Clinicians&quot;) wanting to fill available assignments, positions, and shifts. ZyraHealth provides technical applications and platforms for use by Participating Organizations and Clinicians in order to optimize the staffing experience for all involved. Such technical applications and platforms are referred to herein individually and collectively as the &quot;ZyraHealth Application&quot;. By executing this Agreement in the space provided below, you are indicating your willingness to participate in the ZyraHealth Application and your agreement to all of the terms and conditions of this Agreement. In consideration of the mutual promises herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties, intending to be legally bound, hereby agree as follows:"
+  },
+  {
+    paragraph: "This ZyraHealth Participation Agreement (this &quot;Agreement&quot;) is made effective on the date you execute this Agreement (such date referred to herein as the &quot;Effective Date&quot;). The parties to this Agreement are: (i) You, and (ii) ZyraHealth, Inc., a Delaware corporation, with principal offices located at 999 Peachtree Street NE, Suite 2750, Atlanta, GA 30309 (hereafter referred to as &quot;ZyraHealth&quot;). You and ZyraHealth are individually referred to herein as a &quot;Party&quot; and collectively referred to herein as &quot;Parties&quot;. ZyraHealth is in the business of providing tech-based staffing solutions to hospitals and other healthcare entities (such hospitals and other healthcare entities referred to herein as &quot;Participating Organizations&quot;) that need efficient and quick access to healthcare providers (&quot;Clinicians&quot;) wanting to fill available assignments, positions, and shifts. ZyraHealth provides technical applications and platforms for use by Participating Organizations and Clinicians in order to optimize the staffing experience for all involved. Such technical applications and platforms are referred to herein individually and collectively as the &quot;ZyraHealth Application&quot;. By executing this Agreement in the space provided below, you are indicating your willingness to participate in the ZyraHealth Application and your agreement to all of the terms and conditions of this Agreement. In consideration of the mutual promises herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties, intending to be legally bound, hereby agree as follows:"
   },
 ];
 

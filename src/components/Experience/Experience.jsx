@@ -1,6 +1,5 @@
 "use client";
 
-import { EditIconTransparent, AddIconSmall } from "@/svgs/icons";
 import { Icon } from "@/svgs";
 import Card from "../Card/Card";
 import { continuingEducationData, referencesData } from "@/utils/data";
@@ -12,7 +11,7 @@ const Experience = () => {
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Experience Summary</h4>
-          <Icon name="add" aria-hidden="true" filled />
+          <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
         <div className="pt-5 border-b">
@@ -20,7 +19,7 @@ const Experience = () => {
               <h4 className="text-4xl text-body mb-2">
                 Authorized to work in the US
               </h4>
-            <Icon name="edit" aria-hidden="true" />
+            <Icon name="edit" className="w-8 h-8" aria-hidden="true" />
           </div>
           <div className="mb-4">
             <p className="text-base text-secondary font-medium mb-2">
@@ -60,7 +59,7 @@ const Experience = () => {
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full pb-2 items-center border-b">
           <h4 className="text-5xl text-primary">Work Experience</h4>
-          <Icon name="add" aria-hidden="true" filled />
+          <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
         {continuingEducationData.map((item) => (
@@ -79,7 +78,7 @@ const Experience = () => {
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full pb-2 items-center border-b">
           <h4 className="text-5xl text-primary">Professional Activities</h4>
-          <Icon name="add" aria-hidden="true" filled />
+          <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
         {continuingEducationData.map((item) => (
@@ -98,7 +97,7 @@ const Experience = () => {
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full pb-2 items-center border-b">
           <h4 className="text-5xl text-primary">References</h4>
-          <Icon name="add" aria-hidden="true" filled />
+          <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
         {referencesData.map((item) => (
@@ -117,7 +116,7 @@ const Experience = () => {
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full pb-2 items-center border-b">
           <h4 className="text-5xl text-primary">Tech Proficiancy</h4>
-          <Icon name="add" aria-hidden="true" filled />
+          <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
         {continuingEducationData.map((item) => (
