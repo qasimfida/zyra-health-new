@@ -1,7 +1,6 @@
 "use client";
 
 import { ImageIcon } from "@/svgs/icons";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Button, Tag } from "../Button/Button";
 
 const RightBar = () => {
@@ -25,11 +24,11 @@ const RightBar = () => {
       </div>
       <h4 className="text-base font-semibold text-body mb-2">Featured Jobs</h4>
 
-      <div className="flex justify-center w-full bg-white px-3 py-3.5 mb-7 rounded-2xl">
-        <div className="flex justify-center h-[60px] w-[100px]">
+      <div className="flex justify-center w-full bg-white px-3 py-3.5 mb-7 rounded-2xl gap-2">
+        <div className="flex justify-center h-[57px] w-[57px]">
           <img src={"/images/frame.png"} alt="Career Image" layout="fill" />
         </div>
-        <div className="flex flex-col ml-2  gap-2">
+        <div className="flex flex-col gap-2">
           <div>
             <h4 className="text-base font-semibold text-body">
               Registered Nurse (RN)
