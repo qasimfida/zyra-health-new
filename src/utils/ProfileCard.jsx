@@ -19,14 +19,14 @@ const ProfileCard = ({ data }) => {
   };
 
   return (
-    <div className="py-4 border-b  flex flex-col gap-2.5">
+    <div className="py-4 border-b  flex flex-col">
       {data.country && (
         <div className="flex justify-between items-center w-full">
           <h4 className="text-4xl text-body">{data.country}</h4>
           <Icon name="edit" aria-hidden="true" />
         </div>
       )}
-      <div>
+      <div className="flex flex-col gap-2.5">
         <h4 className="text-4xl text-body">{data.heading}</h4>
         {data?.data?.map(({ name, value }) => {
           const cls = `text-base ${

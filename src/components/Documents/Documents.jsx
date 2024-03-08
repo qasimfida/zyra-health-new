@@ -1,6 +1,6 @@
 "use client";
 
-import { BackIcon, AddIconSmall, DownloadIcon } from "@/svgs/icons";
+import { BackButton, AddIcon, DownloadIcon, CheckboxIcon } from "@/svgs/icons";
 import { Icon } from "@/svgs";
 import Card from "../Card/Card";
 import {
@@ -28,7 +28,7 @@ const Documents = () => {
           <Icon name="edit" aria-hidden="true" filled />
         </div>
 
-        {resumeData.map((item) => (
+        {resumeData?.map((item) => (
           <ProfileCard key={item.country} data={item} />
         ))}
       </div>
@@ -63,9 +63,7 @@ const Documents = () => {
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
           <h4 className="text-5xl text-primary">Health Screening</h4>
-          <button type="button" className="text-white">
-            <AddIconSmall className="w-5 h-5" aria-hidden="true" />
-          </button>
+          <AddIcon className="w-5 h-5" aria-hidden="true" />
         </div>
 
         {healthScreeningData.map((item) => (
@@ -114,10 +112,8 @@ const Documents = () => {
       {/* Libility Insurance */}
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-            <h4 className="text-5xl text-primary">
-              Liability Insurance
-            </h4>
-            <Icon name="edit" aria-hidden="true" filled />
+          <h4 className="text-5xl text-primary">Liability Insurance</h4>
+          <Icon name="edit" aria-hidden="true" filled />
         </div>
         <div className="flex mt-6">
           <button
@@ -140,9 +136,7 @@ const Documents = () => {
       {/* Legal and Consents */}
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-            <h4 className="text-5xl text-primary">
-            Legal and Consents
-          </h4>
+          <h4 className="text-5xl text-primary">Legal and Consents</h4>
         </div>
         <div className="flex justify-between mt-4 mb-4">
           <div>
@@ -168,9 +162,7 @@ const Documents = () => {
       {/* Legal and Consents */}
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-            <h4 className="text-5xl text-primary">
-            Legal and Consents
-          </h4>
+          <h4 className="text-5xl text-primary">Legal and Consents</h4>
         </div>
         <div className="flex justify-between mt-4 mb-4">
           <div>
@@ -241,17 +233,13 @@ const Documents = () => {
         <div className="p-5 mt-6 bg-white rounded-2xl">
           <div className="flex justify-between w-full border-b pb-2 items-center">
             <div className="flex items-center">
-              <button type="button" className="mr-4 text-white">
-                <BackIcon className="w-5 h-5" aria-hidden="true" />
-              </button>
+              <BackButton className="w-5 h-5" aria-hidden="true" />
               <h4 className="text-[19px] font-semibold text-[#7070FF]">
                 Participation Agreement
               </h4>
             </div>
             <div className="flex items-center">
-              <button type="button" className="text-white">
-                <DownloadIcon className="w-5 h-5" aria-hidden="true" />
-              </button>
+              <DownloadIcon className="w-5 h-5" aria-hidden="true" />
             </div>
           </div>
           <div className="mt-4 mb-4">
@@ -680,7 +668,7 @@ const Documents = () => {
               type="button"
               className="flex text-[16px] font-medium text-[#5E5E6F] mb-4 items-center"
             >
-              {/* <CheckboxIcon className="w-5 h-5 mr-2" aria-hidden="true" /> */}
+              <CheckboxIcon className="w-5 h-5 mr-2" aria-hidden="true" />
               <input
                 id="inline-checkbox"
                 type="checkbox"
@@ -727,17 +715,13 @@ const Documents = () => {
         <div className="p-5 bg-white rounded-2xl pb-4">
           <div className="flex justify-between w-full border-b pb-2 items-center">
             <div className="flex items-center">
-              <button type="button" className="mr-4 text-white">
-                <BackIcon className="w-5 h-5" aria-hidden="true" />
-              </button>
+                <BackButton className="w-5 h-5" aria-hidden="true" />
               <h4 className="text-[19px] font-semibold text-[#7070FF]">
                 Participation Agreement
               </h4>
             </div>
             <div className="flex items-center">
-              <button type="button" className="text-white">
                 <DownloadIcon className="w-5 h-5" aria-hidden="true" />
-              </button>
             </div>
           </div>
           <div className="mt-4 mb-4">
