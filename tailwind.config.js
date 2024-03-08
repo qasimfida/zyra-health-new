@@ -61,7 +61,12 @@ module.exports = {
         light: "#F3F5F8",
         grayLignt: "#C7C7C8",
         info: "#299DCF",
-        buttonBorder: '#EAEAF1'
+        buttonBorder: '#EAEAF1',
+        red: '#FF5858',
+        yellow: '#FFC75A',
+        orange: '#FE9B26',
+        green: '#00DF59',
+        background: '#CDE1E1'
       },
     },
   },

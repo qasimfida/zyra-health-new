@@ -1,12 +1,8 @@
 "use client";
 
 import {
-  BackIcon,
-  EditIconTransparent,
-  DocumentTagIcon,
   UploadIcon,
   DropdownIcon,
-  DeleteIcon,
   BoxIcon,
   DocumentFrameIcon,
 } from "@/svgs/icons";
@@ -14,13 +10,82 @@ import ProgressBar from "../CustomProgressbar/CustomProgressbar";
 import CustomCheckbox from "../CustomCheckbox/CustomCheckbox";
 import {
   addChecklistData,
+  ageData,
+  checklistData,
   completedChecklistData,
+  computerSkillsData,
   iconTypes,
 } from "@/utils/data";
 import { Icon } from "@/svgs";
 import { Button } from "../Button/Button";
+import { useState } from "react";
+import { Checkbox } from "../Checkbox/Checkbox";
 
 const Skills = () => {
+  const [checkboxData, setCheckboxData] = useState(checklistData);
+  const [computerData, setComputerData] = useState(computerSkillsData);
+  const [ageSpecificData, setAgeSpecificData] = useState(ageData);
+
+  const handleCheckboxChange = (groupId, checkboxId) => {
+    setCheckboxData((prevData) =>
+      prevData.map((group) => {
+        if (group.id === groupId) {
+          const updatedData = group.data.map((checkbox) => {
+            if (checkbox.id === checkboxId) {
+              return { ...checkbox, checked: !checkbox.checked };
+            } else {
+              return checkbox;
+            }
+          });
+
+          return { ...group, data: updatedData };
+        } else {
+          return group;
+        }
+      })
+    );
+  };
+
+  const handleAgeSpecificChange = (groupId, checkboxId) => {
+    setAgeSpecificData((prevData) =>
+      prevData.map((group) => {
+        if (group.id === groupId) {
+          const updatedData = group.data.map((checkbox) => {
+            if (checkbox.id === checkboxId) {
+              return { ...checkbox, checked: !checkbox.checked };
+            } else {
+              return checkbox;
+            }
+          });
+
+          return { ...group, data: updatedData };
+        } else {
+          return group;
+        }
+      })
+    );
+  };
+
+  const handleComputerCheckbox = (groupId, checkboxId) => {
+    setComputerData((prevData) =>
+      prevData.map((group) => {
+        if (group.id === groupId) {
+          const updatedData = group.data.map((checkbox) => {
+            if (checkbox.id === checkboxId) {
+              return { ...checkbox, checked: !checkbox.checked };
+            } else {
+              return checkbox;
+            }
+          });
+
+          return { ...group, data: updatedData };
+        } else {
+          return group;
+        }
+      })
+    );
+  };
+
   return (
     <div>
       <div className="p-5 mt-6 bg-white rounded-2xl">
@@ -31,45 +96,23 @@ const Skills = () => {
         <div className="flex justify-center pt-5">
           <button
             id=" dropdownOffsetButton"
-            data-dropdown-toggle="dropdownSkidding"
-            data-dropdown-offset-distance="10"
-            data-dropdown-offset-skidding="100"
-            data-dropdown-placement="right"
-            className="border border-[#EAEAF1] rounded-full text-[#5E5E6F] w-full justify-between font-medium text-[14px] px-5 py-2.5 text-center inline-flex items-center"
+            className="border border-buttonBorder rounded-full text-body w-full justify-between font-medium text-sm px-4 py-3 text-center inline-flex items-center"
             type="button"
           >
-            <p className="mr-4">Dropdown button</p>
+            <p>Dropdown button</p>
 
             <span className="w-3">
               <DropdownIcon aria-hidden="true" />
             </span>
           </button>
-          <div
-            id="dropdownSkidding"
-            className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-          >
-            <ul
-              class="py-2 text-sm text-gray-700 dark:text-gray-200"
-              aria-labelledby="dropdownDefault"
-            >
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  Dashboard
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="mx-[20px] flex items-center">
+          <div className="mx-4 flex items-center">
             <p lassname="m-1.5 text-slate-500 font-medium">or</p>
           </div>
           <button
             type="button"
-            className="rounded-3xl bg-[#7070FF] flex items-center text-[16px] font-medium text-white h-[45px] py-[10px] px-[20px] min-w-fit leading-6"
+            className="rounded-3xl bg-primary flex items-center text-base font-medium text-white py-2.5 px-4 min-w-fit leading-6 gap-2"
           >
-            <p className="mr-4">Upload External Checklist</p>
+            <p>Upload External Checklist</p>
 
             <UploadIcon className="w-5 h-5" aria-hidden="true" />
           </button>
@@ -84,25 +127,7 @@ const Skills = () => {
 
         {completedChecklistData.map(({ heading, data, percentage }) => {
           return (
-            <div className="p-5 border flex justify-between px-[16px] py-[14px] items-center rounded-3xl mt-6">
-              <div>
-                <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-                  {heading}
-                </h4>
-                <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-                  <span className="text-[#5E5E6F]">data.name: </span>
-                  {data.value}
-                </p>
-              </div>
-              <Button
-                color={percentage.type}
-                variant="tag"
-                name={percentage.name}
-                size="md"
-                icon={iconTypes[percentage.type]}
-              />
-              <Icon name="edit" aria-hidden="true" />
-            </div>
+            <Checkbox heading={heading} data={data} percentage={percentage} />
           );
         })}
       </div>
@@ -115,25 +140,7 @@ const Skills = () => {
 
         {addChecklistData.map(({ heading, data, percentage }) => {
           return (
-            <div className="p-5 border flex justify-between px-[16px] py-[14px] items-center rounded-3xl mt-6">
-              <div>
-                <h4 className="text-[17px] font-semibold text-[#5E5E6F] mb-2">
-                  {heading}
-                </h4>
-                <p className="text-[16px] text-[#7F7F7F] font-medium mb-2">
-                  <span className="text-[#5E5E6F]">data.name: </span>
-                  {data.value}
-                </p>
-              </div>
-              <Button
-                color={percentage.type}
-                variant="tag"
-                name={percentage.name}
-                size="md"
-                icon={iconTypes[percentage.type]}
-              />
-              <Icon name="delete" aria-hidden="true" />
-            </div>
+            <Checkbox heading={heading} data={data} percentage={percentage} />
           );
         })}
       </div>
@@ -144,48 +151,25 @@ const Skills = () => {
           <button></button>
         </div>
         <div className="flex justify-center pt-5">
-          {/* Dropdown menu */}
           <button
             id=" dropdownOffsetButton"
-            data-dropdown-toggle="dropdownSkidding"
-            data-dropdown-offset-distance="10"
-            data-dropdown-offset-skidding="100"
-            data-dropdown-placement="right"
-            className="border border-[#EAEAF1] rounded-full text-[#5E5E6F] w-full justify-between font-medium text-[14px] px-5 py-2.5 text-center inline-flex items-center"
+            className="border border-buttonBorder rounded-full text-body w-full justify-between font-medium text-sm px-4 py-3 text-center inline-flex items-center"
             type="button"
           >
-            <p className="mr-4">Dropdown button</p>
+            <p>Dropdown button</p>
 
             <span className="w-3">
               <DropdownIcon aria-hidden="true" />
             </span>
           </button>
-          <div
-            id="dropdownSkidding"
-            className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-          >
-            <ul
-              class="py-2 text-sm text-gray-700 dark:text-gray-200"
-              aria-labelledby="dropdownDefault"
-            >
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  Dashboard
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="mx-[20px] flex items-center">
+          <div className="mx-4 flex items-center">
             <p lassname="m-1.5 text-slate-500 font-medium">or</p>
           </div>
           <button
             type="button"
-            className="rounded-3xl bg-[#7070FF] flex items-center text-[16px] font-medium text-white h-[45px] py-[10px] px-[20px] min-w-fit leading-6"
+            className="rounded-3xl bg-primary flex items-center text-base font-medium text-white py-2.5 px-4 min-w-fit leading-6 gap-2"
           >
-            <p className="mr-4">Upload External Checklist</p>
+            <p>Upload External Checklist</p>
 
             <UploadIcon className="w-5 h-5" aria-hidden="true" />
           </button>
@@ -195,10 +179,8 @@ const Skills = () => {
       <div className="px-5 py-6 mt-6 bg-white rounded-2xl">
         <div className="flex justify-center text-center flex-col items-center">
           <BoxIcon className="w-5 h-5" aria-hidden="true" />
-          <h4 className="text-[17px] font-semibold text-[#5E5E6F]">
-            Add a Checklist
-          </h4>
-          <p className="font-normal text-[16px] leading-6 text-[#5E5E6F]">
+          <h4 className="text-5xl text-body">Add a Checklist</h4>
+          <p className="font-normal text-base leading-6 text-body">
             Upload External Checklist
           </p>
         </div>
@@ -207,53 +189,51 @@ const Skills = () => {
       <div className="px-5 py-6 mt-6 bg-white rounded-2xl">
         <div className="flex justify-center text-center flex-col items-center">
           <DocumentFrameIcon className="w-5 h-5" aria-hidden="true" />
-          <h4 className="text-[17px] font-semibold text-[#5E5E6F]">
-            Add a Checklist
-          </h4>
-          <p className="font-normal text-[16px] leading-6 text-[#5E5E6F]">
+          <h4 className="text-5xl text-body">Add a Checklist</h4>
+          <p className="font-normal text-base leading-6 text-body">
             Upload External Checklist
           </p>
         </div>
       </div>
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full border-b pb-2 items-center">
+        <div className="flex w-full border-b pb-2 items-center gap-3">
           <Icon name="back" aria-hidden="true" />
-          <h4 className="text-[19px] font-semibold text-[#7070FF]">
+          <h4 className="text-5xl font-semibold text-primary">
             Please fill out your Administrative RN Skills
           </h4>
         </div>
-        <div className="flex justify-between mt-6">
-          <div>
-            <button type="button" className="flex mb-4 items-center">
-              <div className="w-6 h-6 bg-[#FF5858] rounded-full"></div>
-              <span className="ml-2 text-[16px] font-medium text-[#5E5E6F]">
+        <div className="flex mt-4 gap-8">
+          <div className="flex flex-col gap-3">
+            <button type="button" className="flex items-center gap-2">
+              <span className="w-4 h-4 bg-red rounded-full"></span>
+              <span className=" text-base font-medium text-body">
                 No theory or experience
               </span>
             </button>
-            <button type="button" className="flex mb-4">
-              <div className="w-6 h-6 bg-[#FE9B26] rounded-full"></div>
-              <span className="ml-2 text-[16px] font-medium text-[#5E5E6F]">
+            <button type="button" className="flex items-center gap-2">
+              <span className="w-4 h-4 bg-orange rounded-full"></span>
+              <span className=" text-base font-medium text-body">
                 Limited experience. Need training
               </span>
             </button>
           </div>
-          <div>
+          <div className="flex flex-col gap-3">
             <button
               type="button"
-              className="flex text-[16px] font-medium text-[#5E5E6F] mb-4"
+              className="flex text-base font-medium text-body items-center gap-2"
             >
-              <div className="w-6 h-6 bg-[#FFC75A] rounded-full"></div>
-              <span className="ml-2">
+              <span className="w-4 h-4 bg-yellow rounded-full"></span>
+              <span className="">
                 Experienced. Able to perform under supervision
               </span>
             </button>
             <button
               type="button"
-              className="flex text-[16px] font-medium text-[#5E5E6F] mb-4"
+              className="flex text-base font-medium text-body items-center gap-2"
             >
-              <div className="w-6 h-6 bg-[#00DF59] rounded-full"></div>
-              <span className="ml-2">
+              <span className="w-4 h-4 bg-green rounded-full"></span>
+              <span className="">
                 Proficient. Able to perform independently
               </span>
             </button>
@@ -261,581 +241,98 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="pt-5 border flex flex-col justify-start px-[16px] py-[14px] rounded-3xl mt-6 bg-[#CDE1E1] h-[100px]">
+      <div className="p-5 border flex justify-start px-base py-3.5 rounded-3xl mt-6 bg-background w-full">
         <ProgressBar filled={30} />
       </div>
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
-          <div className="flex items-center">
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Administrative Duties
-            </h4>
-          </div>
-        </div>
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Data Entry
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" checkedDefault={true} />
-            <CustomCheckbox variant="yellow" checkedDefault={true} />
-            <CustomCheckbox variant="green" />
-          </div>
+        <div className="flex justify-between w-full pb-2 items-center border-b">
+          <h4 className="text-5xl text-primary">Administrative Dutiesiii</h4>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Medical Records - Entry
-            </h4>
+        {checkboxData?.map((group) => (
+          <div
+            key={group?.heading}
+            className="mt-6 border-b h-[54px] flex justify-between"
+          >
+            <div>
+              <h4 className="text-base font-semibold text-body mb-2">
+                {group?.heading}
+              </h4>
+            </div>
+            <div className="flex gap-2">
+              {group?.data?.map(({ id, name, checked }) => (
+                <CustomCheckbox
+                  key={id}
+                  variant={name}
+                  checked={checked}
+                  onChange={() => handleCheckboxChange(group.id, id)}
+                />
+              ))}
+            </div>
           </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" checkedDefault={true} />
-            <CustomCheckbox variant="green" checkedDefault={true} />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Medical Records - Maintenance
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" checkedDefault={true} />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Electronic Medical Records - Entry
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" checkedDefault={true} />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Electronic Medical Records - Maintenance
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Electronic Medical Records - Maintenance
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Gathers data and runs reports
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Patient Files - Set up, report, and record
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Completion and filing/distribution of reports
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Schedules appointments/tests
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Takes, distributes, and prioritizes messages
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Assists physicians with procedures
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Assists nursing staff
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Prepares patients for appointments and exams
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Gathers patient history and VS
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Gives injections as directed
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Performs phlebotomy skills
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Collects lab. Specimens
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Administer EKGs
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Completes specimen testing, i.e. glucose, strep, mono, flu
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
+        ))}
       </div>
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
-          <div className="flex items-center">
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Computer Skills
-            </h4>
-          </div>
-        </div>
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Medic, Medic Soft
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" checkedDefault={true} />
-            <CustomCheckbox variant="yellow" checkedDefault={true} />
-            <CustomCheckbox variant="green" />
-          </div>
+        <div className="flex justify-between w-full pb-2 items-center border-b">
+          <h4 className="text-5xl text-primary">Computer Skills</h4>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Centricity
-            </h4>
+        {computerData?.map((group) => (
+          <div
+            key={group?.heading}
+            className="mt-6 border-b h-[54px] flex justify-between"
+          >
+            <div>
+              <h4 className="text-base font-semibold text-body mb-2">
+                {group?.heading}
+              </h4>
+            </div>
+            <div className="flex gap-2">
+              {group?.data?.map(({ id, name, checked }) => (
+                <CustomCheckbox
+                  key={id}
+                  variant={name}
+                  checked={checked}
+                  onChange={() => handleComputerCheckbox(group.id, id)}
+                />
+              ))}
+            </div>
           </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" checkedDefault={true} />
-            <CustomCheckbox variant="green" checkedDefault={true} />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Medical Manager
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" checkedDefault={true} />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              HIS
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" checkedDefault={true} />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Word, Word Perfect
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Soft
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Windows
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              IDX
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Meditech
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
+        ))}
       </div>
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
-        <div className="flex justify-between w-full h-10 border-b">
-          <div className="flex items-center">
-            <h4 className="text-[19px] font-semibold text-[#7070FF]">
-              Age-Specific Competencies
-            </h4>
-          </div>
-        </div>
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Newborn (birth to 30 days)
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" checkedDefault={true} />
-            <CustomCheckbox variant="yellow" checkedDefault={true} />
-            <CustomCheckbox variant="green" />
-          </div>
+        <div className="flex justify-between w-full pb-2 items-center border-b">
+          <h4 className="text-5xl text-primary">Age-Specific Competencies</h4>
+          <Icon name="add" aria-hidden="true" filled />
         </div>
 
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Infant (31 days to 1 year)
-            </h4>
+        {ageSpecificData?.map((group) => (
+          <div
+            key={group?.heading}
+            className="mt-6 border-b h-[54px] flex justify-between"
+          >
+            <div>
+              <h4 className="text-base font-semibold text-body mb-2">
+                {group?.heading}
+              </h4>
+            </div>
+            <div className="flex gap-2">
+              {group?.data?.map(({ id, name, checked }) => (
+                <CustomCheckbox
+                  key={id}
+                  variant={name}
+                  checked={checked}
+                  onChange={() => handleAgeSpecificChange(group.id, id)}
+                />
+              ))}
+            </div>
           </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" checkedDefault={true} />
-            <CustomCheckbox variant="green" checkedDefault={true} />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Toddler (ages 2-3 years)
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" checkedDefault={true} />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Preschooler (ages 4-5 years)
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" checkedDefault={true} />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Childhood (ages 6-12 years)
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Adolescents (ages 13-21 years)
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Young Adults (ages 22-39 years)
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Adults (ages 40-64 years)
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Older Adults (ages 65 -79 years)
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
-
-        <div className="mt-6 border-b h-[54px] flex justify-between">
-          <div>
-            <h4 className="text-[16px] font-semibold text-[#5E5E6F] mb-2">
-              Elderly (ages 80+ years)
-            </h4>
-          </div>
-          <div className="flex gap-2">
-            <CustomCheckbox variant="red" />
-            <CustomCheckbox variant="orange" />
-            <CustomCheckbox variant="yellow" />
-            <CustomCheckbox variant="green" />
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

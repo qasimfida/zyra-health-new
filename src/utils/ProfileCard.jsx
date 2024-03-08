@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "@/components/Button/Button";
-import { EditIconTransparent } from "@/svgs/icons";
 import { renderValue } from "./helper";
 import { iconTypes } from "./data";
 import { Icon } from "@/svgs";

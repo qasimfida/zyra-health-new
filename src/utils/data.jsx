@@ -66,6 +66,302 @@ export const addChecklistData = [
 
 ]
 
+export const checklistData = [
+  {
+    id: 1,
+    heading: "Data Entry",
+    data: [
+      {
+        id: 1,
+        name: "red",
+        checked: false,
+      },
+      {
+        id: 2,
+        name: "orange",
+        checked: true,
+      },
+      {
+        id: 3,
+        name: "yellow",
+        checked: true,
+      },
+      {
+        id: 4,
+        name: "green",
+        checked: false,
+      }
+    ]
+  },
+  {
+    id: 2,
+    heading: "Entry",
+    data: [
+      {
+        id: 1,
+        name: "red",
+        checked: false,
+      },
+      {
+        id: 2,
+        name: "orange",
+        checked: true,
+      },
+      {
+        id: 3,
+        name: "yellow",
+        checked: true,
+      },
+      {
+        id: 4,
+        name: "green",
+        checked: false,
+      }
+    ]
+  },
+  {
+    id: 3,
+    heading: "Data",
+    data: [
+      {
+        id: 1,
+        name: "red",
+        checked: false,
+      },
+      {
+        id: 2,
+        name: "orange",
+        checked: true,
+      },
+      {
+        id: 3,
+        name: "yellow",
+        checked: true,
+      },
+      {
+        id: 4,
+        name: "green",
+        checked: false,
+      }
+    ]
+  },
+
+]
+
+export const computerSkillsData = [
+  {
+    id: 1,
+    heading: "Medic, Medic Soft",
+    data: [
+      {
+        id: 1,
+        name: "red",
+        checked: true,
+      },
+      {
+        id: 2,
+        name: "orange",
+        checked: false,
+      },
+      {
+        id: 3,
+        name: "yellow",
+        checked: false,
+      },
+      {
+        id: 4,
+        name: "green",
+        checked: false,
+      }
+    ]
+  },
+  {
+    id: 2,
+    heading: "Centricity",
+    data: [
+      {
+        id: 1,
+        name: "red",
+        checked: false,
+      },
+      {
+        id: 2,
+        name: "orange",
+        checked: true,
+      },
+      {
+        id: 3,
+        name: "yellow",
+        checked: true,
+      },
+      {
+        id: 4,
+        name: "green",
+        checked: false,
+      }
+    ]
+  },
+  {
+    id: 3,
+    heading: "Medical Manager",
+    data: [
+      {
+        id: 1,
+        name: "red",
+        checked: false,
+      },
+      {
+        id: 2,
+        name: "orange",
+        checked: true,
+      },
+      {
+        id: 3,
+        name: "yellow",
+        checked: true,
+      },
+      {
+        id: 4,
+        name: "green",
+        checked: false,
+      }
+    ]
+  },
+  {
+    id: 4,
+    heading: "HIS",
+    data: [
+      {
+        id: 1,
+        name: "red",
+        checked: false,
+      },
+      {
+        id: 2,
+        name: "orange",
+        checked: true,
+      },
+      {
+        id: 3,
+        name: "yellow",
+        checked: true,
+      },
+      {
+        id: 4,
+        name: "green",
+        checked: false,
+      }
+    ]
+  },
+]
+
+export const ageData = [
+  {
+    id: 1,
+    heading: "Newborn (birth to 30 days)",
+    data: [
+      {
+        id: 1,
+        name: "red",
+        checked: true,
+      },
+      {
+        id: 2,
+        name: "orange",
+        checked: false,
+      },
+      {
+        id: 3,
+        name: "yellow",
+        checked: false,
+      },
+      {
+        id: 4,
+        name: "green",
+        checked: false,
+      }
+    ]
+  },
+  {
+    id: 2,
+    heading: "Infant (31 days to 1 year)",
+    data: [
+      {
+        id: 1,
+        name: "red",
+        checked: false,
+      },
+      {
+        id: 2,
+        name: "orange",
+        checked: true,
+      },
+      {
+        id: 3,
+        name: "yellow",
+        checked: true,
+      },
+      {
+        id: 4,
+        name: "green",
+        checked: false,
+      }
+    ]
+  },
+  {
+    id: 3,
+    heading: "Toddler (ages 2-3 years)",
+    data: [
+      {
+        id: 1,
+        name: "red",
+        checked: false,
+      },
+      {
+        id: 2,
+        name: "orange",
+        checked: true,
+      },
+      {
+        id: 3,
+        name: "yellow",
+        checked: true,
+      },
+      {
+        id: 4,
+        name: "green",
+        checked: false,
+      }
+    ]
+  },
+  {
+    id: 4,
+    heading: "Preschooler (ages 4-5 years)",
+    data: [
+      {
+        id: 1,
+        name: "red",
+        checked: false,
+      },
+      {
+        id: 2,
+        name: "orange",
+        checked: true,
+      },
+      {
+        id: 3,
+        name: "yellow",
+        checked: true,
+      },
+      {
+        id: 4,
+        name: "green",
+        checked: false,
+      }
+    ]
+  },
+]
+
 export const continuingEducationData = [
   {
     country: "Certified Emergency Nurse (CEN) Preparation Course",
