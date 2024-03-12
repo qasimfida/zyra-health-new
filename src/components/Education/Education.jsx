@@ -22,7 +22,7 @@ const Education = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-          <h4 className="text-5xl text-primary">Education</h4>
+          <h4 className="text-5xl text-primary-default">Education</h4>
           <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
@@ -41,7 +41,7 @@ const Education = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-          <h4 className="text-5xl text-primary">Continuing Education</h4>
+          <h4 className="text-5xl text-primary-default">Continuing Education</h4>
           <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
@@ -60,7 +60,7 @@ const Education = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-          <h4 className="text-5xl text-primary">Training</h4>
+          <h4 className="text-5xl text-primary-default">Training</h4>
             <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 

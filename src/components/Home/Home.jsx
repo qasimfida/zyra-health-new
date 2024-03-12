@@ -82,8 +82,8 @@ const Home = () => {
           <a
             onClick={() => handleTabClick(tab.id)}
             href="#"
-            className={`flex items-center justify-center w-full border-r text-body hover:text-primary rounded-s-2xl p-2 ${
-              activeTab === tab.id ? "text-primary" : "text-body"
+            className={`flex items-center justify-center w-full border-r text-body hover:text-primary-default rounded-s-2xl p-2 ${
+              activeTab === tab.id ? "text-primary-default" : "text-body"
             }`}
           >
             <button type="button" className="mr-1">

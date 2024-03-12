@@ -26,23 +26,23 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    fontSize: {
-      "4xl": [
-        "1.063rem",
-        {
-          lineHeight: "1.62rem",  // 17px
-          fontWeight: "600",
-        },
-      ],
-      "5xl": [
-        "1.188rem",
-        {
-          lineHeight: "1.813rem", // 19px
-          fontWeight: "600",
-        },
-      ],
-    },
     extend: {
+      fontSize: {
+        "4xl": [
+          "1.063rem",
+          {
+            lineHeight: "1.62rem", // 17px
+            fontWeight: "600",
+          },
+        ],
+        "5xl": [
+          "1.188rem",
+          {
+            lineHeight: "1.813rem", // 19px
+            fontWeight: "600",
+          },
+        ],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -50,8 +50,10 @@ module.exports = {
       },
       colors: {
         success: "#1ECA63",
-        primary: "#7070FF",
-        primaryLight: "#9A9AFF",
+        primary: {
+          default: "#7070FF",
+          light: "#9A9AFF",
+        },
         warning: "#FF6B2C",
         danger: "#EB3838",
         tagFilled: "#E8E6FF",
@@ -61,12 +63,12 @@ module.exports = {
         light: "#F3F5F8",
         grayLignt: "#C7C7C8",
         info: "#299DCF",
-        buttonBorder: '#EAEAF1',
-        red: '#FF5858',
-        yellow: '#FFC75A',
-        orange: '#FE9B26',
-        green: '#00DF59',
-        background: '#CDE1E1'
+        buttonBorder: "#EAEAF1",
+        red: "#FF5858",
+        yellow: "#FFC75A",
+        orange: "#FE9B26",
+        green: "#00DF59",
+        background: "#CDE1E1",
       },
     },
   },

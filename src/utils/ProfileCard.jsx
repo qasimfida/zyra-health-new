@@ -30,7 +30,7 @@ const ProfileCard = ({ data }) => {
         {data?.data?.map(({ name, value }) => {
           const cls = `text-base ${
             name.toLocaleLowerCase().includes("email")
-              ? "text-primary"
+              ? "text-primary-default"
               : "text-secondary"
           } font-medium mb-2.5 ${
             Array.isArray(value) ? "flex items-center gap-2" : ""

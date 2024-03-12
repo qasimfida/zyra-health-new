@@ -14,7 +14,7 @@ export const renderValue = (value) => {
         )}
         <button
           type="button"
-          className="rounded-3xl flex items-center text-base font-medium text-primary py-1 px-2"
+          className="rounded-3xl flex items-center text-base font-medium text-primary-default py-1 px-2"
         >
           <span>
             <AddPlusIcon className="w-5 h-5" aria-hidden="true" />

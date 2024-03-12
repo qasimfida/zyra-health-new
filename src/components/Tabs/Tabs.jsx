@@ -28,8 +28,8 @@ const Tabs = () => {
       >
         <button
           onClick={() => handleTabClick(tab.id)}
-          className={`flex items-center justify-center w-full border-r text-body hover:text-primary ${
-            activeTab === tab.id ? "text-primary" : ""
+          className={`flex items-center justify-center w-full border-r text-body hover:text-primary-default ${
+            activeTab === tab.id ? "text-primary-default" : ""
           }`}
         >
           {tab.label}

@@ -27,7 +27,7 @@ const Documents = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-          <h4 className="text-5xl text-primary">Resume</h4>
+          <h4 className="text-5xl text-primary-default">Resume</h4>
           <Icon name="edit" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
@@ -46,7 +46,7 @@ const Documents = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-          <h4 className="text-5xl text-primary">Identification</h4>
+          <h4 className="text-5xl text-primary-default">Identification</h4>
           <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
@@ -65,7 +65,7 @@ const Documents = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-          <h4 className="text-5xl text-primary">Health Screening</h4>
+          <h4 className="text-5xl text-primary-default">Health Screening</h4>
           <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
@@ -84,7 +84,7 @@ const Documents = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-          <h4 className="text-5xl text-primary">Immunization</h4>
+          <h4 className="text-5xl text-primary-default">Immunization</h4>
           <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
@@ -103,7 +103,7 @@ const Documents = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-          <h4 className="text-5xl text-primary">Liability Insurance</h4>
+          <h4 className="text-5xl text-primary-default">Liability Insurance</h4>
           <Icon name="edit" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
@@ -115,7 +115,7 @@ const Documents = () => {
       {/* Libility Insurance */}
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-          <h4 className="text-5xl text-primary">Liability Insurance</h4>
+          <h4 className="text-5xl text-primary-default">Liability Insurance</h4>
           <Icon name="edit" className="w-8 h-8" aria-hidden="true" filled />
         </div>
         <div className="flex mt-6">
@@ -139,7 +139,7 @@ const Documents = () => {
       {/* Legal and Consents */}
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-          <h4 className="text-5xl text-primary">Legal and Consents</h4>
+          <h4 className="text-5xl text-primary-default">Legal and Consents</h4>
         </div>
         <div className="flex justify-between mt-4 mb-4">
           <div>
@@ -153,7 +153,7 @@ const Documents = () => {
           <div className="flex items-center">
             <button
               type="button"
-              className="rounded-3xl border-2 border-primary flex items-center text-base font-medium text-primary px-5 py-2.5"
+              className="rounded-3xl border-2 border-primary-default flex items-center text-base font-medium text-primary-default px-5 py-2.5"
             >
               View
             </button>
@@ -163,7 +163,7 @@ const Documents = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-          <h4 className="text-5xl text-primary">Liability Insurance</h4>
+          <h4 className="text-5xl text-primary-default">Liability Insurance</h4>
           <Icon name="edit" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
@@ -181,7 +181,7 @@ const Documents = () => {
             <div className="flex items-center">
               <button
                 type="button"
-                className="rounded-3xl border-2 border-primary flex items-center text-base font-medium text-primary px-5 py-2.5"
+                className="rounded-3xl border-2 border-primary-default flex items-center text-base font-medium text-primary-default px-5 py-2.5"
               >
                 View
               </button>
@@ -204,7 +204,7 @@ const Documents = () => {
           <div className="flex justify-between w-full border-b pb-2 items-center">
             <div className="flex items-center gap-3">
               <Icon name="back" className="w-10 h-10" aria-hidden="true" />
-              <h4 className="text-5xl text-primary">Participation Agreement</h4>
+              <h4 className="text-5xl text-primary-default">Participation Agreement</h4>
             </div>
             <div className="flex items-center">
               <DownloadIcon className="w-5 h-5" aria-hidden="true" />
@@ -214,7 +214,7 @@ const Documents = () => {
           {agreementData.map((data) => {
             return (
               <div className="mt-4 mb-4">
-                <h4 className="text-base font-bold text-primary leading-6 mb-2 mt-4">
+                <h4 className="text-base font-bold text-primary-default leading-6 mb-2 mt-4">
                   {data.heading}
                 </h4>
                 <p className="mb-2">
@@ -246,7 +246,7 @@ const Documents = () => {
                 </span>
               </button>
             </div>
-            <h4 className="text-[14px] font-medium text-primary leading-5 mb-2 mt-4">
+            <h4 className="text-[14px] font-medium text-primary-default leading-5 mb-2 mt-4">
               Signature
             </h4>
           </div>
@@ -260,7 +260,7 @@ const Documents = () => {
             />
             <button
               type="button"
-              className="rounded-3xl bg-primary flex items-center text-base font-medium text-white h-[45px] py-[10px] px-[60px] leading-6"
+              className="rounded-3xl bg-primary-default flex items-center text-base font-medium text-white h-[45px] py-[10px] px-[60px] leading-6"
             >
               Sign
             </button>
@@ -282,7 +282,7 @@ const Documents = () => {
           <div className="flex justify-between w-full border-b pb-2 items-center">
             <div className="flex items-center gap-3">
               <Icon name="back" className="w-10 h-10" aria-hidden="true" />
-              <h4 className="text-5xl text-primary">Participation Agreement</h4>
+              <h4 className="text-5xl text-primary-default">Participation Agreement</h4>
             </div>
             <div className="flex items-center">
               <DownloadIcon className="w-5 h-5" aria-hidden="true" />
@@ -297,7 +297,7 @@ const Documents = () => {
                 right to receive such a copy under California law.
               </span>
             </p>
-            <h4 className="text-base font-bold text-primary leading-6 mb-4 mt-4">
+            <h4 className="text-base font-bold text-primary-default leading-6 mb-4 mt-4">
               Receive Report?
             </h4>
             <div className="flex items-center mb-4">
@@ -349,7 +349,7 @@ const Documents = () => {
             />
             <button
               type="button"
-              className="rounded-3xl bg-primary flex items-center text-base font-medium text-white px-16 py-2.5 leading-6"
+              className="rounded-3xl bg-primary-default flex items-center text-base font-medium text-white px-16 py-2.5 leading-6"
             >
               Sign
             </button>

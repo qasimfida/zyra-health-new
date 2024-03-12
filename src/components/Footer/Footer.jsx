@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="flex justify-center">
             <button
               type="button"
-              className=" text-primary bg-white rounded-full"
+              className=" text-primary-default bg-white rounded-full"
             >
               <QuestionIcon className="w-10 h-10" aria-hidden="true" />
             </button>
@@ -30,7 +30,7 @@ const Footer = () => {
             </p>
             <button
               type="button"
-              className="rounded-3xl flex  items-center text-base font-medium text-primary justify-center leading-6"
+              className="rounded-3xl flex  items-center text-base font-medium text-primary-default justify-center leading-6"
             >
               Show More
               <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
@@ -41,7 +41,7 @@ const Footer = () => {
           <div className="flex justify-center">
             <button
               type="button"
-              className=" text-primary bg-white rounded-full"
+              className=" text-primary-default bg-white rounded-full"
             >
               <SheildIcon className="w-10 h-10" aria-hidden="true" />
             </button>
@@ -54,7 +54,7 @@ const Footer = () => {
             </p>
             <button
               type="button"
-              className="rounded-3xl flex items-center text-base font-medium text-primary justify-center leading-6"
+              className="rounded-3xl flex items-center text-base font-medium text-primary-default justify-center leading-6"
             >
               Show More
               <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
@@ -65,7 +65,7 @@ const Footer = () => {
           <div className="flex justify-center">
             <button
               type="button"
-              className=" text-primary bg-white rounded-full"
+              className=" text-primary-default bg-white rounded-full"
             >
               <CoverIcon className="w-10 h-10" aria-hidden="true" />
             </button>
@@ -81,7 +81,7 @@ const Footer = () => {
             </p>
             <button
               type="button"
-              className="rounded-3xl flex items-center text-base font-medium text-primary justify-center leading-6"
+              className="rounded-3xl flex items-center text-base font-medium text-primary-default justify-center leading-6"
             >
               Show More
               <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
@@ -92,7 +92,7 @@ const Footer = () => {
           <div className="flex justify-center">
             <button
               type="button"
-              className=" text-primary bg-white rounded-full"
+              className=" text-primary-default bg-white rounded-full"
             >
               <LockIcon className="w-10 h-10" aria-hidden="true" />
             </button>
@@ -106,7 +106,7 @@ const Footer = () => {
             </p>
             <button
               type="button"
-              className="rounded-3xl flex items-center text-base font-medium text-primary justify-center leading-6"
+              className="rounded-3xl flex items-center text-base font-medium text-primary-default justify-center leading-6"
             >
               Show More
               <ArrowRightIcon className="w-5 h-5 ml-1.5" aria-hidden="true" />
@@ -117,12 +117,12 @@ const Footer = () => {
 
       <div className="flex justify-between items-center w-full px-24 py-6 border-t ">
         <div>
-          <h4 className="text-sm font-normal text-primary">
+          <h4 className="text-sm font-normal text-primary-default">
             2023 © ZyraHealth
           </h4>
         </div>
         <div>
-          <h4 className="text-sm font-normal text-primary underline">
+          <h4 className="text-sm font-normal text-primary-default underline">
             Made with love in Boston
           </h4>
         </div>

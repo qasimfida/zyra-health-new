@@ -90,7 +90,7 @@ const Skills = () => {
     <div>
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-          <h4 className="text-5xl text-primary">Add a Checklist</h4>
+          <h4 className="text-5xl text-primary-default">Add a Checklist</h4>
           <button></button>
         </div>
         <div className="flex justify-center pt-5">
@@ -110,7 +110,7 @@ const Skills = () => {
           </div>
           <button
             type="button"
-            className="rounded-3xl bg-primary flex items-center text-base font-medium text-white py-2.5 px-4 min-w-fit leading-6 gap-2"
+            className="rounded-3xl bg-primary-default flex items-center text-base font-medium text-white py-2.5 px-4 min-w-fit leading-6 gap-2"
           >
             <p>Upload External Checklist</p>
 
@@ -121,7 +121,7 @@ const Skills = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-          <h4 className="text-5xl text-primary">Completed Chekcklists</h4>
+          <h4 className="text-5xl text-primary-default">Completed Chekcklists</h4>
           <Icon name="edit" aria-hidden="true" filled />
         </div>
 
@@ -134,7 +134,7 @@ const Skills = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-          <h4 className="text-5xl text-primary">External Checkhlist</h4>
+          <h4 className="text-5xl text-primary-default">External Checkhlist</h4>
           <Icon name="edit" aria-hidden="true" filled />
         </div>
 
@@ -165,7 +165,7 @@ const Skills = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-          <h4 className="text-5xl text-primary">Add a Checklist</h4>
+          <h4 className="text-5xl text-primary-default">Add a Checklist</h4>
           <button></button>
         </div>
         <div className="flex justify-center pt-5">
@@ -185,7 +185,7 @@ const Skills = () => {
           </div>
           <button
             type="button"
-            className="rounded-3xl bg-primary flex items-center text-base font-medium text-white py-2.5 px-4 min-w-fit leading-6 gap-2"
+            className="rounded-3xl bg-primary-default flex items-center text-base font-medium text-white py-2.5 px-4 min-w-fit leading-6 gap-2"
           >
             <p>Upload External Checklist</p>
 
@@ -217,7 +217,7 @@ const Skills = () => {
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex w-full border-b pb-2 items-center gap-3">
           <Icon name="back" aria-hidden="true" />
-          <h4 className="text-5xl font-semibold text-primary">
+          <h4 className="text-5xl font-semibold text-primary-default">
             Please fill out your Administrative RN Skills
           </h4>
         </div>
@@ -265,7 +265,7 @@ const Skills = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full pb-2 items-center border-b">
-          <h4 className="text-5xl text-primary">Administrative Duties</h4>
+          <h4 className="text-5xl text-primary-default">Administrative Duties</h4>
           <Icon name="add" aria-hidden="true" filled />
         </div>
 
@@ -295,7 +295,7 @@ const Skills = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full pb-2 items-center border-b">
-          <h4 className="text-5xl text-primary">Computer Skills</h4>
+          <h4 className="text-5xl text-primary-default">Computer Skills</h4>
           <Icon name="add" aria-hidden="true" filled />
         </div>
 
@@ -325,7 +325,7 @@ const Skills = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full pb-2 items-center border-b">
-          <h4 className="text-5xl text-primary">Age-Specific Competencies</h4>
+          <h4 className="text-5xl text-primary-default">Age-Specific Competencies</h4>
           <Icon name="add" aria-hidden="true" filled />
         </div>
 

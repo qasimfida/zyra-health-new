@@ -10,7 +10,7 @@ const Experience = () => {
     <div>
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full border-b pb-2 items-center">
-          <h4 className="text-5xl text-primary">Experience Summary</h4>
+          <h4 className="text-5xl text-primary-default">Experience Summary</h4>
           <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
@@ -58,7 +58,7 @@ const Experience = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full pb-2 items-center border-b">
-          <h4 className="text-5xl text-primary">Work Experience</h4>
+          <h4 className="text-5xl text-primary-default">Work Experience</h4>
           <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
@@ -77,7 +77,7 @@ const Experience = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full pb-2 items-center border-b">
-          <h4 className="text-5xl text-primary">Professional Activities</h4>
+          <h4 className="text-5xl text-primary-default">Professional Activities</h4>
           <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
@@ -96,7 +96,7 @@ const Experience = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full pb-2 items-center border-b">
-          <h4 className="text-5xl text-primary">References</h4>
+          <h4 className="text-5xl text-primary-default">References</h4>
           <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 
@@ -115,7 +115,7 @@ const Experience = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full pb-2 items-center border-b">
-          <h4 className="text-5xl text-primary">Tech Proficiancy</h4>
+          <h4 className="text-5xl text-primary-default">Tech Proficiancy</h4>
           <Icon name="add" className="w-8 h-8" aria-hidden="true" filled />
         </div>
 

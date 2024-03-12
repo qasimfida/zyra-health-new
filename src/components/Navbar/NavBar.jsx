@@ -8,6 +8,7 @@ import {
   ArrowDownIcon,
   CompanyIcon,
 } from "@/svgs/icons";
+import { Icon } from "@/svgs";
 
 const navigation = [
   { name: "Home", href: "#", current: true },
@@ -41,19 +42,13 @@ const NavBar = () => {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button type="button" className="mr-4 text-gray-400 bg-white">
-                  <InfoIcon className="w-4 h-4" aria-hidden="true" />
-                </button>
-                <button type="button" className="mr-4 text-gray-400 bg-white ">
-                  <ChatLeftIcon className="w-4 h-4" aria-hidden="true" />
-                </button>
-                <button type="button" className="mr-4 text-gray-400 bg-white">
-                  <BellIcon className="w-4 h-4" aria-hidden="true" />
-                </button>
+                <Icon name="message" className="mr-4" aria-hidden="true" />
+                <Icon name="info" className="mr-4" aria-hidden="true" />
+                <Icon name="bell" className="mr-4" aria-hidden="true" />
                 <Menu as="div" className="relative">
                   <Menu.Button className="flex items-center text-sm bg-white rounded-full focus:outline-none">
                     <img
-                      className="w-12 h-12 rounded-full"
+                      className="w-9 h-9 rounded-full"
                       src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                       alt=""
                     />

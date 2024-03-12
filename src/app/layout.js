@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <NavBar />
-        <main className="relative flex h-auto min-h-[calc(100vh-8rem)]  pt-[7rem] gap-6 justify-center mb-6 items-start flex-wrap">
+        <main className="relative flex h-auto min-h-[calc(100vh-8rem)] pt-[6.25rem] gap-6 justify-center mb-6 items-start flex-wrap">
           <SideBar />
           {children}
           <RightBar />

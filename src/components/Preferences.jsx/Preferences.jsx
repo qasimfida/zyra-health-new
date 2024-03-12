@@ -11,7 +11,7 @@ const Preferences = () => {
     <div>
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full h-10 border-b">
-          <h4 className="text-5xl text-primary">Search Preferences</h4>
+          <h4 className="text-5xl text-primary-default">Search Preferences</h4>
           <button type="button" className="text-white">
             <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
           </button>
@@ -24,7 +24,7 @@ const Preferences = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full h-10 border-b">
-          <h4 className="text-5xl text-primary">Workplace Preferences</h4>
+          <h4 className="text-5xl text-primary-default">Workplace Preferences</h4>
           <button type="button" className="text-white">
             <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
           </button>
@@ -45,7 +45,7 @@ const Preferences = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full h-10 border-b">
-          <h4 className="text-5xl text-primary">Search Preferences</h4>
+          <h4 className="text-5xl text-primary-default">Search Preferences</h4>
           <button type="button" className="text-white">
             <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
           </button>
@@ -58,7 +58,7 @@ const Preferences = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full h-10 border-b">
-          <h4 className="text-5xl text-primary">Workplace Preferences</h4>
+          <h4 className="text-5xl text-primary-default">Workplace Preferences</h4>
           <button type="button" className="text-white">
             <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
           </button>
@@ -71,7 +71,7 @@ const Preferences = () => {
 
       <div className="p-5 mt-6 bg-white rounded-2xl">
         <div className="flex justify-between w-full h-10 border-b">
-          <h4 className="text-5xl text-primary">Workplace Preferences</h4>
+          <h4 className="text-5xl text-primary-default">Workplace Preferences</h4>
           <button type="button" className="text-white">
             <Icon name="edit" className="h-8 w-8" aria-hidden="true" filled />
           </button>
