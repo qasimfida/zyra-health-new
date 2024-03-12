@@ -5,7 +5,7 @@ import { Button, Tag } from "../Button/Button";
 
 const RightBar = () => {
   return (
-    <div className="flex flex-col min-h-[90vh] w-[calc(100%-3rem)] md:w-[calc(100%-19.5rem)] ml-auto lg:ml-0 mr-6 lg:mr-0 lg:w-[18.875rem] relative lg:top-[5rem] lg:sticky z-10">
+    <div className="flex flex-col min-h-[90vh] w-[calc(100%-3rem)] md:w-[calc(100%-19.5rem)] ml-auto lg:ml-0 mr-6 lg:mr-0 lg:w-[18.875rem] relative lg:top-[6.25rem] lg:sticky z-10">
       <div className="flex flex-col items-center w-full mb-5 text-center bg-white px-6 py-6 rounded-2xl gap-2">
         <div className="flex items-center flex-col w-full">
           <ImageIcon aria-hidden="true" />

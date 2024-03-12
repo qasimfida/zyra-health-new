@@ -13,7 +13,7 @@ import { Cog8ToothIcon } from "@heroicons/react/24/outline";
 
 const SideBar = () => {
   return (
-    <div className="hidden md:flex lg:flex bg-white top-[5rem] sticky py-8 px-5 w-60 rounded-2xl flex-col min-h-[calc(100vh-20.5rem)] h-auto justify-between z-10 gap-52">
+    <div className="hidden md:flex lg:flex bg-white top-[6.25rem] sticky py-8 px-5 w-60 rounded-2xl flex-col min-h-[calc(100vh-20.5rem)] h-auto justify-between z-10 gap-52">
       <div className="flex flex-col items-center w-full gap-1">
         <div className="flex items-center w-52 h-12 justify-start rounded-2xl text-body cursor-pointer hover:text-white hover:bg-primary-default">
           <button type="button" className="ml-5 mr-6">
